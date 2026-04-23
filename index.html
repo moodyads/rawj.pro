@@ -35,7 +35,8 @@
         .hero-image { width: 100%; margin-top: 30px; }
         .hero-image img { width: 100%; max-width: 500px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
 
-        .btn { background-color: var(--purple); color: var(--white); padding: 16px 30px; text-decoration: none; border-radius: 8px; font-size: 1.1rem; font-weight: bold; display: inline-block; border: none; cursor: pointer; width: 100%; max-width: 400px; }
+        .btn { background-color: var(--purple); color: var(--white); padding: 16px 30px; text-decoration: none; border-radius: 8px; font-size: 1.1rem; font-weight: bold; display: inline-block; border: none; cursor: pointer; width: 100%; max-width: 400px; transition: 0.3s; }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(142, 43, 107, 0.3); }
 
         .services { padding: 60px 5%; text-align: center; }
         .section-title { font-size: 2rem; margin-bottom: 40px; font-weight: 800; }
@@ -43,11 +44,19 @@
         .service-card { background: var(--white); padding: 25px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); text-align: right; }
         .service-card img { width: 100%; height: 180px; object-fit: cover; border-radius: 10px; margin-bottom: 15px; }
 
+        /* سكشن ليش حنا (المستعاد) */
+        .about { display: flex; align-items: center; padding: 60px 5%; background-color: var(--white); gap: 40px; flex-wrap: wrap; }
+        .about-image { width: 100%; text-align: center; }
+        .about-image img { width: 100%; max-width: 500px; border-radius: 15px; }
+        .about-text { width: 100%; text-align: center; }
+        .about-text h2 { font-size: 2rem; color: var(--purple); margin-bottom: 15px; font-weight: 800; }
+        .about-text p { font-size: 1.1rem; color: #444; margin-bottom: 20px; }
+
         .contact { padding: 60px 5%; background-color: var(--dark-blue); color: var(--white); text-align: center; }
         .contact-container { max-width: 600px; margin: 0 auto; }
         .highlight { color: var(--light-purple); font-size: 1.3rem; font-weight: bold; margin-bottom: 25px; display: block; }
         
-        .form-group { margin-bottom: 15px; position: relative; }
+        .form-group { margin-bottom: 15px; }
         input, textarea { width: 100%; padding: 15px; border-radius: 8px; border: none; font-family: 'Tajawal', sans-serif; font-size: 1.1rem; }
         .error-message { color: #ff4d4d; font-size: 0.9rem; display: none; margin-top: 5px; font-weight: bold; text-align: right; }
         
@@ -56,11 +65,13 @@
         footer { text-align: center; padding: 25px; background-color: #0d0e1f; color: var(--white); font-size: 0.9rem; }
 
         @media (min-width: 769px) {
-            .hero { text-align: right; padding: 80px 8%; }
-            .hero-content { width: 55%; }
-            .hero-image { width: 40%; margin-top: 0; }
-            .hero h1 { font-size: 3.5rem; }
+            .hero, .about { text-align: right; padding: 80px 8%; }
+            .hero-content, .about-text { width: 55%; }
+            .hero-image, .about-image { width: 40%; margin-top: 0; }
+            .hero h1, .about-text h2 { font-size: 3.2rem; }
             .btn { width: auto; }
+            .about { flex-wrap: nowrap; }
+            .about-text { text-align: right; }
         }
     </style>
 </head>
@@ -71,6 +82,7 @@
         <nav>
             <a href="#hero">الرئيسية</a>
             <a href="#services">وش نقدم؟</a>
+            <a href="#about">ليش حنا؟</a>
             <a href="#contact">تواصل معنا</a>
         </nav>
     </header>
@@ -97,6 +109,16 @@
                 <h3>التسويق بالذكاء الاصطناعي (قريباً)</h3>
                 <p>بندمج الذكاء الاصطناعي بكل خطوة، لنوفر وقتك ونعظم نتايج متجرك.</p>
             </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-image"><img src="img2.webp" alt="فريق روج برو"></div>
+        <div class="about-text">
+            <h2>ليش تختار "روّج.برو"؟</h2>
+            <p>لأننا عارفين ومدركين إن "اللايكات ما تدفع رواتب". حنا نفهم خوارزميات المنصات، ونعرف كيف نربطها بمتاجرك باحترافية عالية.</p>
+            <p>فريقنا يحلل الأرقام والبيانات يومياً، ويختبر الحملات، ويصمم لعميلك رحلة تخليه يشتري وهو واثق. مبيعاتك هي مقياس نجاحنا الوحيد.</p>
+            <a href="#contact" class="btn">احجز تقييم متجرك مجاناً</a>
         </div>
     </section>
 
@@ -138,7 +160,6 @@
         const successMsg = document.getElementById('success-message');
         const submitBtn = document.getElementById('submitBtn');
 
-        // وظيفة سحرية لتحويل الأرقام العربية إلى إنجليزية
         function convertArabicNumbers(str) {
             const arabicNums = ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'];
             return str.replace(/[٠-٩]/g, function(d) {
@@ -147,7 +168,6 @@
         }
 
         function validatePhone(phone) {
-            // تحويل الأرقام أولاً قبل الفحص
             const cleanPhone = convertArabicNumbers(phone).replace(/\s/g, '');
             const gccRegex = /^(?:\+966|\+971|\+965|\+974|\+968|\+973|00966|00971|00965|00974|00968|00973|05|0)[0-9]{7,12}$/;
             return gccRegex.test(cleanPhone);
@@ -166,10 +186,8 @@
             }
             errorMsg.style.display = 'none';
 
-            // تحويل الرقم في الحقل قبل الإرسال الفعلي للإيميل
             phoneInput.value = convertArabicNumbers(phoneVal).replace(/\s/g, '');
 
-            // إيفنت البكسل
             if (typeof fbq !== 'undefined') fbq('track', 'Lead'); 
 
             submitBtn.innerText = "جاري الإرسال...";
