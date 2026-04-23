@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="image" href="img4.webp">
+    
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -61,7 +65,6 @@
         html { scroll-behavior: smooth; overflow-x: hidden; }
         body { font-family: 'Tajawal', sans-serif; background-color: var(--light-bg); color: var(--dark-blue); line-height: 1.8; text-align: right; overflow-x: hidden; }
 
-        /* الهيدر */
         header { background-color: var(--white); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 15px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
         .logo img { max-height: 55px; width: auto; transition: 0.3s; }
         nav { display: flex; gap: 20px; }
@@ -74,7 +77,8 @@
         .hero h1 span { color: var(--light-purple); }
         .hero p { font-size: 1.15rem; margin-bottom: 35px; opacity: 0.9; }
         .hero-image { width: 45%; }
-        .hero-image img { width: 100%; max-width: 500px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
+        /* منع اهتزاز الشاشة بإعطاء نسبة وتناسب للصورة */
+        .hero-image img { width: 100%; height: auto; max-width: 500px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.4); display: block; aspect-ratio: 4/3; object-fit: cover; }
 
         .btn { background-color: var(--purple); color: var(--white); padding: 16px 30px; text-decoration: none; border-radius: 8px; font-size: 1.1rem; font-weight: bold; display: inline-block; border: none; cursor: pointer; text-align: center; transition: 0.3s; }
         .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(142, 43, 107, 0.3); }
@@ -86,26 +90,24 @@
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
         .service-card { background: var(--white); padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: right; transition: 0.3s; border-bottom: 4px solid transparent; }
         .service-card:hover { border-bottom-color: var(--purple); transform: translateY(-5px); }
-        .service-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 20px; }
+        .service-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 20px; background-color: #eee; }
         .service-card h3 { color: var(--purple); font-size: 1.4rem; margin-bottom: 15px; font-weight: 700; }
 
         .about { display: flex; align-items: center; justify-content: space-between; padding: 80px 5%; background-color: var(--white); gap: 40px; flex-wrap: wrap; }
         .about-image { width: 45%; }
-        .about-image img { width: 100%; border-radius: 15px; }
+        .about-image img { width: 100%; height: auto; border-radius: 15px; aspect-ratio: 4/3; object-fit: cover; background-color: #eee; }
         .about-text { width: 50%; }
         .about-text h2 { font-size: 2.2rem; color: var(--purple); margin-bottom: 20px; font-weight: 800; }
         .about-list { list-style: none; padding: 0; text-align: right; margin-bottom: 30px; }
         .about-list li { margin-bottom: 15px; font-size: 1.1rem; color: #444; line-height: 1.6; }
         .about-list li strong { color: var(--dark-blue); font-size: 1.2rem; }
 
-        /* قسم شركاء النجاح */
         .partners-section { padding: 80px 5%; background-color: var(--light-bg); text-align: center; overflow: hidden; }
         .partners-container { display: flex; justify-content: center; align-items: center; gap: 25px; flex-wrap: wrap; margin-top: 50px; padding: 20px 0; }
         .partner-logo { width: 130px; height: 130px; display: flex; justify-content: center; align-items: center; border-radius: 20px; background: var(--white); border: 2px solid transparent; opacity: 0.6; filter: grayscale(100%); transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1); }
         .partner-logo img { max-width: 65%; max-height: 65%; object-fit: contain; }
         .partner-logo.active-partner { transform: scale(1.2); opacity: 1; filter: grayscale(0%); border-color: var(--purple); box-shadow: 0 10px 25px rgba(142, 43, 107, 0.25); z-index: 2; }
 
-        /* قسم الأسئلة الشائعة */
         .faq-section { padding: 80px 5%; background-color: var(--white); text-align: center; }
         .faq-container { max-width: 800px; margin: 40px auto 0; text-align: right; }
         .faq-item { background: var(--light-bg); margin-bottom: 15px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(142, 43, 107, 0.05); transition: 0.3s; }
@@ -127,50 +129,21 @@
 
         footer { text-align: center; padding: 25px; background-color: #0d0e1f; color: var(--white); font-size: 0.95rem; }
 
-        /* ========================================= */
-        /* زر الواتساب العائم (تم النقل لليمين) */
-        /* ========================================= */
         .whatsapp-float {
-            position: fixed;
-            width: 65px;
-            height: 65px;
-            bottom: 25px;
-            right: 25px; /* تم التعديل إلى اليمين */
-            background-color: #25d366;
-            color: #FFF;
-            border-radius: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0px 4px 15px rgba(37, 211, 102, 0.4);
-            z-index: 9999;
-            transition: all 0.3s ease;
-            animation: pulse-wa 2s infinite;
+            position: fixed; width: 65px; height: 65px; bottom: 25px; right: 25px;
+            background-color: #25d366; color: #FFF; border-radius: 50px;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0px 4px 15px rgba(37, 211, 102, 0.4); z-index: 9999;
+            transition: all 0.3s ease; animation: pulse-wa 2s infinite;
         }
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            background-color: #1ebe57;
-            animation: none;
-        }
+        .whatsapp-float:hover { transform: scale(1.1); background-color: #1ebe57; animation: none; }
         .whatsapp-float svg { width: 38px; height: 38px; fill: #FFF; }
-        @keyframes pulse-wa {
-            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-        }
+        @keyframes pulse-wa { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
 
-        /* التوافق مع الموبايل */
         @media (max-width: 768px) {
-            header { 
-                flex-direction: column; 
-                padding: 15px 5% 10px; /* تقليل المسافات لتصغير الفراغ */
-                align-items: center; 
-            }
-            .logo img { max-height: 75px; } /* تصغير بسيط لتقليل الفراغ */
-            nav { 
-                margin-top: 5px; /* تقليل المسافة بين اللوجو والقائمة */
-                width: 100%; justify-content: flex-start; gap: 12px; background: transparent; padding: 5px 0; flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; 
-            }
+            header { flex-direction: column; padding: 15px 5% 10px; align-items: center; }
+            .logo img { max-height: 75px; }
+            nav { margin-top: 5px; width: 100%; justify-content: flex-start; gap: 12px; background: transparent; padding: 5px 0; flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
             nav::-webkit-scrollbar { display: none; }
             nav a { font-size: 0.95rem; white-space: nowrap; background: var(--white); padding: 8px 20px; border-radius: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border: 1px solid #f0f0f0; color: var(--dark-blue); }
             nav a:active { background: var(--purple); color: var(--white); }
@@ -180,12 +153,10 @@
             .hero-image { order: 2; margin-top: 40px; }
             .hero h1 { font-size: 2.1rem; }
             .about { padding: 50px 5%; flex-direction: column-reverse; text-align: center; }
-            .about-list { text-align: center; } /* توسيط القائمة في الموبايل */
+            .about-list { text-align: center; }
             .partner-logo { width: 85px; height: 85px; }
             .faq-question { font-size: 1rem; padding: 18px; }
             .btn { width: 100%; padding: 16px; font-size: 1.05rem; }
-            
-            /* الواتساب يمين للموبايل */
             .whatsapp-float { width: 55px; height: 55px; bottom: 20px; right: 20px; }
             .whatsapp-float svg { width: 32px; height: 32px; }
         }
@@ -195,7 +166,9 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TGG7PCLH"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <header>
-        <div class="logo"><img src="logo.png" alt="روّج.برو"></div>
+        <div class="logo">
+            <img src="logo.png" alt="روّج.برو" width="150" height="55">
+        </div>
         <nav>
             <a href="#hero">الرئيسية</a>
             <a href="#services">وش نقدم؟</a>
@@ -213,63 +186,55 @@
                 <p>إحنا وكالة تسويق رقمي متخصصة لمتاجر "سلة" و"زد". نعتمد على لغة الأرقام لبناء حملات تزيد من مبيعات متجرك بشكل مستدام وحقيقي بعيداً عن الوعود الوهمية.</p>
                 <a href="#contact" class="btn">احصل على فحص مجاني لمتجرك</a>
             </div>
-            <div class="hero-image"><img src="img4.webp" alt="مبيعات سلة وزد"></div>
+            <div class="hero-image">
+                <img src="img4.webp" alt="مبيعات سلة وزد" fetchpriority="high" width="500" height="375">
+            </div>
         </section>
 
         <section id="services" class="services">
             <h2 class="section-title">كيف نصنع الفارق في مبيعات متجرك؟</h2>
             <div class="services-grid">
                 <article class="service-card">
-                    <img src="img3.webp" alt="إدارة الحملات">
+                    <img src="img3.webp" alt="إدارة الحملات" loading="lazy" width="400" height="200">
                     <h3>إدارة الحملات الموجهة</h3>
                     <p>نصمم استراتيجيات على سناب شات، تيك توك، وجوجل تركز على تحسين تكلفة الاستحواذ (CAC) ورفع العائد على الإنفاق الإعلاني (ROAS).</p>
                 </article>
                 <article class="service-card">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="تحسين التحويل">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="تحسين التحويل" loading="lazy" width="400" height="200">
                     <h3>تحسين معدل التحويل (CRO)</h3>
                     <p>نحلل أداء متجرك ونعطيك توصيات دقيقة لتحسين تجربة المستخدم عشان نسهل على العميل يكمل عملية الشراء بدون تعقيد.</p>
                 </article>
                 <article class="service-card">
-                    <img src="img1.webp" alt="ذكاء اصطناعي">
+                    <img src="img1.webp" alt="ذكاء اصطناعي" loading="lazy" width="400" height="200">
                     <h3>التسويق بالذكاء الاصطناعي (قريباً)</h3>
                     <p>ندمج أدوات الذكاء الاصطناعي في تحليل بيانات حملاتك وصناعة المحتوى، عشان نضمن لك استهداف أدق ونتائج تتفوق على المنافسين.</p>
                 </article>
             </div>
         </section>
- <section id="about" class="about">
 
-            <div class="about-image"><img src="img2.webp" alt="فريق روج برو"></div>
-
-            <div class="about-text">
-
-                <h2>ليش تختار "روّج.برو"؟</h2>
-
-                <ul class="about-list">
-
-                    <li> <strong>استهداف يجيب مبيعات:</strong> ما نضيع ميزانيتك على زيارات وهمية، نركز على العميل اللي جاهز يشتري.</li>
-
-                    <li> <strong>شفافية بالأرقام:</strong> تقارير واضحة توريك كل ريال وين انصرف وكم جاب لك عائد (ROAS).</li>
-
-                    <li> <strong>نفهم السوق السعودي:</strong> عارفين سلوك المشتري المحلي، ونصمم رحلة تخليه يكمل الطلب وهو واثق.</li>
-
-                </ul>
-
-                <a href="#contact" class="btn">احجز فحص متجرك مجاناً</a>
-
+        <section id="about" class="about">
+            <div class="about-image">
+                <img src="img2.webp" alt="فريق روج برو" loading="lazy" width="500" height="375">
             </div>
-
+            <div class="about-text">
+                <h2>ليش تختار "روّج.برو"؟</h2>
+                <ul class="about-list">
+                    <li>🎯 <strong>استهداف يجيب مبيعات:</strong> ما نضيع ميزانيتك على زيارات وهمية، نركز على العميل اللي جاهز يشتري.</li>
+                    <li>📊 <strong>شفافية بالأرقام:</strong> تقارير واضحة توريك كل ريال وين انصرف وكم جاب لك عائد (ROAS).</li>
+                    <li>🇸🇦 <strong>نفهم السوق السعودي:</strong> عارفين سلوك المشتري المحلي، ونصمم رحلة تخليه يكمل الطلب وهو واثق.</li>
+                </ul>
+                <a href="#contact" class="btn">احجز فحص متجرك مجاناً</a>
+            </div>
         </section>
-
-
 
         <section id="partners" class="partners-section">
             <h2 class="section-title">شركاء النجاح والمنصات المعتمدة</h2>
             <div class="partners-container">
-                <div class="partner-logo active-partner"><img src="par5.webp" alt="سلة"></div>
-                <div class="partner-logo"><img src="par4.webp" alt="زد"></div>
-                <div class="partner-logo"><img src="par3.webp" alt="تيك توك"></div>
-                <div class="partner-logo"><img src="par2.webp" alt="سناب شات"></div>
-                <div class="partner-logo"><img src="par1.webp" alt="كارتات"></div>
+                <div class="partner-logo active-partner"><img src="par5.webp" alt="سلة" loading="lazy" width="80" height="80"></div>
+                <div class="partner-logo"><img src="par4.webp" alt="زد" loading="lazy" width="80" height="80"></div>
+                <div class="partner-logo"><img src="par3.webp" alt="تيك توك" loading="lazy" width="80" height="80"></div>
+                <div class="partner-logo"><img src="par2.webp" alt="سناب شات" loading="lazy" width="80" height="80"></div>
+                <div class="partner-logo"><img src="par1.webp" alt="كارتات" loading="lazy" width="80" height="80"></div>
             </div>
         </section>
 
