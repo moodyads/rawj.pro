@@ -3,97 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>روّج.برو | لأن العادي ما يجيب مبيعات</title>
+    
+    <title>روّج.برو | نضاعف مبيعات متجرك في (سلة وزد)</title>
+    <meta name="description" content="وكالة متخصصة في الـ Performance Marketing. ما نبيع لك وهم، نحول ميزانيتك الإعلانية لطلبات فعلية وأرباح حقيقية. احصل على فحص مجاني لمتجرك الحين!">
+    <meta property="og:title" content="روّج.برو | لأن العادي ما يجيب مبيعات" />
+    <meta property="og:description" content="نضاعف مبيعات متاجرك في سلة وزد باستخدام الـ Performance Marketing والذكاء الاصطناعي." />
+    <meta property="og:image" content="https://rawj.pro/whatsapp-share.png" />
+    <meta property="og:url" content="https://rawj.pro" />
+    <meta name="twitter:card" content="summary_large_image">
+
     <link rel="icon" type="image/png" href="small.png">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
     
+    <script>
+        // مثال: !function(f,b,e,v,n,t,s)... (كود البكسل حقك)
+    </script>
+
     <style>
         :root {
             --dark-blue: #15162d;
             --purple: #8e2b6b;
             --light-purple: #d150a2;
             --light-bg: #f4f4f9;
+            --white: #ffffff;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; overflow-x: hidden; }
         body { font-family: 'Tajawal', sans-serif; background-color: var(--light-bg); color: var(--dark-blue); line-height: 1.6; text-align: right; overflow-x: hidden; }
 
         /* Navigation */
-        header { background-color: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        header { background-color: var(--white); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
         .logo img { max-height: 50px; width: auto; }
-        nav { display: flex; gap: 15px; }
-        nav a { text-decoration: none; color: var(--dark-blue); font-weight: 700; font-size: 0.95rem; transition: 0.3s; }
+        nav { display: flex; gap: 20px; }
+        nav a { text-decoration: none; color: var(--dark-blue); font-weight: 700; font-size: 1rem; transition: 0.3s; }
+        nav a:hover { color: var(--purple); }
 
         /* Hero Section */
-        .hero { display: flex; align-items: center; justify-content: space-between; padding: 60px 5%; background: linear-gradient(135deg, var(--dark-blue) 0%, #2a1b4d 100%); color: white; min-height: auto; flex-wrap: wrap; }
+        .hero { display: flex; align-items: center; justify-content: space-between; padding: 80px 5%; background: linear-gradient(135deg, var(--dark-blue) 0%, #2a1b4d 100%); color: var(--white); min-height: 70vh; }
         .hero-content { width: 55%; }
-        .hero h1 { font-size: 2.8rem; margin-bottom: 20px; line-height: 1.2; font-weight: 900; }
+        .hero h1 { font-size: 3rem; margin-bottom: 20px; line-height: 1.2; font-weight: 900; }
         .hero h1 span { color: var(--light-purple); }
-        .hero p { font-size: 1.1rem; margin-bottom: 30px; color: #e0e0e0; max-width: 90%; }
+        .hero p { font-size: 1.2rem; margin-bottom: 30px; color: #e0e0e0; max-width: 90%; }
         .hero-image { width: 40%; }
-        .hero-image img { width: 100%; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); }
+        .hero-image img { width: 100%; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.4); }
 
         /* Global Button */
-        .btn { background-color: var(--purple); color: white; padding: 14px 28px; text-decoration: none; border-radius: 8px; font-size: 1.1rem; font-weight: bold; display: inline-block; transition: 0.3s; border: none; cursor: pointer; text-align: center; width: auto; }
-        .btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(142, 43, 107, 0.4); }
+        .btn { background-color: var(--purple); color: var(--white); padding: 16px 32px; text-decoration: none; border-radius: 8px; font-size: 1.1rem; font-weight: bold; display: inline-block; transition: 0.3s; border: none; cursor: pointer; text-align: center; }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(142, 43, 107, 0.3); }
 
         /* Services */
-        .services { padding: 60px 5%; text-align: center; }
-        .section-title { font-size: 2rem; margin-bottom: 40px; color: var(--dark-blue); font-weight: 800; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .service-card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.04); text-align: right; border-bottom: 4px solid transparent; transition: 0.3s; }
-        .service-card:hover { border-bottom-color: var(--purple); }
-        .service-card img { width: 100%; height: 180px; object-fit: cover; border-radius: 10px; margin-bottom: 15px; }
-        .service-card h3 { color: var(--purple); font-size: 1.3rem; margin-bottom: 12px; font-weight: 700; }
+        .services { padding: 80px 5%; text-align: center; }
+        .section-title { font-size: 2.5rem; margin-bottom: 50px; color: var(--dark-blue); font-weight: 800; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .service-card { background: var(--white); padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); text-align: right; }
+        .service-card img { width: 100%; height: 220px; object-fit: cover; border-radius: 10px; margin-bottom: 20px; }
+        .service-card h3 { color: var(--purple); font-size: 1.5rem; margin-bottom: 15px; font-weight: 700; }
 
-        /* About */
-        .about { display: flex; align-items: center; padding: 60px 5%; background-color: white; gap: 40px; flex-wrap: wrap; }
+        /* About Section */
+        .about { display: flex; align-items: center; padding: 80px 5%; background-color: var(--white); gap: 50px; }
         .about-image { width: 45%; }
-        .about-image img { width: 100%; border-radius: 15px; }
+        .about-image img { width: 100%; border-radius: 20px; }
         .about-text { width: 50%; }
-        .about-text h2 { font-size: 2rem; color: var(--purple); margin-bottom: 15px; font-weight: 800; }
-        .about-text p { font-size: 1.1rem; color: #444; margin-bottom: 20px; }
+        .about-text h2 { font-size: 2.5rem; color: var(--purple); margin-bottom: 20px; font-weight: 800; }
+        .about-text p { font-size: 1.2rem; color: #444; margin-bottom: 20px; }
 
         /* Contact Section */
-        .contact { padding: 60px 5%; background-color: var(--dark-blue); color: white; text-align: center; }
+        .contact { padding: 80px 5%; background-color: var(--dark-blue); color: var(--white); text-align: center; }
         .contact-container { max-width: 600px; margin: 0 auto; }
-        .contact h2 { font-size: 2rem; margin-bottom: 10px; font-weight: 800; }
-        .contact p.highlight { color: var(--light-purple); font-size: 1.2rem; font-weight: bold; margin-bottom: 25px; }
-        .contact form { display: flex; flex-direction: column; gap: 12px; }
-        .contact input, .contact textarea { width: 100%; padding: 14px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); font-family: 'Tajawal', sans-serif; font-size: 1rem; background: #fff; }
+        .contact h2 { font-size: 2.5rem; margin-bottom: 15px; font-weight: 800; }
+        .highlight { color: var(--light-purple); font-size: 1.4rem; font-weight: bold; margin-bottom: 30px; display: block; }
+        
+        .form-group { margin-bottom: 15px; text-align: right; }
+        .contact input, .contact textarea { width: 100%; padding: 15px; border-radius: 8px; border: none; font-family: 'Tajawal', sans-serif; font-size: 1.1rem; background: var(--white); }
+        .error-message { color: #ff4d4d; font-size: 0.9rem; display: none; margin-top: 5px; font-weight: bold; }
+        
+        /* Success Message Styling */
+        #success-message { display: none; background: #2ecc71; color: white; padding: 20px; border-radius: 10px; margin-top: 20px; font-weight: bold; font-size: 1.2rem; }
 
-        footer { text-align: center; padding: 25px; background-color: #0d0e1f; color: white; font-size: 0.9rem; }
+        footer { text-align: center; padding: 30px; background-color: #0d0e1f; color: var(--white); font-size: 1rem; }
 
-        /* Mobile Adjustments (Very Important) */
+        /* Responsive Mobile */
         @media (max-width: 768px) {
-            header { flex-direction: column; padding: 15px 2%; }
-            nav { margin-top: 15px; gap: 12px; width: 100%; justify-content: center; background: #f9f9f9; padding: 10px; border-radius: 8px; }
-            nav a { font-size: 0.85rem; }
-
+            header { flex-direction: column; padding: 15px; }
+            nav { margin-top: 15px; gap: 12px; font-size: 0.9rem; }
             .hero { padding: 40px 5%; flex-direction: column; text-align: center; }
-            .hero-content { width: 100%; order: 1; }
-            .hero-image { width: 100%; order: 2; margin-top: 30px; }
-            .hero h1 { font-size: 2.1rem; line-height: 1.3; }
-            .hero p { font-size: 1rem; max-width: 100%; }
-            .btn { width: 100%; padding: 16px; font-size: 1rem; }
-
-            .section-title { font-size: 1.7rem; }
-            
-            .about { padding: 40px 5%; flex-direction: column-reverse; text-align: center; }
+            .hero-content, .hero-image { width: 100%; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero-image { margin-top: 30px; }
+            .about { flex-direction: column-reverse; text-align: center; padding: 40px 5%; }
             .about-image, .about-text { width: 100%; }
-            .about-text h2 { font-size: 1.7rem; }
-
-            .contact h2 { font-size: 1.6rem; }
-            .contact p.highlight { font-size: 1.1rem; }
+            .section-title, .about-text h2, .contact h2 { font-size: 1.8rem; }
+            .btn { width: 100%; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">
-            <img src="logo.png" alt="وكالة روّج.برو">
-        </div>
+        <div class="logo"><img src="logo.png" alt="روّج.برو"></div>
         <nav>
             <a href="#hero">الرئيسية</a>
             <a href="#services">وش نقدم؟</a>
@@ -105,38 +112,34 @@
     <section id="hero" class="hero">
         <div class="hero-content">
             <h1>لأن العادي ما يجيب مبيعات .. <span>روّج.برو</span></h1>
-            <p>حنا ما نبيع لك لايكات أو مشاهدات وهمية! كوكالة متخصصة لمتاجر "سلة" و"زد"، تركيزنا الأول والأخير هو كيف نحول ميزانيتك لطلبات فعلية وأرباح تضاعف دخلك.</p>
+            <p>حنا ما نبيع لك لايكات! كوكالة متخصصة لمتاجر "سلة" و"زد"، نحول ميزانيتك لطلبات فعلية وأرباح تضاعف دخلك.</p>
             <a href="#contact" class="btn">ضاعف مبيعات متجرك الحين</a>
         </div>
-        <div class="hero-image">
-            <img src="img4.webp" alt="تجارة إلكترونية السعودية">
-        </div>
+        <div class="hero-image"><img src="img4.webp" alt="مبيعات سلة وزد"></div>
     </section>
 
     <section id="services" class="services">
         <h2 class="section-title">كيف نصنع الفرق بمتجرك؟</h2>
         <div class="services-grid">
             <div class="service-card">
-                <img src="img3.webp" alt="إدارة المبيعات">
-                <h3>إدارة الحملات وتحقيق مبيعات</h3>
-                <p>نخطط وندير حملاتك على منصات السوشيال ميديا بهدف واحد: نرفع العائد على استثمارك (ROAS) ونحول الزوار لعملاء.</p>
+                <img src="img3.webp" alt="إدارة حملات">
+                <h3>إدارة الحملات وتحقيق أعلى مبيعات</h3>
+                <p>نخطط وندير حملاتك بهدف واحد: نرفع العائد على استثمارك (ROAS) ونحول الزوار لعملاء فعليين.</p>
             </div>
             <div class="service-card">
                 <img src="img1.webp" alt="ذكاء اصطناعي">
                 <h3>التسويق بالذكاء الاصطناعي (قريباً)</h3>
-                <p>بندمج الذكاء الاصطناعي بكل خطوة.. من صناعة المحتوى للتحليل الدقيق، لنوفر وقتك ونعظم نتايج متجرك.</p>
+                <p>بندمج الذكاء الاصطناعي بكل خطوة، من صناعة المحتوى للتحليل الدقيق، لنعظم نتايج متجرك.</p>
             </div>
         </div>
     </section>
 
     <section id="about" class="about">
-        <div class="about-image">
-            <img src="img2.webp" alt="فريق روج برو">
-        </div>
+        <div class="about-image"><img src="img2.webp" alt="فريق روج برو"></div>
         <div class="about-text">
             <h2>ليش تختار "روّج.برو"؟</h2>
-            <p>لأننا عارفين إن "اللايكات ما تدفع رواتب". حنا نفهم خوارزميات المنصات، ونعرف كيف نربطها بمتاجرك في (سلة وزد) باحترافية عالية.</p>
-            <p>فريقنا يحلل الأرقام يومياً، ويصمم لعميلك رحلة تخليه يشتري وهو واثق. مبيعاتك هي مقياس نجاحنا الوحيد.</p>
+            <p>لأننا عارفين إن "اللايكات ما تدفع رواتب". حنا نفهم خوارزميات المنصات، ونعرف كيف نربطها بمتاجرك باحترافية.</p>
+            <p>فريقنا يحلل الأرقام يومياً، ويصمم لعميلك رحلة تخليه يشتري وهو واثق. مبيعاتك هي مقياس نجاحنا.</p>
             <a href="#contact" class="btn">احجز تقييم متجرك مجاناً</a>
         </div>
     </section>
@@ -144,43 +147,85 @@
     <section id="contact" class="contact">
         <div class="contact-container">
             <h2>جاهز ترفع مبيعاتك؟</h2>
-            <p class="highlight">احصل على فحص مجاني لمتجرك الحين!</p>
+            <span class="highlight">احصل على فحص مجاني لمتجرك الحين!</span>
             
-            <form id="contactForm" action="https://formsubmit.co/moodysameh66@gmail.com" method="POST" onsubmit="return validateForm(event)">
+            <form id="contactForm">
                 <input type="hidden" name="_cc" value="yasminfaried18@gmail.com">
-                <input type="hidden" name="_subject" value="طلب فحص مجاني - روّج.برو">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="https://rawj.pro">
-
-                <input type="text" name="الاسم" placeholder="الاسم الكريم" required>
-                <input type="tel" id="phone" name="رقم_الجوال" placeholder="رقم الجوال (05XXXXXXXX)" required dir="ltr" style="text-align: right;">
-                <div id="phoneError" class="error-message" style="color: #ff4d4d; font-size: 0.8rem; text-align: right; display: none;">الرجاء إدخال رقم جوال صحيح</div>
-                <textarea name="تفاصيل_المتجر" rows="4" placeholder="رابط متجرك (سلة/زد) أو وش اللي ودك نحققه؟" required></textarea>
+                <input type="hidden" name="_subject" value="طلب فحص مجاني جديد!">
                 
-                <button type="submit" class="btn" style="width: 100%;">احصل على الاستشارة المجانية</button>
+                <div class="form-group">
+                    <input type="text" name="الاسم" placeholder="الاسم الكريم" required>
+                </div>
+                
+                <div class="form-group">
+                    <input type="tel" id="phone" name="رقم_الجوال" placeholder="رقم الجوال (05XXXXXXXX)" required dir="ltr" style="text-align: right;">
+                    <div id="phoneError" class="error-message">الرجاء إدخال رقم جوال سعودي أو خليجي صحيح</div>
+                </div>
+
+                <div class="form-group">
+                    <textarea name="تفاصيل_المتجر" rows="4" placeholder="رابط متجرك أو وش تبي نحقق لك؟" required></textarea>
+                </div>
+                
+                <button type="submit" id="submitBtn" class="btn" style="width: 100%;">احصل على الاستشارة المجانية الحين</button>
             </form>
+
+            <div id="success-message">
+                ✅ تم استلام طلبك بنجاح! <br> فريقنا بيتواصل معك خلال 12 ساعة القادمة.
+            </div>
         </div>
     </section>
 
-    <footer>
-        <p>جميع الحقوق محفوظة © 2026 - وكالة روّج.برو</p>
-    </footer>
+    <footer><p>جميع الحقوق محفوظة © 2026 - وكالة روّج.برو للتسويق الرقمي</p></footer>
 
     <script>
-        function validateForm(event) {
-            const phoneInput = document.getElementById('phone').value;
-            const errorMsg = document.getElementById('phoneError');
+        const contactForm = document.getElementById('contactForm');
+        const successMsg = document.getElementById('success-message');
+        const submitBtn = document.getElementById('submitBtn');
+
+        function validatePhone(phone) {
             const gccRegex = /^(?:\+966|\+971|\+965|\+974|\+968|\+973|00966|00971|00965|00974|00968|00973|05|0)[0-9]{7,12}$/;
-            
-            if (!gccRegex.test(phoneInput.replace(/\s/g, ''))) {
-                errorMsg.style.display = 'block';
-                event.preventDefault();
-                return false;
-            } else {
-                errorMsg.style.display = 'none';
-                return true;
-            }
+            return gccRegex.test(phone.replace(/\s/g, ''));
         }
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const phoneVal = document.getElementById('phone').value;
+            const errorMsg = document.getElementById('phoneError');
+
+            if (!validatePhone(phoneVal)) {
+                errorMsg.style.display = 'block';
+                return;
+            }
+            errorMsg.style.display = 'none';
+
+            // 1. إرسال إيفنت البكسل (Pixel Event)
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Lead'); 
+                console.log('Pixel Lead Sent!');
+            }
+
+            // 2. تغيير نص الزر أثناء الإرسال
+            submitBtn.innerText = "جاري الإرسال...";
+            submitBtn.disabled = true;
+
+            // 3. إرسال البيانات باستخدام AJAX (Fetch)
+            const formData = new FormData(contactForm);
+            fetch('https://formsubmit.co/ajax/moodysameh66@gmail.com', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                contactForm.style.display = 'none';
+                successMsg.style.display = 'block';
+            })
+            .catch(error => {
+                alert('عذراً، حدث خطأ. حاول مرة أخرى أو تواصل معنا مباشرة.');
+                submitBtn.innerText = "احصل على الاستشارة المجانية الحين";
+                submitBtn.disabled = false;
+            });
+        });
     </script>
 </body>
 </html>
