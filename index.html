@@ -51,12 +51,14 @@
         html { scroll-behavior: smooth; overflow-x: hidden; }
         body { font-family: 'Tajawal', sans-serif; background-color: var(--light-bg); color: var(--dark-blue); line-height: 1.8; text-align: right; overflow-x: hidden; }
 
+        /* الهيدر */
         header { background-color: var(--white); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
         .logo img { max-height: 45px; width: auto; }
         nav { display: flex; gap: 15px; }
         nav a { text-decoration: none; color: var(--dark-blue); font-weight: 700; font-size: 0.95rem; transition: 0.3s; }
         nav a:hover { color: var(--purple); }
 
+        /* الواجهة */
         .hero { display: flex; align-items: center; justify-content: space-between; padding: 80px 5%; background: linear-gradient(135deg, var(--dark-blue) 0%, #2a1b4d 100%); color: var(--white); flex-wrap: wrap; }
         .hero-content { width: 50%; }
         .hero h1 { font-size: 3rem; margin-bottom: 20px; font-weight: 900; line-height: 1.3; }
@@ -68,6 +70,7 @@
         .btn { background-color: var(--purple); color: var(--white); padding: 16px 30px; text-decoration: none; border-radius: 8px; font-size: 1.1rem; font-weight: bold; display: inline-block; border: none; cursor: pointer; text-align: center; transition: 0.3s; }
         .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(142, 43, 107, 0.3); }
 
+        /* الخدمات */
         .services { padding: 80px 5%; text-align: center; }
         .section-title { font-size: 2.2rem; margin-bottom: 15px; font-weight: 800; color: var(--dark-blue); }
         .section-subtitle { font-size: 1.1rem; color: #555; margin-bottom: 50px; max-width: 700px; margin-left: auto; margin-right: auto; }
@@ -78,13 +81,43 @@
         .service-card h3 { color: var(--purple); font-size: 1.4rem; margin-bottom: 15px; font-weight: 700; }
         .service-card p { font-size: 1rem; color: #555; }
 
-        .about { display: flex; align-items: center; justify-content: space-between; padding: 80px 5%; background-color: var(--white); gap: 40px; flex-wrap: wrap; }
+        /* قسم شركاء النجاح (الجديد) */
+        .partners-section { padding: 80px 5%; background-color: var(--white); text-align: center; }
+        .partners-container { display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 50px; }
+        .partner-logo { 
+            width: 130px; 
+            height: 130px; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            border-radius: 20px; 
+            background: var(--light-bg); 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03); 
+            transition: all 0.5s ease-in-out; 
+            opacity: 0.6; 
+            filter: grayscale(80%); 
+        }
+        .partner-logo img { max-width: 70%; max-height: 70%; object-fit: contain; }
+        /* التأثير الخاص باللوجو النشط */
+        .partner-logo.active-partner {
+            transform: scale(1.25);
+            opacity: 1;
+            filter: grayscale(0%);
+            background: var(--white);
+            box-shadow: 0 15px 30px rgba(142, 43, 107, 0.15);
+            z-index: 2;
+            border: 2px solid rgba(142, 43, 107, 0.1);
+        }
+
+        /* من نحن */
+        .about { display: flex; align-items: center; justify-content: space-between; padding: 80px 5%; background-color: var(--light-bg); gap: 40px; flex-wrap: wrap; }
         .about-image { width: 45%; }
         .about-image img { width: 100%; border-radius: 15px; }
         .about-text { width: 50%; }
         .about-text h2 { font-size: 2.2rem; color: var(--purple); margin-bottom: 20px; font-weight: 800; }
         .about-text p { font-size: 1.15rem; color: #444; margin-bottom: 20px; }
 
+        /* التواصل */
         .contact { padding: 80px 5%; background-color: var(--dark-blue); color: var(--white); text-align: center; }
         .contact-container { max-width: 650px; margin: 0 auto; }
         .highlight { color: var(--light-purple); font-size: 1.4rem; font-weight: bold; margin-bottom: 10px; display: block; }
@@ -98,7 +131,7 @@
 
         @media (max-width: 768px) {
             header { flex-direction: column; padding: 15px 2%; }
-            nav { margin-top: 15px; width: 100%; justify-content: center; gap: 12px; background: #f9f9f9; padding: 10px; border-radius: 8px; }
+            nav { margin-top: 15px; width: 100%; justify-content: center; gap: 12px; background: #f9f9f9; padding: 10px; border-radius: 8px; flex-wrap: wrap; }
             nav a { font-size: 0.9rem; }
             
             .hero { padding: 50px 5%; flex-direction: column; text-align: center; }
@@ -109,6 +142,10 @@
             
             .section-title { font-size: 1.8rem; }
             .section-subtitle { font-size: 1rem; }
+            
+            /* تظبيط الموبايل لشركاء النجاح */
+            .partner-logo { width: 90px; height: 90px; }
+            .partner-logo.active-partner { transform: scale(1.15); }
             
             .about { padding: 50px 5%; flex-direction: column-reverse; text-align: center; }
             .about-image, .about-text { width: 100%; }
@@ -129,6 +166,7 @@
         <nav>
             <a href="#hero">الرئيسية</a>
             <a href="#services">وش نقدم؟</a>
+            <a href="#partners">شركاؤنا</a>
             <a href="#about">ليش حنا؟</a>
             <a href="#contact">تواصل معنا</a>
         </nav>
@@ -169,6 +207,19 @@
             </div>
         </section>
 
+        <section id="partners" class="partners-section">
+            <h2 class="section-title">شركاء النجاح والمنصات المعتمدة</h2>
+            <p class="section-subtitle" style="margin-bottom: 20px;">نفخر بشراكتنا واعتمادنا من كبرى منصات التجارة الإلكترونية وشبكات التواصل الاجتماعي لضمان أفضل النتائج لحملاتك الإعلانية.</p>
+            
+            <div class="partners-container">
+                <div class="partner-logo active-partner"><img src="par5.webp" alt="منصة سلة"></div>
+                <div class="partner-logo"><img src="par4.webp" alt="منصة زد"></div>
+                <div class="partner-logo"><img src="par3.webp" alt="تيك توك"></div>
+                <div class="partner-logo"><img src="par2.webp" alt="سناب شات"></div>
+                <div class="partner-logo"><img src="par1.webp" alt="كارتات"></div>
+            </div>
+        </section>
+
         <section id="about" class="about">
             <div class="about-image"><img src="img2.webp" alt="فريق عمل وكالة روّج.برو للتسويق"></div>
             <div class="about-text">
@@ -199,4 +250,90 @@
                     </div>
 
                     <div class="form-group">
-                        <textarea name="تفاصيل_المتجر" rows="4" placeholder="رابط متجرك (سلة/زد) أو نبذة
+                        <textarea name="تفاصيل_المتجر" rows="4" placeholder="رابط متجرك (سلة/زد) أو نبذة عن أهدافك التسويقية..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" id="submitBtn" class="btn">أرسل طلب الاستشارة الحين</button>
+                </form>
+
+                <div id="success-message">
+                    ✅ تم استلام طلبك بنجاح! <br> فريقنا الاستشاري سيقوم بالتواصل معك خلال الـ 12 ساعة القادمة.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer><p>جميع الحقوق محفوظة © 2026 - وكالة روّج.برو للتسويق الرقمي</p></footer>
+
+    <script>
+        // 1. كود تحريك لوجوهات الشركاء
+        const partners = document.querySelectorAll('.partner-logo');
+        let currentPartner = 0;
+        
+        setInterval(() => {
+            // إزالة الكلاس من كل اللوجوهات
+            partners.forEach(p => p.classList.remove('active-partner'));
+            
+            // نقل التركيز للوجو اللي عليه الدور
+            currentPartner = (currentPartner + 1) % partners.length;
+            partners[currentPartner].classList.add('active-partner');
+        }, 2000); // بيتغير كل ثانيتين
+
+        // 2. كود نموذج التواصل وتأكيد الأرقام
+        const contactForm = document.getElementById('contactForm');
+        const successMsg = document.getElementById('success-message');
+        const submitBtn = document.getElementById('submitBtn');
+
+        function convertArabicNumbers(str) {
+            const arabicNums = ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'];
+            return str.replace(/[٠-٩]/g, function(d) {
+                return arabicNums.indexOf(d);
+            });
+        }
+
+        function validatePhone(phone) {
+            const cleanPhone = convertArabicNumbers(phone).replace(/\s/g, '');
+            const gccRegex = /^(?:\+966|\+971|\+965|\+974|\+968|\+973|00966|00971|00965|00974|00968|00973|05|0)[0-9]{7,12}$/;
+            return gccRegex.test(cleanPhone);
+        }
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const phoneInput = document.getElementById('phone');
+            const phoneVal = phoneInput.value;
+            const errorMsg = document.getElementById('phoneError');
+
+            if (!validatePhone(phoneVal)) {
+                errorMsg.style.display = 'block';
+                return;
+            }
+            errorMsg.style.display = 'none';
+
+            phoneInput.value = convertArabicNumbers(phoneVal).replace(/\s/g, '');
+
+            if (typeof fbq !== 'undefined') fbq('track', 'Lead'); 
+
+            submitBtn.innerText = "جاري إرسال الطلب...";
+            submitBtn.disabled = true;
+
+            const formData = new FormData(contactForm);
+            fetch('https://formsubmit.co/ajax/moodysameh66@gmail.com', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                contactForm.style.display = 'none';
+                successMsg.style.display = 'block';
+                window.scrollTo({ top: document.getElementById('contact').offsetTop, behavior: 'smooth' });
+            })
+            .catch(error => {
+                alert('حدث خطأ، يرجى المحاولة مرة أخرى.');
+                submitBtn.innerText = "أرسل طلب الاستشارة الحين";
+                submitBtn.disabled = false;
+            });
+        });
+    </script>
+</body>
+</html>
