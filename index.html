@@ -6,35 +6,50 @@
     <title>وكالة روّج | للتسويق الرقمي</title>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        /* الإعدادات الأساسية والألوان بناءً على اللوجو */
+        /* الإعدادات الأساسية */
         :root {
-            --dark-blue: #15162d; /* لون كحلي من اللوجو */
-            --purple: #8e2b6b; /* لون موف من اللوجو */
-            --light-bg: #f8f9fa;
+            --dark-blue: #15162d;
+            --purple: #8e2b6b;
+            --light-purple: #d150a2;
+            --light-bg: #f4f4f9;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth; /* حركة تنقل ناعمة لما تدوس على الزراير */
         }
         body {
             font-family: 'Tajawal', sans-serif;
-            margin: 0;
-            padding: 0;
             background-color: var(--light-bg);
             color: var(--dark-blue);
+            line-height: 1.6;
         }
-        /* تصميم الـ Header (الرأس) */
+
+        /* تصميم القائمة العلوية */
         header {
             background-color: white;
-            padding: 15px 50px;
+            padding: 15px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         .logo img {
-            max-height: 80px; /* حجم اللوجو */
+            max-height: 60px;
+        }
+        nav {
+            display: flex;
+            gap: 25px;
         }
         nav a {
             text-decoration: none;
             color: var(--dark-blue);
-            margin: 0 15px;
             font-weight: 700;
             font-size: 1.1rem;
             transition: 0.3s;
@@ -42,14 +57,36 @@
         nav a:hover {
             color: var(--purple);
         }
-        /* القسم الرئيسي (الواجهة) */
+
+        /* الزراير */
+        .btn {
+            background-color: var(--purple);
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            display: inline-block;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #6a1f4f;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(142, 43, 107, 0.3);
+        }
+
+        /* الواجهة الرئيسية */
         .hero {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 80px 50px;
+            padding: 80px 5%;
             background: linear-gradient(135deg, var(--dark-blue) 0%, #2a1b4d 100%);
             color: white;
+            min-height: 80vh;
         }
         .hero-content {
             width: 50%;
@@ -60,46 +97,151 @@
             line-height: 1.2;
         }
         .hero h1 span {
-            color: #d150a2; /* موف فاتح لإبراز الكلمة */
+            color: var(--light-purple);
         }
         .hero p {
             font-size: 1.3rem;
-            line-height: 1.8;
             margin-bottom: 30px;
             color: #e0e0e0;
         }
-        .cta-button {
-            background-color: var(--purple);
-            color: white;
-            padding: 15px 35px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            display: inline-block;
-            transition: 0.3s;
-        }
-        .cta-button:hover {
-            background-color: #6a1f4f;
-            transform: translateY(-2px);
-        }
-        /* مكان صورة العميل السعودي */
         .hero-image {
             width: 45%;
-            text-align: left;
         }
         .hero-image img {
-            max-width: 100%;
+            width: 100%;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
         }
-        /* تجاوب الموقع مع الموبايل */
+
+        /* قسم الخدمات */
+        .services {
+            padding: 80px 5%;
+            text-align: center;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: var(--dark-blue);
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .service-card h3 {
+            color: var(--purple);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        /* قسم لماذا نحن */
+        .about {
+            display: flex;
+            align-items: center;
+            padding: 80px 5%;
+            background-color: white;
+            gap: 50px;
+        }
+        .about-image {
+            width: 50%;
+        }
+        .about-image img {
+            width: 100%;
+            border-radius: 20px;
+        }
+        .about-text {
+            width: 50%;
+        }
+        .about-text h2 {
+            font-size: 2.5rem;
+            color: var(--purple);
+            margin-bottom: 20px;
+        }
+        .about-text p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* قسم التواصل */
+        .contact {
+            padding: 80px 5%;
+            background-color: var(--dark-blue);
+            color: white;
+            text-align: center;
+        }
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 15px;
+            border-radius: 8px;
+            border: none;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 1.1rem;
+        }
+
+        /* الفوتر */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0d0e1f;
+            color: white;
+        }
+
+        /* التجاوب مع الموبايل (Responsive) */
         @media (max-width: 768px) {
-            .hero { flex-direction: column; text-align: center; padding: 40px 20px; }
-            .hero-content { width: 100%; margin-bottom: 40px; }
-            .hero-image { width: 100%; }
-            header { flex-direction: column; padding: 15px; }
-            nav { margin-top: 15px; }
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 50px 5%;
+            }
+            .hero-content, .hero-image {
+                width: 100%;
+            }
+            .hero-image {
+                margin-top: 40px;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .about {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+            .about-image, .about-text {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -107,26 +249,70 @@
 
     <header>
         <div class="logo">
-            <img src="logo.png" alt="وكالة روج للتسويق الرقمي">
+            <img src="logo.png" alt="وكالة روج للتسويق">
         </div>
         <nav>
-            <a href="#">الرئيسية</a>
-            <a href="#">خدماتنا</a>
-            <a href="#">لماذا نحن؟</a>
-            <a href="#">تواصل معنا</a>
+            <a href="#hero">الرئيسية</a>
+            <a href="#services">خدماتنا</a>
+            <a href="#about">لماذا نحن؟</a>
+            <a href="#contact">تواصل معنا</a>
         </nav>
     </header>
 
-    <section class="hero">
+    <section id="hero" class="hero">
         <div class="hero-content">
             <h1>نحلق بمبيعاتك نحو <span>القمة</span></h1>
             <p>وكالة روّج هي شريكك الاستراتيجي في المملكة العربية السعودية. نقدم حلول تسويقية رقمية مبتكرة لزيادة أرباحك، وبناء هوية بصرية قوية، والوصول لعملائك المستهدفين بدقة.</p>
-            <a href="#" class="cta-button">اطلب استشارة مجانية</a>
+            <a href="#contact" class="btn">اطلب استشارتك الآن</a>
         </div>
         <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="رجل أعمال سعودي">
+            <img src="img4.webp" alt="تسويق رقمي في السعودية">
         </div>
     </section>
+
+    <section id="services" class="services">
+        <h2 class="section-title">خدماتنا المتميزة</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="img3.webp" alt="إدارة منصات التواصل">
+                <h3>إدارة الحملات الإعلانية</h3>
+                <p>نخطط وندير حملاتك على جميع المنصات (سناب شات، تيك توك، جوجل، ميتا) لضمان أعلى عائد على الاستثمار.</p>
+            </div>
+            <div class="service-card">
+                <img src="img1.webp" alt="تحليل البيانات">
+                <h3>تحليل البيانات وتحسين محركات البحث</h3>
+                <p>نقرأ الأرقام لنصنع القرارات. نحلل أداء موقعك ومنافسيك لتتصدر نتائج البحث الأولى في جوجل.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-image">
+            <img src="img2.webp" alt="فريق عمل وكالة روج">
+        </div>
+        <div class="about-text">
+            <h2>لماذا وكالة روّج؟</h2>
+            <p>لأننا نفهم ثقافة السوق السعودي وتوجهاته. فريقنا يجمع بين الإبداع والخبرة التقنية ليقدم لك حملات تسويقية تخاطب عميلك وتلبي احتياجاته.</p>
+            <p>سواء كنت شركة ناشئة أو علامة تجارية كبرى، نحن نضع خطة مخصصة تناسب ميزانيتك وأهدافك بدقة تامة.</p>
+            <a href="#contact" class="btn">ابدأ قصة نجاحك معنا</a>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 class="section-title" style="color: white;">تواصل معنا الآن</h2>
+        <p style="margin-bottom: 30px; font-size: 1.2rem;">دعنا نناقش كيف يمكننا مضاعفة مبيعاتك.</p>
+        <form onsubmit="event.preventDefault(); alert('تم استلام رسالتك! سنتواصل معك قريباً.');">
+            <input type="text" placeholder="الاسم الكريم" required>
+            <input type="email" placeholder="البريد الإلكتروني" required>
+            <input type="tel" placeholder="رقم الجوال (اختياري)">
+            <textarea rows="5" placeholder="تفاصيل مشروعك أو استفسارك..." required></textarea>
+            <button type="submit" class="btn" style="width: 100%;">إرسال الطلب</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2024 - وكالة روّج للتسويق الرقمي</p>
+    </footer>
 
 </body>
 </html>
