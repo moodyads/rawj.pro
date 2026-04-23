@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
-    <title>روّج.برو | نضاعف مبيعات متجرك في (سلة وزد)</title>
-    <meta name="description" content="وكالة متخصصة في الـ Performance Marketing لمتاجر سلة وزد. نحول ميزانيتك لطلبات فعلية وأرباح حقيقية.">
+    <title>روّج.برو | Performance Marketing لمتاجر سلة وزد</title>
+    <meta name="description" content="وكالة تسويق رقمي متخصصة في إدارة الحملات الإعلانية لمتاجر سلة وزد. نعتمد على البيانات لتحقيق مبيعات فعلية وعائد مستدام على استثمارك.">
     <meta property="og:image" content="https://rawj.pro/whatsapp-share.png" />
     <link rel="icon" type="image/png" href="small.png">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
@@ -20,55 +20,61 @@
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; overflow-x: hidden; }
-        body { font-family: 'Tajawal', sans-serif; background-color: var(--light-bg); color: var(--dark-blue); line-height: 1.6; text-align: right; overflow-x: hidden; }
+        body { font-family: 'Tajawal', sans-serif; background-color: var(--light-bg); color: var(--dark-blue); line-height: 1.8; text-align: right; overflow-x: hidden; }
 
         header { background-color: var(--white); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
         .logo img { max-height: 45px; width: auto; }
         nav { display: flex; gap: 15px; }
-        nav a { text-decoration: none; color: var(--dark-blue); font-weight: 700; font-size: 0.9rem; }
+        nav a { text-decoration: none; color: var(--dark-blue); font-weight: 700; font-size: 0.95rem; }
 
-        .hero { display: flex; align-items: center; justify-content: space-between; padding: 60px 5%; background: linear-gradient(135deg, var(--dark-blue) 0%, #2a1b4d 100%); color: var(--white); flex-wrap: wrap; text-align: center; }
+        .hero { display: flex; align-items: center; justify-content: space-between; padding: 80px 5%; background: linear-gradient(135deg, var(--dark-blue) 0%, #2a1b4d 100%); color: var(--white); flex-wrap: wrap; text-align: center; }
         .hero-content { width: 100%; }
-        .hero h1 { font-size: 2.5rem; margin-bottom: 20px; font-weight: 900; }
+        .hero h1 { font-size: 2.6rem; margin-bottom: 20px; font-weight: 900; line-height: 1.3; }
         .hero h1 span { color: var(--light-purple); }
-        .hero p { font-size: 1.1rem; margin-bottom: 30px; opacity: 0.9; }
+        .hero p { font-size: 1.15rem; margin-bottom: 35px; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto; }
         .hero-image { width: 100%; margin-top: 30px; }
         .hero-image img { width: 100%; max-width: 500px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
 
-        .btn { background-color: var(--purple); color: var(--white); padding: 16px 30px; text-decoration: none; border-radius: 8px; font-size: 1.1rem; font-weight: bold; display: inline-block; border: none; cursor: pointer; width: 100%; max-width: 400px; transition: 0.3s; }
+        .btn { background-color: var(--purple); color: var(--white); padding: 16px 30px; text-decoration: none; border-radius: 8px; font-size: 1.1rem; font-weight: bold; display: inline-block; border: none; cursor: pointer; width: 100%; max-width: 300px; transition: 0.3s; }
         .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(142, 43, 107, 0.3); }
 
-        .services { padding: 60px 5%; text-align: center; }
-        .section-title { font-size: 2rem; margin-bottom: 40px; font-weight: 800; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .service-card { background: var(--white); padding: 25px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); text-align: right; }
-        .service-card img { width: 100%; height: 180px; object-fit: cover; border-radius: 10px; margin-bottom: 15px; }
+        .services { padding: 80px 5%; text-align: center; }
+        .section-title { font-size: 2.2rem; margin-bottom: 15px; font-weight: 800; color: var(--dark-blue); }
+        .section-subtitle { font-size: 1.1rem; color: #555; margin-bottom: 50px; max-width: 700px; margin-left: auto; margin-right: auto; }
+        
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .service-card { background: var(--white); padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: right; transition: 0.3s; border-bottom: 4px solid transparent; }
+        .service-card:hover { border-bottom-color: var(--purple); transform: translateY(-5px); }
+        .service-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 20px; }
+        .service-card h3 { color: var(--purple); font-size: 1.4rem; margin-bottom: 15px; font-weight: 700; }
+        .service-card p { font-size: 1rem; color: #555; }
 
-        /* سكشن ليش حنا (المستعاد) */
-        .about { display: flex; align-items: center; padding: 60px 5%; background-color: var(--white); gap: 40px; flex-wrap: wrap; }
+        .about { display: flex; align-items: center; padding: 80px 5%; background-color: var(--white); gap: 50px; flex-wrap: wrap; }
         .about-image { width: 100%; text-align: center; }
         .about-image img { width: 100%; max-width: 500px; border-radius: 15px; }
         .about-text { width: 100%; text-align: center; }
-        .about-text h2 { font-size: 2rem; color: var(--purple); margin-bottom: 15px; font-weight: 800; }
-        .about-text p { font-size: 1.1rem; color: #444; margin-bottom: 20px; }
+        .about-text h2 { font-size: 2.2rem; color: var(--purple); margin-bottom: 20px; font-weight: 800; }
+        .about-text p { font-size: 1.15rem; color: #444; margin-bottom: 20px; }
 
-        .contact { padding: 60px 5%; background-color: var(--dark-blue); color: var(--white); text-align: center; }
-        .contact-container { max-width: 600px; margin: 0 auto; }
-        .highlight { color: var(--light-purple); font-size: 1.3rem; font-weight: bold; margin-bottom: 25px; display: block; }
+        .contact { padding: 80px 5%; background-color: var(--dark-blue); color: var(--white); text-align: center; }
+        .contact-container { max-width: 650px; margin: 0 auto; }
+        .highlight { color: var(--light-purple); font-size: 1.4rem; font-weight: bold; margin-bottom: 10px; display: block; }
+        .contact-desc { font-size: 1.1rem; margin-bottom: 30px; opacity: 0.9; }
         
         .form-group { margin-bottom: 15px; }
-        input, textarea { width: 100%; padding: 15px; border-radius: 8px; border: none; font-family: 'Tajawal', sans-serif; font-size: 1.1rem; }
-        .error-message { color: #ff4d4d; font-size: 0.9rem; display: none; margin-top: 5px; font-weight: bold; text-align: right; }
+        input, textarea { width: 100%; padding: 16px; border-radius: 8px; border: none; font-family: 'Tajawal', sans-serif; font-size: 1.05rem; }
+        .error-message { color: #ff4d4d; font-size: 0.95rem; display: none; margin-top: 5px; font-weight: bold; text-align: right; }
         
-        #success-message { display: none; background: #2ecc71; color: white; padding: 30px; border-radius: 10px; font-weight: bold; font-size: 1.3rem; line-height: 1.8; }
+        #success-message { display: none; background: #2ecc71; color: white; padding: 30px; border-radius: 10px; font-weight: bold; font-size: 1.2rem; line-height: 1.8; margin-top: 20px; }
 
-        footer { text-align: center; padding: 25px; background-color: #0d0e1f; color: var(--white); font-size: 0.9rem; }
+        footer { text-align: center; padding: 25px; background-color: #0d0e1f; color: var(--white); font-size: 0.95rem; }
 
         @media (min-width: 769px) {
-            .hero, .about { text-align: right; padding: 80px 8%; }
-            .hero-content, .about-text { width: 55%; }
-            .hero-image, .about-image { width: 40%; margin-top: 0; }
-            .hero h1, .about-text h2 { font-size: 3.2rem; }
+            .hero, .about { text-align: right; padding: 100px 8%; }
+            .hero-content, .about-text { width: 50%; }
+            .hero p { margin-left: 0; margin-right: 0; }
+            .hero-image, .about-image { width: 45%; margin-top: 0; }
+            .hero h1, .about-text h2 { font-size: 3.5rem; }
             .btn { width: auto; }
             .about { flex-wrap: nowrap; }
             .about-text { text-align: right; }
@@ -90,24 +96,33 @@
     <section id="hero" class="hero">
         <div class="hero-content">
             <h1>لأن العادي ما يجيب مبيعات .. <span>روّج.برو</span></h1>
-            <p>حنا وكالة متخصصة لمتاجر "سلة" و"زد"، نحول ميزانيتك لطلبات فعلية وأرباح تضاعف دخلك.</p>
-            <a href="#contact" class="btn">ضاعف مبيعات متجرك الحين</a>
+            <p>إحنا وكالة تسويق رقمي متخصصة في الـ Performance Marketing لمتاجر "سلة" و"زد". نعتمد على لغة الأرقام والبيانات لبناء حملات إعلانية مدروسة، تستهدف العميل الصح وتزيد من مبيعات متجرك بشكل مستدام وحقيقي بعيداً عن الوعود الوهمية.</p>
+            <a href="#contact" class="btn">ابدأ في نمو متجرك الحين</a>
         </div>
         <div class="hero-image"><img src="img4.webp" alt="مبيعات سلة وزد"></div>
     </section>
 
     <section id="services" class="services">
-        <h2 class="section-title">كيف نصنع الفرق بمتجرك؟</h2>
+        <h2 class="section-title">كيف نصنع الفارق في مبيعات متجرك؟</h2>
+        <p class="section-subtitle">شغلنا ما يعتمد على الحظ أو التوقعات، إحنا نبني استراتيجية كاملة تبدأ من العميل وتنتهي بإتمام الطلب في متجرك.</p>
+        
         <div class="services-grid">
             <div class="service-card">
                 <img src="img3.webp" alt="إدارة حملات">
-                <h3>إدارة الحملات وتحقيق مبيعات</h3>
-                <p>نخطط وندير حملاتك بهدف رفع العائد على استثمارك (ROAS) ونحول الزوار لعملاء فعليين.</p>
+                <h3>إدارة الحملات الإعلانية الموجهة</h3>
+                <p>ما نطلق حملات عشوائية. نصمم استراتيجية متكاملة على منصات (سناب شات، تيك توك، انستقرام، وجوجل) تركز على تحسين تكلفة الاستحواذ على العميل (CAC) ورفع العائد على الإنفاق الإعلاني (ROAS).</p>
             </div>
+            
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="تحسين معدل التحويل">
+                <h3>تحسين معدل التحويل (CRO)</h3>
+                <p>الزيارات بدون طلبات ما لها قيمة! نساعدك في تحليل أداء متجرك على منصتك، ونعطيك توصيات دقيقة لتحسين تجربة المستخدم (UX) عشان نسهل على العميل يكمل عملية الشراء بدون أي تعقيد.</p>
+            </div>
+
             <div class="service-card">
                 <img src="img1.webp" alt="ذكاء اصطناعي">
                 <h3>التسويق بالذكاء الاصطناعي (قريباً)</h3>
-                <p>بندمج الذكاء الاصطناعي بكل خطوة، لنوفر وقتك ونعظم نتايج متجرك.</p>
+                <p>لأننا دايماً نبحث عن التطور، شغالين حالياً على دمج أدوات الذكاء الاصطناعي في تحليل بيانات حملاتك وصناعة المحتوى، عشان نضمن لك استهداف أدق ونتائج تتفوق على كل المنافسين.</p>
             </div>
         </div>
     </section>
@@ -115,45 +130,46 @@
     <section id="about" class="about">
         <div class="about-image"><img src="img2.webp" alt="فريق روج برو"></div>
         <div class="about-text">
-            <h2>ليش تختار "روّج.برو"؟</h2>
-            <p>لأننا عارفين ومدركين إن "اللايكات ما تدفع رواتب". حنا نفهم خوارزميات المنصات، ونعرف كيف نربطها بمتاجرك باحترافية عالية.</p>
-            <p>فريقنا يحلل الأرقام والبيانات يومياً، ويختبر الحملات، ويصمم لعميلك رحلة تخليه يشتري وهو واثق. مبيعاتك هي مقياس نجاحنا الوحيد.</p>
+            <h2>ليش تعتمد على "روّج.برو"؟</h2>
+            <p>لأننا نعتبر أنفسنا شركاء نجاح لمتجرك، مو مجرد جهة تنفذ إعلانات. فريقنا يمتلك خبرة عميقة في سلوك المستهلك السعودي وتفضيلاته، وهذا يساعدنا نصمم رسائل إعلانية تلامس احتياجه الفعلي وتخليه يتخذ قرار الشراء.</p>
+            <p>نتميز بالشفافية التامة مع عملائنا. نشاركك تقارير دورية واضحة تشرح أداء الحملات بالأرقام، ونوضح لك وين تروح ميزانيتك وكيف جالسة ترجع لك في شكل طلبات فعلية. استقرار مبيعاتك ونموها هو مقياسنا الوحيد للنجاح.</p>
             <a href="#contact" class="btn">احجز تقييم متجرك مجاناً</a>
         </div>
     </section>
 
     <section id="contact" class="contact">
         <div class="contact-container">
-            <h2 style="font-size: 2.2rem; margin-bottom: 10px;">جاهز ترفع مبيعاتك؟</h2>
-            <span class="highlight">احصل على فحص مجاني لمتجرك الحين!</span>
+            <h2 style="font-size: 2.4rem; margin-bottom: 10px;">مستعد تنقل متجرك لمستوى جديد؟</h2>
+            <span class="highlight">احصل على تقييم مجاني لأداء متجرك وحملاتك الحالية!</span>
+            <p class="contact-desc">اترك بياناتك، وفريقنا بيتواصل معك لجلسة استشارية مجانية ندرس فيها وضع متجرك، ونقترح لك أنسب الحلول التسويقية اللي تناسب ميزانيتك وأهدافك.</p>
             
             <form id="contactForm">
                 <input type="hidden" name="_cc" value="yasminfaried18@gmail.com">
-                <input type="hidden" name="_subject" value="طلب فحص مجاني جديد من روّج.برو">
+                <input type="hidden" name="_subject" value="طلب استشارة وفحص مجاني - روّج.برو">
                 
                 <div class="form-group">
                     <input type="text" name="الاسم" placeholder="الاسم الكريم" required>
                 </div>
                 
                 <div class="form-group">
-                    <input type="text" id="phone" name="رقم_الجوال" placeholder="رقم الجوال (05XXXXXXXX)" required dir="ltr" style="text-align: right;">
+                    <input type="text" id="phone" name="رقم_الجوال" placeholder="رقم الجوال (مثال: 05XXXXXXXX)" required dir="ltr" style="text-align: right;">
                     <div id="phoneError" class="error-message">الرجاء إدخال رقم جوال سعودي أو خليجي صحيح</div>
                 </div>
 
                 <div class="form-group">
-                    <textarea name="تفاصيل_المتجر" rows="4" placeholder="رابط متجرك أو وش تبي نحقق لك؟" required></textarea>
+                    <textarea name="تفاصيل_المتجر" rows="4" placeholder="رابط متجرك (سلة/زد) أو نبذة عن أهدافك التسويقية..." required></textarea>
                 </div>
                 
-                <button type="submit" id="submitBtn" class="btn">احصل على الاستشارة المجانية الحين</button>
+                <button type="submit" id="submitBtn" class="btn" style="max-width: 100%;">أرسل طلب الاستشارة الحين</button>
             </form>
 
             <div id="success-message">
-                ✅ تم استلام طلبك بنجاح! <br> فريقنا بيتواصل معك خلال الـ 12 ساعة القادمة.
+                ✅ تم استلام طلبك بنجاح! <br> فريقنا الاستشاري سيقوم بالتواصل معك خلال الـ 12 ساعة القادمة.
             </div>
         </div>
     </section>
 
-    <footer><p>جميع الحقوق محفوظة © 2026 - وكالة روّج.برو</p></footer>
+    <footer><p>جميع الحقوق محفوظة © 2026 - وكالة روّج.برو للتسويق الرقمي</p></footer>
 
     <script>
         const contactForm = document.getElementById('contactForm');
@@ -190,7 +206,7 @@
 
             if (typeof fbq !== 'undefined') fbq('track', 'Lead'); 
 
-            submitBtn.innerText = "جاري الإرسال...";
+            submitBtn.innerText = "جاري إرسال الطلب...";
             submitBtn.disabled = true;
 
             const formData = new FormData(contactForm);
@@ -205,8 +221,8 @@
                 window.scrollTo({ top: document.getElementById('contact').offsetTop, behavior: 'smooth' });
             })
             .catch(error => {
-                alert('حدث خطأ، حاول مرة أخرى.');
-                submitBtn.innerText = "احصل على الاستشارة المجانية الحين";
+                alert('حدث خطأ، يرجى المحاولة مرة أخرى.');
+                submitBtn.innerText = "أرسل طلب الاستشارة الحين";
                 submitBtn.disabled = false;
             });
         });
