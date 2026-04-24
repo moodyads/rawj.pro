@@ -101,7 +101,7 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'YOUR_PIXEL_ID_HERE'); // أضف رقم البيكسل الحقيقي هنا
+    fbq('init', 'YOUR_PIXEL_ID_HERE'); /* أضف رقم البيكسل الحقيقي هنا */
     fbq('track', 'PageView');
     </script>
 
@@ -135,7 +135,6 @@
         .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px); background-size: 40px 40px; z-index: 1; pointer-events: none; }
         .hero-content, .hero-image { position: relative; z-index: 2; }
         .hero-content { width: 50%; }
-        /* SEO Fix: H1 includes keyword */
         .hero h1 { font-size: 3rem; margin-bottom: 25px; font-weight: 900; line-height: 1.4; }
         .hero h1 span { background: linear-gradient(90deg, var(--light-purple), var(--purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: block; font-size: 2.4rem;}
         .hero p { font-size: 1.25rem; margin-bottom: 40px; color: #e0e0e0; font-weight: 400; line-height: 1.8; }
@@ -156,8 +155,13 @@
         .partners-container { display: flex; justify-content: center; align-items: center; gap: 30px; flex-wrap: wrap; }
         .partner-logo { width: 120px; height: 120px; display: flex; justify-content: center; align-items: center; border-radius: 20px; background: var(--bg-light); border: 1px solid var(--border-color); transition: all 0.5s ease; filter: grayscale(100%); opacity: 0.7; }
         .partner-logo img { max-width: 60%; max-height: 60%; object-fit: contain; }
-        /* JS Fix: Slower animation transition */
         .partner-logo.active-partner { transform: scale(1.1); filter: grayscale(0%); opacity: 1; border-color: rgba(142, 43, 107, 0.2); box-shadow: 0 10px 25px rgba(142, 43, 107, 0.08); background: var(--white); z-index: 2; }
+
+        /* Social Proof Placeholder */
+        .social-proof { background-color: var(--white); border-bottom: 1px solid var(--border-color); }
+        .testimonial-card { background: var(--bg-light); padding: 30px; border-radius: 12px; border: 1px solid var(--purple); border-left: 5px solid var(--purple); margin: 20px auto; max-width: 800px; text-align: center; }
+        .testimonial-card p { font-style: italic; font-size: 1.2rem; margin-bottom: 15px;}
+        .testimonial-card h4 { color: var(--dark-blue); }
 
         /* Anti-Agency */
         .anti-agency { background-color: var(--bg-light); }
@@ -170,12 +174,6 @@
         .pain-card h3 { font-size: 1.4rem; color: var(--dark-blue); margin-bottom: 15px; font-weight: 800; }
         .pain-card p { color: #555; font-size: 1.05rem; }
 
-        /* Social Proof Placeholder */
-        .social-proof { background-color: var(--white); border-bottom: 1px solid var(--border-color); }
-        .testimonial-card { background: var(--bg-light); padding: 30px; border-radius: 12px; border: 1px solid var(--purple); border-left: 5px solid var(--purple); margin: 20px auto; max-width: 800px; text-align: center; }
-        .testimonial-card p { font-style: italic; font-size: 1.2rem; margin-bottom: 15px;}
-        .testimonial-card h4 { color: var(--dark-blue); }
-
         /* Numbers */
         .numbers-section { background-color: var(--dark-blue); color: var(--white); position: relative; }
         .numbers-section::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 40px 40px; z-index: 1; pointer-events: none; }
@@ -186,7 +184,7 @@
         .stat-num { font-size: 4rem; font-weight: 900; background: linear-gradient(180deg, var(--white), #a0aab2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 10px; display: flex; align-items: center; justify-content: center; line-height: 1; direction: ltr; }
         .stat-desc { font-size: 1.15rem; color: var(--light-purple); font-weight: 700; line-height: 1.5; }
 
-        /* Services & Process (Omitted from CSS snippet for brevity but keeping styling identical) */
+        /* Services */
         .services-section { background-color: var(--white); }
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
         .service-card { background: var(--bg-light); padding: 30px; border-radius: 16px; border: 1px solid var(--border-color); transition: 0.4s; }
@@ -194,6 +192,7 @@
         .service-card img { width: 100%; height: 220px; object-fit: cover; border-radius: 8px; margin-bottom: 25px; }
         .service-card h3 { color: var(--purple); font-size: 1.5rem; margin-bottom: 15px; font-weight: 800; }
         
+        /* Process */
         .process-section { background-color: var(--bg-light); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); }
         .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; text-align: center; }
         .process-step { background: var(--white); padding: 50px 30px; border-radius: 12px; border: 1px solid var(--border-color); transition: 0.3s; box-shadow: 0 5px 20px rgba(0,0,0,0.02); }
@@ -411,26 +410,29 @@
                 <h2>هل متجرك جاهز للتوسع ومضاعفة مبيعاته؟</h2>
                 <p>قدم طلبك الآن. سيقوم فريقنا الاستشاري بمراجعة بيانات متجرك، وسنرتب جلسة عمل استراتيجية (مجانية) لدراسة وضعك وبدء رحلة النمو.</p>
                 
-                <form id="contactForm" action="/api/submit-form" method="POST">
+                <form id="contactForm">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_subject" value="طلب استشارة جديد - روّج.برو!">
+
                     <div class="form-group">
                         <label>الاسم الكريم</label>
-                        <input type="text" name="name" placeholder="اسمك أو اسم المسؤول عن المتجر" required>
+                        <input type="text" name="الاسم" placeholder="اسمك أو اسم المسؤول عن المتجر" required>
                     </div>
                     
                     <div class="form-group">
                         <label>رقم الجوال (للتواصل عبر واتساب)</label>
-                        <input type="tel" id="phone" name="phone" placeholder="مثال: 05XXXXXXXX" required dir="ltr">
+                        <input type="tel" id="phone" name="رقم_الجوال" placeholder="مثال: 05XXXXXXXX" required dir="ltr">
                         <div id="phoneError" class="error-message">الرجاء إدخال رقم جوال صحيح</div>
                     </div>
 
                     <div class="form-group">
                         <label>رابط متجرك الإلكتروني <span class="optional-text">(اختياري)</span></label>
-                        <input type="url" name="website" placeholder="https://..." dir="ltr">
+                        <input type="url" name="رابط_المتجر" placeholder="https://..." dir="ltr">
                     </div>
 
                     <div class="form-group">
                         <label>ما هو متوسط مبيعاتك الشهرية الحالية تقريباً؟ <span class="optional-text">(اختياري)</span></label>
-                        <select name="sales_volume">
+                        <select name="متوسط_المبيعات">
                             <option value="" disabled selected>اختر الإجابة الأقرب...</option>
                             <option value="متجر جديد">متجر جديد (في مرحلة التأسيس)</option>
                             <option value="أقل من 20,000 ريال">أقل من 20,000 ريال شهرياً</option>
@@ -471,7 +473,6 @@
     </a>
 
     <script>
-        // الأرقام المتحركة
         const counters = document.querySelectorAll('.counter');
         const speed = 50; 
         const startCounters = (entries, observer) => {
@@ -497,16 +498,14 @@
         const counterObserver = new IntersectionObserver(startCounters, { threshold: 0.5 });
         counters.forEach(counter => counterObserver.observe(counter));
 
-        // تبديل الشركاء (تم الإبطاء لراحة العين)
         const partners = document.querySelectorAll('.partner-logo');
         let currentP = 0;
         setInterval(() => {
             partners.forEach(p => p.classList.remove('active-partner'));
             currentP = (currentP + 1) % partners.length;
             partners[currentP].classList.add('active-partner');
-        }, 3000); // تغيير المدة إلى 3 ثواني بدلاً من 1.1
+        }, 3000); 
 
-        // الأسئلة الشائعة
         document.querySelectorAll('.faq-question').forEach(q => {
             q.addEventListener('click', () => {
                 const item = q.parentElement;
@@ -546,13 +545,12 @@
             btn.innerText = "جاري إرسال الطلب...";
             btn.disabled = true;
 
-            // تم إزالة الرابط المكشوف. يجب ربط هذا الفورم بالخادم الخاص بك
-            fetch('/api/submit-form', {
+            fetch('https://formsubmit.co/ajax/el/wepola', {
                 method: 'POST',
                 body: new FormData(this)
             })
-            .then(response => {
-                // محاكاة لنجاح الإرسال (يجب تعديلها لتتوافق مع الـ Backend الخاص بك)
+            .then(response => response.json())
+            .then(data => {
                 this.style.display = 'none';
                 document.getElementById('success-message').style.display = 'block';
             })
