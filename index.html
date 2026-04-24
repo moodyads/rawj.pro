@@ -213,7 +213,7 @@
         input:focus, select:focus, textarea:focus { outline: none; border-color: var(--light-purple); background: rgba(255,255,255,0.1); }
         select option { background: var(--dark-blue); color: var(--white); }
         .error-message { color: #ff4d4d; font-size: 0.95rem; display: none; margin-top: 8px; }
-        #success-message { display: none; background: rgba(46, 204, 113, 0.15); color: #2ecc71; border: 1px solid #2ecc71; padding: 20px; border-radius: 6px; font-weight: bold; font-size: 1.1rem; margin-top: 20px; }
+        #success-message { display: none; background: rgba(46, 204, 113, 0.15); color: #2ecc71; border: 1px solid #2ecc71; padding: 20px; border-radius: 6px; font-weight: bold; font-size: 1.2rem; margin-top: 20px; }
 
         footer { background-color: #0a0b16; color: var(--text-muted); padding: 70px 5% 30px; border-top: 1px solid rgba(255,255,255,0.05); }
         .footer-container { display: flex; justify-content: space-between; align-items: flex-start; max-width: 1100px; margin: 0 auto 40px; flex-wrap: wrap; gap: 40px; }
@@ -397,7 +397,9 @@
                 <h2>هل متجرك جاهز للتوسع ومضاعفة مبيعاته؟</h2>
                 <p>قدم طلبك الآن. سيقوم فريقنا الاستشاري بمراجعة بيانات متجرك، وسنرتب جلسة عمل استراتيجية (مجانية) لدراسة وضعك وبدء رحلة النمو.</p>
                 
-                <form id="contactForm" action="https://formsubmit.co/moodysameh66@gmail.com" method="POST">
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+                
+                <form id="contactForm" action="https://formsubmit.co/moodysameh66@gmail.com" method="POST" target="hidden_iframe">
                     <input type="hidden" name="_cc" value="yasminfaried18@gmail.com">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_subject" value="طلب استشارة جديد - روّج.برو!">
@@ -431,7 +433,8 @@
                     
                     <button type="submit" id="submitBtn" class="btn-premium" style="width: 100%; margin-top: 15px;">احجز جلستك الاستشارية المجانية</button>
                 </form>
-                <div id="success-message">✅ تم استلام طلبك بنجاح. سيقوم خبراؤنا بتحليل متجرك والتواصل معك قريباً.</div>
+                
+                <div id="success-message">✅ تم استلام طلبك بنجاح. سيتم التواصل معك خلال ١٢ ساعة.</div>
             </div>
         </section>
     </main>
@@ -514,20 +517,21 @@
             return str.replace(/[٠-٩]/g, d => ar.indexOf(d));
         }
 
-        /* تم تعديل هذا الجزء لحذف الكود الخاطئ الخاص بـ AJAX مع الإبقاء على الفحص السليم للرقم */
+        let formSubmitted = false;
+
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             const phone = document.getElementById('phone');
             const phoneVal = convertArabicNumbers(phone.value).replace(/\s/g, '');
             const gcc = /^(?:\+966|\+971|\+965|\+974|\+968|\+973|00966|00971|00965|00974|00968|00973|05|0)[0-9]{7,12}$/;
             
-            // في حالة كان الرقم غير صحيح، نوقف عملية الإرسال
+            // التحقق من رقم الجوال
             if (!gcc.test(phoneVal)) {
                 e.preventDefault(); 
                 document.getElementById('phoneError').style.display = 'block';
                 return;
             }
             
-            // في حالة كان الرقم صحيحاً
+            // إذا كان الرقم صحيح يتم استكمال الإرسال
             document.getElementById('phoneError').style.display = 'none';
             phone.value = phoneVal;
             
@@ -535,8 +539,15 @@
             
             const btn = document.getElementById('submitBtn');
             btn.innerText = "جاري إرسال الطلب...";
-            
-            // لن يتم استخدام fetch (AJAX) هنا، بل سيتم إرسال الفورم مباشرة بالطريقة العادية للإيميل
+            formSubmitted = true;
+        });
+
+        // عند الانتهاء من الإرسال عبر الإطار المخفي يتم إخفاء الفورم وإظهار رسالة التأكيد
+        document.getElementById('hidden_iframe').addEventListener('load', function() {
+            if (formSubmitted) {
+                document.getElementById('contactForm').style.display = 'none';
+                document.getElementById('success-message').style.display = 'block';
+            }
         });
     </script>
 </body>
