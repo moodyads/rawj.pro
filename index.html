@@ -12,7 +12,6 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-    <!-- Open Graph -->
     <meta property="og:locale" content="ar_SA" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="وكالة روّج.برو | تسويق أداء للمتاجر الإلكترونية في السعودية" />
@@ -73,12 +72,10 @@
     <link rel="icon" type="image/webp" href="logo.webp">
     <link rel="apple-touch-icon" href="logo.webp">
 
-    <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TGG7PCLH');</script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0LG3HLGERN"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-0LG3HLGERN');</script>
 
-    <!-- Facebook Pixel — TODO: استبدل YOUR_PIXEL_ID_HERE برقم الـ Pixel من Meta Business Manager -->
     <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView');</script>
 
     <style>
@@ -94,7 +91,7 @@
             --border-color: #eaecef;
             --success: #2ecc71;
             --transition: 0.3s ease;
-            --mobile-bar: 72px; /* ارتفاع الشريط الثابت أسفل الموبايل */
+            --mobile-bar: 72px;
         }
 
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -112,7 +109,7 @@
         .skip-link {
             position: absolute; top: -100%; right: 0;
             background: var(--purple); color: white; padding: 10px 20px;
-            z-index: 9999; font-family: 'Tajawal', sans-serif; font-weight: 700;
+            z-index: 9999; font-weight: 700;
             border-radius: 0 0 8px 8px; text-decoration: none; transition: top 0.3s;
         }
         .skip-link:focus { top: 0; }
@@ -134,100 +131,57 @@
         .logo img { max-height: 50px; width: auto; }
         .logo a { display: block; line-height: 0; }
         nav { display: flex; gap: 22px; align-items: center; }
-        nav a {
-            text-decoration: none; color: var(--dark-blue);
-            font-weight: 700; font-size: 1rem; transition: var(--transition);
-        }
+        nav a { text-decoration: none; color: var(--dark-blue); font-weight: 700; font-size: 1rem; transition: var(--transition); }
         nav a:hover { color: var(--purple); }
-        .nav-btn {
-            border: 2px solid var(--purple); color: var(--purple);
-            padding: 8px 20px; border-radius: 6px; font-weight: 800;
-        }
+        .nav-btn { border: 2px solid var(--purple); color: var(--purple); padding: 8px 20px; border-radius: 6px; font-weight: 800; }
         .nav-btn:hover { background: var(--purple); color: var(--white); }
-        /* مخفي على الموبايل — يظهر فقط على الديسك توب */
         .nav-links { display: flex; gap: 22px; align-items: center; }
 
         /* ========== HERO — DESKTOP ========== */
         .hero {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 90px 5%;
-            background: linear-gradient(135deg, var(--dark-blue) 0%, #1e133d 100%);
-            color: var(--white);
-            flex-wrap: wrap;
-            min-height: 88vh;
-            overflow: hidden;
+            position: relative; display: flex; align-items: center; justify-content: space-between;
+            padding: 90px 5%; background: linear-gradient(135deg, var(--dark-blue) 0%, #1e133d 100%);
+            color: var(--white); flex-wrap: wrap; min-height: 88vh; overflow: hidden;
         }
         .hero::before {
-            content: '';
-            position: absolute; inset: 0;
+            content: ''; position: absolute; inset: 0;
             background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
-            background-size: 40px 40px;
-            z-index: 1; pointer-events: none;
-        }
-        .hero::after {
-            content: ''; position: absolute;
-            top: -40%; left: -15%; width: 55%; height: 110%;
-            background: radial-gradient(ellipse, rgba(209,80,162,0.13) 0%, transparent 70%);
-            z-index: 1; pointer-events: none;
+            background-size: 40px 40px; z-index: 1; pointer-events: none;
         }
         .hero-content { position: relative; z-index: 2; width: 50%; }
         .hero-image  { position: relative; z-index: 2; width: 45%; }
-
         .hero-badge {
-            display: inline-block;
-            background: rgba(209,80,162,0.15);
-            border: 1px solid rgba(209,80,162,0.4);
-            color: var(--light-purple);
-            font-size: 0.88rem; font-weight: 700;
+            display: inline-block; background: rgba(209,80,162,0.15); border: 1px solid rgba(209,80,162,0.4);
+            color: var(--light-purple); font-size: 0.88rem; font-weight: 700;
             padding: 6px 16px; border-radius: 50px; margin-bottom: 22px;
         }
         .hero h1 { font-size: 2.9rem; margin-bottom: 22px; font-weight: 900; line-height: 1.4; }
         .hero h1 span {
             background: linear-gradient(90deg, var(--light-purple), var(--purple));
             -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-            background-clip: text; display: block; font-size: 2.3rem;
+            display: block; font-size: 2.3rem;
         }
         .hero p { font-size: 1.15rem; margin-bottom: 35px; color: #c9d4e0; line-height: 1.9; }
         .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
-        .hero-image img {
-            width: 100%; border-radius: 16px;
-            box-shadow: 0 25px 60px rgba(0,0,0,0.5);
-            display: block; aspect-ratio: 4/3; object-fit: cover;
-            border: 2px solid rgba(255,255,255,0.1);
-        }
-        .hero-social-proof {
-            display: flex; align-items: center; gap: 10px;
-            margin-top: 22px; color: #a0b0c0; font-size: 0.9rem;
-        }
+        .hero-image img { width: 100%; border-radius: 16px; box-shadow: 0 25px 60px rgba(0,0,0,0.5); display: block; aspect-ratio: 4/3; object-fit: cover; border: 2px solid rgba(255,255,255,0.1); }
+        .hero-social-proof { display: flex; align-items: center; gap: 10px; margin-top: 22px; color: #a0b0c0; font-size: 0.9rem; }
         .hero-avatars { display: flex; }
         .hero-avatars span {
-            width: 30px; height: 30px; border-radius: 50%;
-            background: linear-gradient(135deg, var(--purple), var(--light-purple));
-            border: 2px solid rgba(255,255,255,0.3); margin-left: -7px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 0.7rem; font-weight: 700; color: white;
+            width: 30px; height: 30px; border-radius: 50%; background: linear-gradient(135deg, var(--purple), var(--light-purple));
+            border: 2px solid rgba(255,255,255,0.3); margin-left: -7px; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 700; color: white;
         }
         .proof-dot { color: var(--success); font-size: 0.65rem; }
 
         /* ========== BUTTONS ========== */
         .btn-premium {
-            background: linear-gradient(90deg, var(--purple), var(--light-purple));
-            color: var(--white); padding: 16px 36px; text-decoration: none;
-            border-radius: 8px; font-size: 1.05rem; font-weight: 800;
-            display: inline-block; border: none; cursor: pointer;
-            transition: 0.4s; box-shadow: 0 10px 30px rgba(142,43,107,0.35);
-            font-family: 'Tajawal', sans-serif;
+            background: linear-gradient(90deg, var(--purple), var(--light-purple)); color: var(--white); padding: 16px 36px;
+            text-decoration: none; border-radius: 8px; font-size: 1.05rem; font-weight: 800; display: inline-block; border: none; cursor: pointer;
+            transition: 0.4s; box-shadow: 0 10px 30px rgba(142,43,107,0.35); font-family: inherit;
         }
         .btn-premium:hover { transform: translateY(-3px); box-shadow: 0 18px 40px rgba(209,80,162,0.5); color: white; }
         .btn-ghost {
-            background: transparent; color: var(--white); padding: 16px 26px;
-            text-decoration: none; border-radius: 8px; font-size: 1.05rem; font-weight: 700;
-            display: inline-flex; align-items: center; gap: 8px;
-            border: 2px solid rgba(255,255,255,0.3); cursor: pointer;
-            transition: var(--transition); font-family: 'Tajawal', sans-serif;
+            background: transparent; color: var(--white); padding: 16px 26px; text-decoration: none; border-radius: 8px; font-size: 1.05rem; font-weight: 700; display: inline-flex; align-items: center; gap: 8px;
+            border: 2px solid rgba(255,255,255,0.3); cursor: pointer; transition: var(--transition);
         }
         .btn-ghost:hover { border-color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.05); color: white; }
 
@@ -240,15 +194,12 @@
         .anti-agency { background: var(--bg-light); }
         .pain-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 25px; }
         .pain-card {
-            background: var(--white); padding: 35px; border-radius: 16px;
-            border: 1px solid var(--border-color); box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+            background: var(--white); padding: 35px; border-radius: 16px; border: 1px solid var(--border-color); box-shadow: 0 5px 20px rgba(0,0,0,0.03);
             transition: var(--transition); position: relative; overflow: hidden;
         }
         .pain-card::before {
-            content: ''; position: absolute; top: 0; right: 0;
-            width: 4px; height: 0;
-            background: linear-gradient(180deg, var(--purple), var(--light-purple));
-            border-radius: 0 16px 16px 0; transition: height 0.4s ease;
+            content: ''; position: absolute; top: 0; right: 0; width: 4px; height: 0;
+            background: linear-gradient(180deg, var(--purple), var(--light-purple)); border-radius: 0 16px 16px 0; transition: height 0.4s ease;
         }
         .pain-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(142,43,107,0.1); }
         .pain-card:hover::before { height: 100%; }
@@ -263,20 +214,14 @@
             background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
             background-size: 40px 40px; pointer-events: none;
         }
-        .numbers-section .section-title { color: var(--white); position: relative; z-index: 2; }
-        .numbers-section .section-subtitle { color: #8fa3b8; position: relative; z-index: 2; }
+        .numbers-section .section-title, .numbers-section .section-subtitle { color: var(--white); position: relative; z-index: 2; }
+        .numbers-section .section-subtitle { color: #8fa3b8; }
         .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; text-align: center; position: relative; z-index: 2; }
-        .stat-item {
-            padding: 40px 25px; background: rgba(255,255,255,0.03);
-            border-radius: 20px; border: 1px solid rgba(255,255,255,0.07); transition: var(--transition);
-        }
+        .stat-item { padding: 40px 25px; background: rgba(255,255,255,0.03); border-radius: 20px; border: 1px solid rgba(255,255,255,0.07); transition: var(--transition); }
         .stat-item:hover { background: rgba(255,255,255,0.06); border-color: rgba(209,80,162,0.3); transform: translateY(-6px); }
         .stat-num {
-            font-size: 3.8rem; font-weight: 900;
-            background: linear-gradient(180deg, var(--white), #8fa3b8);
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-            margin-bottom: 10px; display: flex; align-items: center; justify-content: center;
-            line-height: 1; direction: ltr;
+            font-size: 3.8rem; font-weight: 900; background: linear-gradient(180deg, var(--white), #8fa3b8);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 10px; display: flex; align-items: center; justify-content: center; line-height: 1; direction: ltr;
         }
         .stat-desc { font-size: 1rem; color: var(--light-purple); font-weight: 700; line-height: 1.6; }
         .stat-note { text-align: center; color: rgba(255,255,255,0.3); font-size: 0.85rem; margin-top: 35px; position: relative; z-index: 2; }
@@ -300,7 +245,11 @@
             animation: fadeEffect 0.7s ease;
         }
         .testimonial-slide.active { display: block; }
-        .testimonial-quote { font-size: 2.8rem; color: var(--light-purple); opacity: 0.25; line-height: 1; margin-bottom: 8px; }
+        /* تعديل شكل وحجم علامة التنصيص */
+        .testimonial-quote { 
+            font-family: Georgia, serif; font-size: 4rem; color: var(--light-purple); 
+            opacity: 0.15; line-height: 0.5; margin-bottom: 15px; 
+        }
         .testimonial-stars { color: #f59e0b; font-size: 1rem; margin-bottom: 14px; letter-spacing: 2px; }
         .testimonial-slide p { font-size: 1.15rem; margin-bottom: 18px; color: #3a4a5a; line-height: 1.8; }
         .testimonial-slide h4 { color: var(--dark-blue); font-weight: 800; font-size: 1rem; }
@@ -329,10 +278,8 @@
         .faq-container { max-width: 800px; margin: 0 auto; }
         .faq-item { background: var(--white); margin-bottom: 10px; border-radius: 12px; border: 1px solid var(--border-color); overflow: hidden; transition: var(--transition); }
         .faq-question {
-            width: 100%; padding: 20px 24px; background: none; border: none;
-            font-family: 'Tajawal', sans-serif; font-size: 1.1rem; font-weight: 700;
-            color: var(--dark-blue); text-align: right; cursor: pointer;
-            display: flex; justify-content: space-between; align-items: center; line-height: 1.5;
+            width: 100%; padding: 20px 24px; background: none; border: none; font-family: inherit; font-size: 1.1rem; font-weight: 700;
+            color: var(--dark-blue); text-align: right; cursor: pointer; display: flex; justify-content: space-between; align-items: center; line-height: 1.5;
         }
         .faq-question span { font-size: 1.3rem; color: var(--purple); transition: transform 0.35s ease; flex-shrink: 0; margin-right: 12px; }
         .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; }
@@ -382,7 +329,7 @@
         .optional-text { font-size: 0.8rem; color: var(--text-muted); font-weight: normal; margin-right: 5px; }
         input, select, textarea {
             width: 100%; padding: 15px 16px; border-radius: 8px;
-            border: 1.5px solid rgba(255,255,255,0.15); font-family: 'Tajawal', sans-serif;
+            border: 1.5px solid rgba(255,255,255,0.15); font-family: inherit;
             font-size: 1rem; background: rgba(255,255,255,0.05); color: var(--white);
             transition: var(--transition); -webkit-appearance: none;
         }
@@ -429,7 +376,7 @@
         }
         .whatsapp-float::before {
             content: 'تواصل معنا'; position: absolute; right: 68px; background: white; color: #333;
-            padding: 7px 13px; border-radius: 20px; font-family: 'Tajawal', sans-serif;
+            padding: 7px 13px; border-radius: 20px; font-family: inherit;
             font-size: 0.88rem; font-weight: 700; white-space: nowrap;
             box-shadow: 0 4px 15px rgba(0,0,0,0.12); opacity: 0;
             transform: translateX(10px); transition: all 0.3s ease; pointer-events: none;
@@ -439,283 +386,144 @@
         .whatsapp-float svg { width: 30px; height: 30px; fill: #FFF; }
 
         /* ========== MOBILE STICKY BAR ========== */
-        /* شريط ثابت أسفل الشاشة على الموبايل — الـ CTA الرئيسي */
-        .mobile-sticky-bar {
-            display: none; /* مخفي بالكامل على الديسك توب */
-        }
+        .mobile-sticky-bar { display: none; }
 
         /* ============================================================ */
         /* =================== MOBILE STYLES =========================== */
         /* ============================================================ */
         @media (max-width: 768px) {
-
-            /* --- HEADER MOBILE --- */
-            header {
-                padding: 12px 5%;
-                flex-direction: row; /* صف واحد */
-                justify-content: space-between;
-                gap: 0;
-            }
+            header { padding: 12px 5%; flex-direction: row; justify-content: space-between; gap: 0; }
             .logo img { max-height: 42px; }
-
-            /* إخفاء روابط الـ nav العادية على الموبايل */
             .nav-links { display: none !important; }
-
-            /* إظهار زر واتساب صغير في الهيدر بدل النافيجيشن */
             .header-wa-btn {
-                display: flex !important;
-                align-items: center; gap: 7px;
-                background: #25d366; color: white;
-                padding: 9px 16px; border-radius: 22px;
-                font-family: 'Tajawal', sans-serif; font-size: 0.88rem;
-                font-weight: 800; text-decoration: none;
+                display: flex !important; align-items: center; gap: 7px; background: #25d366; color: white;
+                padding: 9px 16px; border-radius: 22px; font-size: 0.88rem; font-weight: 800; text-decoration: none;
                 box-shadow: 0 4px 14px rgba(37,211,102,0.3);
             }
             .header-wa-btn svg { width: 17px; height: 17px; fill: white; }
 
-            /* --- HERO MOBILE: صورة كخلفية + overlay --- */
-            .hero {
-                flex-direction: column;
-                padding: 0;
-                min-height: 100svh; /* ملء الشاشة كاملة */
-                position: relative;
-            }
-
-            /* الصورة كخلفية Hero على الموبايل */
-            .hero-image {
-                position: absolute !important;
-                inset: 0;
-                width: 100% !important;
-                height: 100%;
-                z-index: 0;
-            }
-            .hero-image img {
-                width: 100%; height: 100%;
-                object-fit: cover; border-radius: 0;
-                box-shadow: none; border: none;
-                aspect-ratio: unset;
-            }
-
-            /* طبقة تدرج فوق الصورة لإبراز النص */
+            .hero { flex-direction: column; padding: 0; min-height: 100svh; position: relative; }
+            .hero-image { position: absolute !important; inset: 0; width: 100% !important; height: 100%; z-index: 0; }
+            .hero-image img { width: 100%; height: 100%; object-fit: cover; border-radius: 0; box-shadow: none; border: none; aspect-ratio: unset; }
             .hero-image::after {
-                content: '';
-                position: absolute; inset: 0;
-                background: linear-gradient(
-                    to top,
-                    rgba(21,22,45,0.97) 0%,
-                    rgba(21,22,45,0.85) 45%,
-                    rgba(21,22,45,0.5) 100%
-                );
-                z-index: 1;
+                content: ''; position: absolute; inset: 0;
+                background: linear-gradient(to top, rgba(21,22,45,0.97) 0%, rgba(21,22,45,0.85) 45%, rgba(21,22,45,0.5) 100%); z-index: 1;
             }
-
-            /* المحتوى فوق الصورة */
-            .hero-content {
-                width: 100% !important;
-                position: relative; z-index: 3;
-                padding: 0 5% 32px;
-                margin-top: auto; /* ينزل للأسفل */
-                text-align: center;
-            }
-
+            .hero-content { width: 100% !important; position: relative; z-index: 3; padding: 0 5% 32px; margin-top: auto; text-align: center; }
             .hero-badge { font-size: 0.78rem; padding: 5px 13px; margin-bottom: 14px; }
-
             .hero h1 { font-size: 1.75rem; margin-bottom: 14px; line-height: 1.45; }
             .hero h1 span { font-size: 1.55rem; }
-
-            /* اختصار نص الـ hero على الموبايل */
             .hero p { font-size: 0.95rem; margin-bottom: 22px; color: #c5d0de; line-height: 1.7; }
-
-            /* زر واحد فقط ظاهر (الواتساب) */
             .hero-ctas { flex-direction: column; gap: 10px; align-items: center; }
-            .btn-ghost-mobile-hide { display: none; } /* إخفاء الزر الثاني من الـ hero */
+            .btn-ghost-mobile-hide { display: none; }
             .btn-premium { width: 100%; text-align: center; padding: 16px; font-size: 1rem; }
-            .btn-ghost { width: 100%; text-align: center; justify-content: center; padding: 14px; font-size: 0.95rem; }
-
-            /* Social proof مضغوطة */
             .hero-social-proof { justify-content: center; font-size: 0.82rem; margin-top: 14px; }
 
-            /* --- SCROLL INDICATOR --- */
             .scroll-indicator {
-                display: flex !important;
-                flex-direction: column;
-                align-items: center;
-                position: absolute;
-                bottom: 80px; /* فوق الـ sticky bar */
-                left: 50%;
-                transform: translateX(-50%);
-                z-index: 3;
-                color: rgba(255,255,255,0.5);
-                font-size: 0.78rem;
-                font-family: 'Tajawal', sans-serif;
-                gap: 5px;
-                animation: bounce 2s infinite;
+                display: flex !important; flex-direction: column; align-items: center;
+                position: absolute; bottom: 80px; left: 50%; transform: translateX(-50%);
+                z-index: 3; color: rgba(255,255,255,0.5); font-size: 0.78rem; gap: 5px; animation: bounce 2s infinite;
             }
             .scroll-indicator svg { width: 20px; height: 20px; fill: rgba(255,255,255,0.4); }
             @keyframes bounce { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(6px); } }
 
-            /* --- SECTIONS MOBILE --- */
             .section-padding { padding: 52px 5%; }
             .section-title { font-size: 1.7rem; margin-bottom: 12px; }
             .section-subtitle { font-size: 0.95rem; margin-bottom: 30px; line-height: 1.7; }
 
-            /* --- PAIN CARDS: أفقي قابل للسحب --- */
-            .pain-grid {
-                display: flex !important;
-                gap: 16px;
-                overflow-x: auto;
-                scroll-snap-type: x mandatory;
-                -webkit-overflow-scrolling: touch;
-                padding-bottom: 12px;
-                scrollbar-width: none;
+            /* إصلاح القص في الكروت الأفقي (Edge to Edge Scroll) */
+            .pain-grid, .services-grid {
+                display: flex !important; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch; padding-bottom: 12px; scrollbar-width: none;
+                margin-right: -5vw; margin-left: -5vw; padding-right: 5vw; padding-left: 5vw;
             }
-            .pain-grid::-webkit-scrollbar { display: none; }
-            .pain-card {
-                min-width: 82vw;
-                scroll-snap-align: start;
-                flex-shrink: 0;
-                padding: 26px;
+            .pain-grid::-webkit-scrollbar, .services-grid::-webkit-scrollbar { display: none; }
+            .pain-card, .service-card {
+                min-width: 82vw; scroll-snap-align: center; flex-shrink: 0; padding: 26px;
             }
             .pain-card .icon { font-size: 2rem; margin-bottom: 12px; }
-            .pain-card h3 { font-size: 1.1rem; }
-            .pain-card p { font-size: 0.92rem; }
+            .pain-card h3, .service-card h3 { font-size: 1.15rem; }
+            .pain-card p, .service-card p { font-size: 0.92rem; }
+            .service-card img { height: 165px; }
 
-            /* مؤشر السحب */
             .swipe-hint {
-                display: flex !important;
-                align-items: center; gap: 6px;
-                color: #999; font-size: 0.78rem; margin-top: 12px;
-                justify-content: center;
+                display: flex !important; align-items: center; gap: 6px; color: #999;
+                font-size: 0.78rem; margin-top: 12px; justify-content: center;
             }
             .swipe-hint svg { width: 16px; height: 16px; fill: #bbb; }
 
-            /* --- NUMBERS: 3 أرقام في صف واحد مضغوط --- */
-            .stats-grid {
-                grid-template-columns: repeat(3, 1fr) !important;
-                gap: 12px;
-            }
+            .stats-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 12px; }
             .stat-item { padding: 22px 10px; border-radius: 14px; }
             .stat-num { font-size: 2rem; margin-bottom: 6px; flex-direction: column; }
             .stat-desc { font-size: 0.78rem; line-height: 1.4; }
             .stat-note { font-size: 0.75rem; margin-top: 20px; }
 
-            /* --- SERVICES: أفقي قابل للسحب --- */
-            .services-grid {
-                display: flex !important;
-                gap: 16px;
-                overflow-x: auto;
-                scroll-snap-type: x mandatory;
-                -webkit-overflow-scrolling: touch;
-                padding-bottom: 12px;
-                scrollbar-width: none;
-            }
-            .services-grid::-webkit-scrollbar { display: none; }
-            .service-card {
-                min-width: 78vw;
-                scroll-snap-align: start;
-                flex-shrink: 0;
-                padding: 22px;
-            }
-            .service-card img { height: 165px; }
-            .service-card h3 { font-size: 1.15rem; }
-            .service-card p { font-size: 0.92rem; }
-
-            /* --- TESTIMONIALS MOBILE --- */
+            /* إصلاح حجم علامة التنصيص */
             .testimonial-slide { padding: 24px 20px; border-radius: 16px; }
-            .testimonial-quote { font-size: 2.2rem; }
+            .testimonial-quote { font-size: 3rem; line-height: 0.6; }
             .testimonial-slide p { font-size: 1rem; line-height: 1.7; }
 
-            /* --- PARTNERS MOBILE --- */
+            /* إصلاح الشركاء */
             .partners-section { padding: 40px 5%; }
             .partners-container {
-                display: flex;
-                overflow-x: auto;
-                scroll-snap-type: x mandatory;
-                flex-wrap: nowrap !important;
-                gap: 14px;
-                padding-bottom: 8px;
-                justify-content: flex-start;
-                scrollbar-width: none;
+                display: flex; overflow-x: auto; scroll-snap-type: x mandatory; flex-wrap: nowrap !important;
+                gap: 14px; padding-bottom: 8px; justify-content: flex-start; scrollbar-width: none;
+                margin-right: -5vw; margin-left: -5vw; padding-right: 5vw; padding-left: 5vw;
             }
             .partners-container::-webkit-scrollbar { display: none; }
-            .partner-logo { min-width: 85px; width: 85px; height: 85px; scroll-snap-align: start; flex-shrink: 0; }
+            .partner-logo { min-width: 85px; width: 85px; height: 85px; scroll-snap-align: center; flex-shrink: 0; }
 
-            /* --- PROCESS: timeline عمودي --- */
-            .process-grid {
-                grid-template-columns: 1fr !important;
-                gap: 0;
-            }
+            /* إصلاح الخط الرأسي في الخطوات (Timeline) */
+            .process-grid { grid-template-columns: 1fr !important; gap: 0; position: relative; }
             .process-step {
-                border-radius: 0;
-                padding: 28px 22px;
-                border-bottom: none;
-                display: flex; align-items: flex-start; gap: 18px; text-align: right;
-                border-radius: 0;
+                border-radius: 0; padding: 28px 22px; border-bottom: none;
+                display: flex; align-items: flex-start; gap: 18px; text-align: right; position: relative;
             }
             .process-step:first-child { border-radius: 16px 16px 0 0; }
-            .process-step:last-child  { border-radius: 0 0 16px 16px; }
-            .process-step-icon-wrap { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
+            .process-step:last-child  { border-radius: 0 0 16px 16px; border-bottom: 1px solid var(--border-color); }
+            /* الخط الفاصل المظبوط 100% */
+            .process-step:not(:last-child)::after {
+                content: ''; position: absolute;
+                top: 68px; /* يبدأ من أسفل الدائرة */
+                right: 39px; /* منتصف الدائرة تماماً (22px padding + 18px half-width - 1px line) */
+                width: 2px; height: calc(100% - 40px); /* يصل للدائرة التالية */
+                background: var(--light-purple); opacity: 0.4;
+            }
+            .process-step-icon-wrap { width: 36px; display: flex; flex-direction: column; align-items: center; z-index: 2; background: var(--bg-light); border-radius: 50%; }
             .step-number { margin-bottom: 0; }
             .process-step-content { flex: 1; }
             .process-step-content h3 { font-size: 1.1rem; margin-bottom: 6px; }
             .process-step-content p  { font-size: 0.9rem; }
-            .step-icon { display: none; } /* مخفي بالموبايل */
-            /* خط رأسي بين الخطوات */
-            .process-step:not(:last-child)::after {
-                content: '' !important;
-                position: absolute;
-                bottom: 0; right: 36px;
-                width: 2px; height: 100%;
-                background: linear-gradient(180deg, rgba(142,43,107,0.3), transparent);
-                left: auto; top: auto; transform: none; font-size: 0;
-            }
-            /* مخفي السهم الأفقي */
+            .step-icon { display: none; }
 
-            /* --- FORM MOBILE --- */
             .app-container { padding: 28px 18px; }
             .form-trust { gap: 10px; }
             .form-trust-item { font-size: 0.82rem; }
 
-            /* --- FOOTER MOBILE --- */
             .footer-container { flex-direction: column; align-items: flex-start; gap: 28px; }
             .footer-about { max-width: 100%; }
-            footer { padding: 50px 5% calc(var(--mobile-bar) + 20px); } /* فراغ للـ sticky bar */
-
-            /* --- WHATSAPP FLOAT — مخفي على الموبايل (عوضاً عنه الـ sticky bar) --- */
+            footer { padding: 50px 5% calc(var(--mobile-bar) + 20px); }
+            
             .whatsapp-float { display: none !important; }
 
-            /* --- MOBILE STICKY BAR --- */
             .mobile-sticky-bar {
-                display: flex !important;
-                position: fixed;
-                bottom: 0; left: 0; right: 0;
-                height: var(--mobile-bar);
-                background: white;
-                border-top: 1px solid rgba(0,0,0,0.08);
-                box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
-                z-index: 997;
-                padding: 10px 5%;
-                gap: 10px;
-                align-items: center;
+                display: flex !important; position: fixed; bottom: 0; left: 0; right: 0;
+                height: var(--mobile-bar); background: white; border-top: 1px solid rgba(0,0,0,0.08);
+                box-shadow: 0 -4px 20px rgba(0,0,0,0.1); z-index: 997; padding: 10px 5%; gap: 10px; align-items: center;
             }
             .sticky-wa-btn {
                 flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px;
-                background: #25d366; color: white; border-radius: 10px;
-                font-family: 'Tajawal', sans-serif; font-size: 0.95rem; font-weight: 800;
-                text-decoration: none; height: 48px;
-                box-shadow: 0 4px 14px rgba(37,211,102,0.3);
+                background: #25d366; color: white; border-radius: 10px; font-size: 0.95rem; font-weight: 800;
+                text-decoration: none; height: 48px; box-shadow: 0 4px 14px rgba(37,211,102,0.3);
             }
             .sticky-wa-btn svg { width: 20px; height: 20px; fill: white; }
             .sticky-form-btn {
                 display: flex; align-items: center; justify-content: center;
                 background: transparent; color: var(--purple); border: 2px solid var(--purple);
-                border-radius: 10px; font-family: 'Tajawal', sans-serif; font-size: 0.88rem;
-                font-weight: 800; text-decoration: none; height: 48px; padding: 0 16px;
-                white-space: nowrap; transition: var(--transition);
+                border-radius: 10px; font-size: 0.88rem; font-weight: 800; text-decoration: none;
+                height: 48px; padding: 0 16px; white-space: nowrap; transition: var(--transition);
             }
             .sticky-form-btn:hover { background: var(--purple); color: white; }
-
-            /* إضافة padding-bottom للصفحة لعدم تغطية المحتوى */
             main { padding-bottom: 0; }
         }
 
@@ -728,7 +536,6 @@
             .stat-desc { font-size: 0.72rem; }
         }
 
-        /* على الديسك توب: عناصر الموبايل مخفية */
         .mobile-only { display: none; }
         .header-wa-btn { display: none; }
         .scroll-indicator { display: none; }
@@ -738,7 +545,6 @@
             .mobile-only { display: block; }
         }
 
-        /* ========== REVEAL ANIMATION ========== */
         .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
         .reveal.visible { opacity: 1; transform: translateY(0); }
     </style>
@@ -747,7 +553,6 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TGG7PCLH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="#main-content" class="skip-link">انتقل للمحتوى الرئيسي</a>
 
-    <!-- ==================== HEADER ==================== -->
     <header role="banner">
         <div class="logo">
             <a href="/" aria-label="الصفحة الرئيسية - روّج.برو">
@@ -755,7 +560,6 @@
             </a>
         </div>
 
-        <!-- روابط الديسك توب -->
         <nav class="nav-links" role="navigation" aria-label="القائمة الرئيسية">
             <a href="#philosophy">أرقامنا</a>
             <a href="#services">خدماتنا</a>
@@ -763,52 +567,30 @@
             <a href="#apply" class="nav-btn">استشارة مجانية</a>
         </nav>
 
-        <!-- زر واتساب في هيدر الموبايل -->
         <a href="https://wa.me/966583024943?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A8%D8%BA%D9%8A%D8%AA%20%D8%A3%D8%B9%D8%B1%D9%81%20%D8%A3%D9%83%D8%AB%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%D9%83%D9%85."
-           class="header-wa-btn"
-           target="_blank" rel="noopener noreferrer"
-           data-event="header_wa_mobile">
+           class="header-wa-btn" target="_blank" rel="noopener noreferrer" data-event="header_wa_mobile">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
             واتساب
         </a>
     </header>
 
     <main id="main-content" role="main">
-
-        <!-- ==================== HERO ==================== -->
         <section id="hero" class="hero" aria-label="القسم الرئيسي">
-
-            <!-- الصورة — في الديسك توب: جانبية | في الموبايل: خلفية كاملة -->
             <div class="hero-image">
-                <img src="img4.webp"
-                     alt="نمو مبيعات المتجر الإلكتروني مع وكالة روّج.برو"
-                     fetchpriority="high"
-                     width="500" height="375">
+                <img src="img4.webp" alt="نمو مبيعات المتجر الإلكتروني مع وكالة روّج.برو" fetchpriority="high" width="500" height="375">
             </div>
-
-            <!-- المحتوى النصي -->
             <div class="hero-content">
                 <span class="hero-badge">🚀 وكالة تسويق أداء — متخصصة بالمتاجر الإلكترونية</span>
-                <h1>
-                    وكالة تفهم المتاجر الإلكترونية
-                    <span>ونحوّل الصرف الإعلاني إلى مبيعات واضحة</span>
-                </h1>
+                <h1>وكالة تفهم المتاجر الإلكترونية<br><span>ونحوّل الصرف الإعلاني إلى مبيعات واضحة</span></h1>
                 <p>نشتغل كشريك نمو للمتاجر في السعودية. مبيعات أكثر، هدر أقل، وROAS أفضل. بدون لف ودوران.</p>
-
                 <div class="hero-ctas">
-                    <a href="https://wa.me/966583024943?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A8%D8%BA%D9%8A%D8%AA%20%D8%A3%D8%B9%D8%B1%D9%81%20%D8%A3%D9%83%D8%AB%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%D9%83%D9%85%20%D9%84%D9%85%D8%AA%D8%AC%D8%B1%D9%8A."
-                       class="btn-premium"
-                       target="_blank" rel="noopener noreferrer"
-                       data-event="hero_cta_whatsapp">
+                    <a href="https://wa.me/966583024943?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A8%D8%BA%D9%8A%D8%AA%20%D8%A3%D8%B9%D8%B1%D9%81%20%D8%A3%D9%83%D8%AB%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%D9%83%D9%85%20%D9%84%D9%85%D8%AA%D8%AC%D8%B1%D9%8A." class="btn-premium" target="_blank" rel="noopener noreferrer" data-event="hero_cta_whatsapp">
                         📲 احجز جلستك المجانية — واتساب
                     </a>
-                    <a href="#apply"
-                       class="btn-ghost btn-ghost-mobile-hide desktop-only"
-                       data-event="hero_cta_form">
+                    <a href="#apply" class="btn-ghost btn-ghost-mobile-hide desktop-only" data-event="hero_cta_form">
                         أو أرسل طلبك هنا ↓
                     </a>
                 </div>
-
                 <div class="hero-social-proof">
                     <div class="hero-avatars">
                         <span>م</span><span>ع</span><span>ف</span>
@@ -817,15 +599,12 @@
                     <span>+20 متجر سعودي يثق في روّج.برو</span>
                 </div>
             </div>
-
-            <!-- مؤشر التمرير — موبايل فقط -->
             <div class="scroll-indicator" aria-hidden="true">
                 <span>اسحب لأسفل</span>
                 <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
             </div>
         </section>
 
-        <!-- ==================== PAIN SECTION ==================== -->
         <section class="anti-agency section-padding" aria-label="المشاكل التي نحلها">
             <h2 class="section-title">تعبت من إعلانات تصرف وما تبين نتيجة؟</h2>
             <p class="section-subtitle">كثير متاجر تنحرق ميزانيتها بسبب حملات ما تستهدف الزبون الصح. هنا نشتغل على المشاكل اللي فعلاً توقف نموك.</p>
@@ -846,7 +625,6 @@
                     <p>تحتاج تعرف وين راح كل ريال. عندنا كلام واضح وROAS مفهوم من أول نظرة.</p>
                 </div>
             </div>
-            <!-- مؤشر السحب — موبايل فقط -->
             <div class="swipe-hint" aria-hidden="true">
                 <svg viewBox="0 0 24 24"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg>
                 اسحب لرؤية المزيد
@@ -854,7 +632,6 @@
             </div>
         </section>
 
-        <!-- ==================== NUMBERS ==================== -->
         <section id="philosophy" class="numbers-section section-padding" aria-label="أرقامنا وإنجازاتنا">
             <h2 class="section-title">نقرأ الأرقام ونقرر بناءً عليها</h2>
             <p class="section-subtitle">ما نعتمد على الانطباعات. كل خطوة لها سبب، وكل تعديل هدفه يرفع المبيعات.</p>
@@ -875,7 +652,6 @@
             <p class="stat-note">* متوسط نتائج الشركاء الفعليين خلال 12 شهر</p>
         </section>
 
-        <!-- ==================== SERVICES ==================== -->
         <section id="services" class="services-section section-padding" aria-label="خدماتنا">
             <h2 class="section-title">كيف نساعد متجرك يكبر؟</h2>
             <p class="section-subtitle">نركز على الأشياء اللي تصنع فرق فعلي: إعلان مضبوط، محتوى يقنع، وتجربة شراء سلسة.</p>
@@ -903,7 +679,6 @@
             </div>
         </section>
 
-        <!-- ==================== SOCIAL PROOF ==================== -->
         <section class="social-proof section-padding" aria-label="آراء عملائنا">
             <h2 class="section-title">وش يقولون عن الشغل معنا؟</h2>
             <p class="section-subtitle">تجارب عملاء حسّوا بفرق واضح في الصرف، التحويل، والمبيعات.</p>
@@ -941,7 +716,6 @@
             </div>
         </section>
 
-        <!-- ==================== PARTNERS ==================== -->
         <section class="partners-section" aria-label="المنصات التي نشتغل عليها">
             <p class="partners-label">المنصات اللي نشتغل عليها</p>
             <div class="partners-container">
@@ -953,7 +727,6 @@
             </div>
         </section>
 
-        <!-- ==================== FAQ ==================== -->
         <section id="faq" class="faq-section section-padding" aria-label="الأسئلة الشائعة">
             <h2 class="section-title">أسئلة كثير تنسألنا</h2>
             <div class="faq-container" role="list">
@@ -975,19 +748,18 @@
                 </div>
                 <div class="faq-item reveal" role="listitem">
                     <button class="faq-question" aria-expanded="false">تسوون المحتوى الإعلاني؟ <span aria-hidden="true">+</span></button>
-                    <div class="faq-answer" role="region"><p>نشتغل على الأفكار والرسائل والإخراج المطلوب، ونوجّهك للمحتوى اللي يخدم البيع فعليًا. التفاصيل تتحدد حسب الباقة.</p></div>
+                    <div class="faq-answer" role="region"><p>نشتغل على الأفكار والرسائل والإخراج المطلوب، ونوجّهك للمحتوى اللي يخدم البيع فعليًا بدل المحتوى اللي شكله حلو وما يجيب نتيجة.</p></div>
                 </div>
                 <div class="faq-item reveal" role="listitem">
                     <button class="faq-question" aria-expanded="false">كيف تكون المتابعة والتواصل؟ <span aria-hidden="true">+</span></button>
-                    <div class="faq-answer" role="region"><p>تواصل واضح ومباشر، وتقارير أسبوعية وشهرية عشان تعرف وش قاعد يصير وش الخطوة الجاية.</p></div>
+                    <div class="faq-answer" role="region"><p>تواصل واضح ومباشر، ونشاركك التطورات والتقارير بشكل دوري عشان تعرف وش قاعد يصير، وش اللي يتحسن، ووش الخطوة الجاية.</p></div>
                 </div>
             </div>
         </section>
 
-        <!-- ==================== PROCESS ==================== -->
         <section class="process-section section-padding" aria-label="طريقة عملنا">
             <h2 class="section-title">كيف نمشي معك خطوة بخطوة؟</h2>
-            <p class="section-subtitle">شغل مرتب وواضح مبني على أشياء نقدر نقيسها.</p>
+            <p class="section-subtitle">شغل مرتب، وواضح، ومبني على أشياء نقدر نقيسها ونحسنها.</p>
             <div class="process-grid">
                 <div class="process-step reveal">
                     <div class="process-step-icon-wrap">
@@ -996,7 +768,7 @@
                     <div class="process-step-content">
                         <span class="step-icon" role="img" aria-label="بحث">🔬</span>
                         <h3>نفهم المشكلة</h3>
-                        <p>نراجع وضع المتجر والإعلانات والبيانات الحالية، ونحدد وين التسريب ووين الفرص.</p>
+                        <p>نراجع وضع المتجر والإعلانات والبيانات الحالية، ونحدد وين التسريب ووين الفرص اللي ممكن نكبرها.</p>
                     </div>
                 </div>
                 <div class="process-step reveal">
@@ -1006,7 +778,7 @@
                     <div class="process-step-content">
                         <span class="step-icon" role="img" aria-label="إعدادات">⚙️</span>
                         <h3>نبني الخطة</h3>
-                        <p>نختار القنوات المناسبة ونرتب الرسائل والمحتوى مع مؤشرات واضحة للنجاح.</p>
+                        <p>نختار القنوات المناسبة، ونرتب الرسائل والمحتوى، ونحط مؤشرات واضحة نعرف منها وش اللي ينجح.</p>
                     </div>
                 </div>
                 <div class="process-step reveal">
@@ -1016,17 +788,16 @@
                     <div class="process-step-content">
                         <span class="step-icon" role="img" aria-label="إطلاق">🚀</span>
                         <h3>نوسّع الصح</h3>
-                        <p>بعد ما نلقى الصيغة اللي تعطي نتيجة، نكبرها بشكل محسوب عشان تزيد المبيعات.</p>
+                        <p>بعد ما نلقى الصيغة اللي تعطي نتيجة، نكبرها بشكل محسوب عشان تزيد المبيعات بدون ما نخرب التوازن.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ==================== FORM ==================== -->
         <section id="apply" class="application section-padding" aria-label="نموذج الطلب">
             <div class="app-container">
                 <h2 class="section-title">متجرك جاهز يكبر؟</h2>
-                <p>ارسل بياناتك ونرتب لك جلسة استشارية مجانية نشوف فيها كيف نرفع النتيجة.</p>
+                <p>ارسل بياناتك، وفريقنا يراجع وضعك ونرتب لك جلسة استشارية مجانية نشوف فيها وش الأنسب لمتجرك وكيف نقدر نرفع النتيجة.</p>
                 <div class="form-trust">
                     <div class="form-trust-item"><span class="trust-icon">✓</span><span>مجانية 100%</span></div>
                     <div class="form-trust-item"><span class="trust-icon">✓</span><span>بدون التزام</span></div>
@@ -1080,7 +851,6 @@
         </section>
     </main>
 
-    <!-- ==================== FOOTER ==================== -->
     <footer role="contentinfo">
         <div class="footer-container">
             <div class="footer-about">
@@ -1121,32 +891,23 @@
         </div>
     </footer>
 
-    <!-- ==================== WHATSAPP FLOAT — DESKTOP ONLY ==================== -->
     <a href="https://wa.me/966583024943?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A8%D8%BA%D9%8A%D8%AA%20%D8%A3%D8%B9%D8%B1%D9%81%20%D8%A3%D9%83%D8%AB%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%D9%83%D9%85."
-       class="whatsapp-float"
-       target="_blank" rel="noopener noreferrer"
-       aria-label="تواصل معنا على واتساب"
-       data-event="whatsapp_float">
+       class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+       aria-label="تواصل معنا على واتساب" data-event="whatsapp_float">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
     </a>
 
-    <!-- ==================== MOBILE STICKY BAR ==================== -->
     <div class="mobile-sticky-bar" role="complementary" aria-label="خيارات التواصل">
         <a href="https://wa.me/966583024943?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A8%D8%BA%D9%8A%D8%AA%20%D8%A3%D8%B9%D8%B1%D9%81%20%D8%A3%D9%83%D8%AB%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%D9%83%D9%85."
-           class="sticky-wa-btn"
-           target="_blank" rel="noopener noreferrer"
-           data-event="sticky_whatsapp">
+           class="sticky-wa-btn" target="_blank" rel="noopener noreferrer" data-event="sticky_whatsapp">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
             واتساب — احجز مجاناً
         </a>
-        <a href="#apply" class="sticky-form-btn" data-event="sticky_form">
-            أو سجّل
-        </a>
+        <a href="#apply" class="sticky-form-btn" data-event="sticky_form">أو سجّل</a>
     </div>
 
-    <!-- ==================== JAVASCRIPT ==================== -->
     <script>
-    // === Counter Animation ===
+    // Counter Animation
     (function() {
         const counters = document.querySelectorAll('.counter');
         if (!counters.length) return;
@@ -1169,7 +930,7 @@
         counters.forEach(c => obs.observe(c));
     })();
 
-    // === Testimonial Slider ===
+    // Testimonial Slider
     (function() {
         const slides = document.querySelectorAll('.testimonial-slide');
         const dots   = document.querySelectorAll('.slider-dot');
@@ -1189,7 +950,7 @@
         start();
     })();
 
-    // === Partners Rotation ===
+    // Partners Rotation
     (function() {
         const partners = document.querySelectorAll('.partner-logo');
         if (!partners.length) return;
@@ -1201,7 +962,7 @@
         }, 3000);
     })();
 
-    // === FAQ Accordion ===
+    // FAQ Accordion
     (function() {
         document.querySelectorAll('.faq-question').forEach(q => {
             q.addEventListener('click', () => {
@@ -1222,7 +983,7 @@
         });
     })();
 
-    // === Form Validation ===
+    // Form Validation
     (function() {
         const toEn = s => s.replace(/[٠-٩]/g, d => '٠١٢٣٤٥٦٧٨٩'.indexOf(d).toString());
         const validPhone = p => /^(\+?966|00966)?0?5[0-9]{8}$/.test(toEn(p).replace(/[\s\-\(\)]/g,''));
@@ -1268,7 +1029,6 @@
             }
         });
 
-        // CTA tracking
         document.querySelectorAll('[data-event]').forEach(el => {
             el.addEventListener('click', function() {
                 if(typeof gtag!=='undefined') gtag('event','click',{event_category:'cta',event_label:this.dataset.event});
@@ -1276,7 +1036,7 @@
         });
     })();
 
-    // === Smooth Scroll ===
+    // Smooth Scroll
     document.querySelectorAll('a[href^="#"]').forEach(a => {
         a.addEventListener('click', function(e) {
             const t = document.querySelector(this.getAttribute('href'));
@@ -1288,7 +1048,7 @@
         });
     });
 
-    // === Scroll Reveal ===
+    // Scroll Reveal
     (function() {
         const els = document.querySelectorAll('.reveal');
         const obs = new IntersectionObserver((entries) => {
@@ -1302,7 +1062,7 @@
         els.forEach(el => obs.observe(el));
     })();
 
-    // === Mobile Sticky Bar: إخفاء عند وصول الفورم ===
+    // Mobile Sticky Bar Hide
     (function() {
         const bar = document.querySelector('.mobile-sticky-bar');
         const form = document.getElementById('apply');
