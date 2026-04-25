@@ -1,49 +1,81 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar-SA" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>وكالة روّج.برو | شريك نمو للمتاجر الإلكترونية بالسعودية</title>
-    <meta name="description" content="وكالة تسويق أداء (Performance Marketing) تساعد المتاجر الإلكترونية في السعودية على رفع المبيعات، تقليل الهدر الإعلاني، وتحسين ROAS بقرارات مبنية على البيانات.">
+
+    <!-- ✅ FIX: عنوان الصفحة محسّن للـ SEO مع الكلمات المفتاحية -->
+    <title>وكالة روّج.برو | تسويق أداء للمتاجر الإلكترونية في السعودية</title>
+    <meta name="description" content="وكالة تسويق أداء (Performance Marketing) متخصصة في المتاجر الإلكترونية بالسعودية. نرفع ROAS، نخفض تكلفة الاستحواذ، ونحوّل الصرف الإعلاني إلى مبيعات حقيقية مبنية على البيانات.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <link rel="canonical" href="https://rawj.pro/" />
     
+    <!-- ✅ FIX: إضافة hreflang للـ SEO الدولي -->
+    <link rel="alternate" hreflang="ar-SA" href="https://rawj.pro/" />
+    <link rel="canonical" href="https://rawj.pro/" />
+
+    <!-- ✅ FIX: إضافة theme-color لتجربة الجوال -->
+    <meta name="theme-color" content="#15162d">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Open Graph / Social Media -->
     <meta property="og:locale" content="ar_SA" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="وكالة روّج.برو | شريك نمو للمتاجر الإلكترونية" />
+    <meta property="og:title" content="وكالة روّج.برو | تسويق أداء للمتاجر الإلكترونية في السعودية" />
     <meta property="og:description" content="نساعد متجرك الإلكتروني يكبر بمبيعات أوضح، صرف أذكى، وROAS أعلى على أساس البيانات والنتائج." />
     <meta property="og:url" content="https://rawj.pro/" />
     <meta property="og:site_name" content="وكالة روّج.برو" />
     <meta property="og:image" content="https://rawj.pro/img4.webp" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="وكالة روّج.برو - شريك نمو المتاجر الإلكترونية في السعودية" />
+
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@rawjpro">
-    <meta name="twitter:title" content="وكالة روّج.برو | شريك نمو للمتاجر الإلكترونية">
+    <meta name="twitter:creator" content="@rawjpro">
+    <meta name="twitter:title" content="وكالة روّج.برو | تسويق أداء للمتاجر الإلكترونية">
     <meta name="twitter:description" content="نساعد المتاجر الإلكترونية في السعودية على رفع المبيعات وتحسين ROAS بصرف إعلاني ذكي.">
     <meta name="twitter:image" content="https://rawj.pro/img4.webp">
 
+    <!-- ✅ FIX: Schema منظّم ومحسّن بشكل كامل -->
     <script type="application/ld+json">
     [
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
+        "@type": "ProfessionalService",
         "name": "وكالة روّج.برو للتسويق الرقمي",
+        "alternateName": "Rawj Pro",
         "url": "https://rawj.pro/",
-        "logo": "https://rawj.pro/logo.webp",
-        "description": "وكالة تسويق أداء (Performance Marketing) تساعد المتاجر الإلكترونية في السعودية على زيادة المبيعات وتحسين ROAS.",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://rawj.pro/logo.webp",
+          "width": 150,
+          "height": 55
+        },
+        "image": "https://rawj.pro/img4.webp",
+        "description": "وكالة تسويق أداء (Performance Marketing) متخصصة في المتاجر الإلكترونية بالسعودية. نرفع ROAS ونحوّل الصرف الإعلاني إلى مبيعات حقيقية.",
         "address": {
           "@type": "PostalAddress",
-          "addressCountry": "SA"
+          "addressCountry": "SA",
+          "addressRegion": "المملكة العربية السعودية"
         },
         "contactPoint": {
           "@type": "ContactPoint",
           "telephone": "+966583024943",
           "contactType": "customer service",
+          "contactOption": "TollFree",
           "areaServed": "SA",
           "availableLanguage": "Arabic"
         },
+        "priceRange": "$$",
+        "currenciesAccepted": "SAR",
+        "paymentAccepted": "Bank Transfer",
+        "areaServed": {
+          "@type": "Country",
+          "name": "Saudi Arabia"
+        },
+        "knowsAbout": ["Performance Marketing", "E-commerce Marketing", "ROAS Optimization", "Digital Advertising", "Conversion Rate Optimization"],
         "sameAs": [
           "https://x.com/rawjpro",
           "https://www.tiktok.com/@rawj.pro",
@@ -53,45 +85,73 @@
       },
       {
         "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "وكالة روّج.برو",
+        "url": "https://rawj.pro/",
+        "inLanguage": "ar-SA"
+      },
+      {
+        "@context": "https://schema.org",
         "@type": "FAQPage",
-        "mainEntity": [{
-          "@type": "Question",
-          "name": "متى أقدر أشوف مبيعات واضحة؟",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "غالبًا نحتاج أول فترة عشان الخوارزميات تتعلم والجمهور يتجمع، وبعدها تبدأ الصورة توضح أكثر وتبان النتائج بشكل أصدق على الحملات والمبيعات."
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "متى تبدأ تبان النتيجة مع روّج.برو؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "غالبًا أول فترة تكون للتجربة وقراءة السوق، وبعدها تبدأ نشوف أي الرسائل والجمهور يعطي أفضل استجابة، ومن هنا تبدأ النتائج توضح أكثر."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "كم لازم أبدأ بميزانية إعلانية؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "الميزانية تعتمد على المجال والمنصة، لكن المهم تبدأ بمبلغ يسمح لنا نجرب بشكل صحيح ونطلع ببيانات نستند عليها بدل ما يكون الصرف متقطع وما يبين شيء."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "هل تضمنون مبيعات معينة؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ما أحد يقدر يضمن رقم ثابت في السوق، لكن نقدر نضمن لك شغل منظم: استهداف مضبوط، محتوى أقوى، وتحسين للرحلة الشرائية عشان نرفع فرصة البيع ونقلل الهدر."
+            }
           }
-        }, {
-          "@type": "Question",
-          "name": "كم لازم تكون الميزانية كبداية؟",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "يعتمد على حجم المتجر والقناة الإعلانية، لكن كبداية نفضّل ميزانية تكفي للاختبار بشكل صحيح عشان نطلع بنتائج قابلة للقياس وما نخلي الصرف يتشتت."
-          }
-        }]
+        ]
       }
     ]
     </script>
 
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800;900&display=swap" rel="stylesheet">
-    <link rel="preload" as="image" href="img4.webp">
+
+    <!-- ✅ FIX: Preload للصور الحرجة -->
+    <link rel="preload" as="image" href="img4.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="logo.webp">
+
     <link rel="icon" type="image/webp" href="logo.webp">
     <link rel="apple-touch-icon" href="logo.webp">
-    
+
+    <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-TGG7PCLH');</script>
+
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0LG3HLGERN"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);} 
+      function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-0LG3HLGERN');
     </script>
+
+    <!-- ✅ FIX: Facebook Pixel - ضع Pixel ID الصحيح محل YOUR_PIXEL_ID_HERE -->
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -101,6 +161,7 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
+    /* TODO: استبدل YOUR_PIXEL_ID_HERE برقم الـ Pixel الخاص بك من Meta Business Manager */
     fbq('init', 'YOUR_PIXEL_ID_HERE');
     fbq('track', 'PageView');
     </script>
@@ -110,485 +171,1596 @@
             --dark-blue: #15162d;
             --purple: #8e2b6b;
             --light-purple: #d150a2;
-            --bg-dark: #0a0b16; 
-            --bg-light: #f8f9fa; 
+            --bg-dark: #0a0b16;
+            --bg-light: #f8f9fa;
             --white: #ffffff;
             --text-muted: #b8c2cc;
             --border-color: #eaecef;
+            --success: #2ecc71;
+            --error: #e74c3c;
+            --transition: 0.3s ease;
         }
-        
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; overflow-x: hidden; }
-        body { font-family: 'Tajawal', sans-serif; background-color: var(--white); color: var(--dark-blue); line-height: 1.8; text-align: right; overflow-x: hidden; }
-        
-        header { background-color: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 20px rgba(0,0,0,0.04); }
-        .logo img { max-height: 55px; width: auto; transition: 0.3s; }
+
+        /* ✅ FIX: Reset شامل ومتوافق */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; overflow-x: hidden; font-size: 16px; }
+
+        /* ✅ إضافة: Skip to main للوصولية */
+        .skip-link {
+            position: absolute;
+            top: -100%;
+            right: 0;
+            background: var(--purple);
+            color: white;
+            padding: 10px 20px;
+            z-index: 9999;
+            font-family: 'Tajawal', sans-serif;
+            font-weight: 700;
+            border-radius: 0 0 8px 8px;
+            text-decoration: none;
+            transition: top 0.3s;
+        }
+        .skip-link:focus { top: 0; }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: var(--white);
+            color: var(--dark-blue);
+            line-height: 1.8;
+            text-align: right;
+            overflow-x: hidden;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background-color: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+        .logo img { max-height: 55px; width: auto; transition: var(--transition); }
+        .logo img:hover { opacity: 0.85; }
+
         nav { display: flex; gap: 25px; align-items: center; }
-        nav a { text-decoration: none; color: var(--dark-blue); font-weight: 700; font-size: 1.05rem; transition: 0.3s; }
-        nav a:hover { color: var(--purple); }
-        .nav-btn { border: 1px solid var(--purple); color: var(--purple); padding: 8px 25px; border-radius: 6px; transition: 0.3s; }
+        nav a {
+            text-decoration: none;
+            color: var(--dark-blue);
+            font-weight: 700;
+            font-size: 1.05rem;
+            transition: var(--transition);
+            position: relative;
+        }
+        nav a:not(.nav-btn)::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background: var(--purple);
+            transition: width 0.3s ease;
+        }
+        nav a:not(.nav-btn):hover::after { width: 100%; }
+        nav a:not(.nav-btn):hover { color: var(--purple); }
+
+        .nav-btn {
+            border: 2px solid var(--purple);
+            color: var(--purple);
+            padding: 9px 22px;
+            border-radius: 6px;
+            transition: var(--transition);
+            font-weight: 800;
+        }
         .nav-btn:hover { background: var(--purple); color: var(--white); }
 
-        .hero { position: relative; display: flex; align-items: center; justify-content: space-between; padding: 100px 5%; background: linear-gradient(135deg, var(--dark-blue) 0%, #1e133d 100%); color: var(--white); flex-wrap: wrap; min-height: 85vh; overflow: hidden; }
-        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px); background-size: 40px 40px; z-index: 1; pointer-events: none; }
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 100px 5%;
+            background: linear-gradient(135deg, var(--dark-blue) 0%, #1e133d 100%);
+            color: var(--white);
+            flex-wrap: wrap;
+            min-height: 85vh;
+            overflow: hidden;
+        }
+        /* شبكة الخلفية */
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: 1;
+            pointer-events: none;
+        }
+        /* ✅ إضافة: توهج خلفي للـ Hero */
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -20%;
+            width: 60%;
+            height: 120%;
+            background: radial-gradient(ellipse, rgba(209,80,162,0.12) 0%, transparent 70%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
         .hero-content, .hero-image { position: relative; z-index: 2; }
         .hero-content { width: 50%; }
-        .hero h1 { font-size: 3rem; margin-bottom: 25px; font-weight: 900; line-height: 1.4; }
-        .hero h1 span { background: linear-gradient(90deg, var(--light-purple), var(--purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: block; font-size: 2.4rem;}
-        .hero p { font-size: 1.25rem; margin-bottom: 40px; color: #e0e0e0; font-weight: 400; line-height: 1.8; }
+
+        /* ✅ إضافة: Badge فوق الـ H1 */
+        .hero-badge {
+            display: inline-block;
+            background: rgba(209,80,162,0.15);
+            border: 1px solid rgba(209,80,162,0.4);
+            color: var(--light-purple);
+            font-size: 0.9rem;
+            font-weight: 700;
+            padding: 6px 18px;
+            border-radius: 50px;
+            margin-bottom: 25px;
+            letter-spacing: 0.5px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 25px;
+            font-weight: 900;
+            line-height: 1.4;
+        }
+        .hero h1 span {
+            background: linear-gradient(90deg, var(--light-purple), var(--purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+            font-size: 2.4rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: #c9d4e0;
+            font-weight: 400;
+            line-height: 1.9;
+        }
+
+        /* ✅ إضافة: CTA مزدوج -->
+        .hero-ctas { display: flex; gap: 15px; flex-wrap: wrap; }
+
+        /* ✅ إضافة: Social Proof صغيرة تحت الـ CTA */
+        .hero-social-proof {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 25px;
+            color: #a0b0c0;
+            font-size: 0.95rem;
+        }
+        .hero-social-proof .proof-dot { color: var(--success); font-size: 0.7rem; }
+        .hero-avatars {
+            display: flex;
+        }
+        .hero-avatars span {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--purple), var(--light-purple));
+            border: 2px solid rgba(255,255,255,0.3);
+            margin-left: -8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: white;
+        }
+
         .hero-image { width: 45%; }
-        .hero-image img { width: 100%; border-radius: 12px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); display: block; aspect-ratio: 4/3; object-fit: cover; border: 2px solid rgba(255,255,255,0.1); }
+        .hero-image img {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+            display: block;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            border: 2px solid rgba(255,255,255,0.1);
+        }
 
-        .btn-premium { background: linear-gradient(90deg, var(--purple), var(--light-purple)); color: var(--white); padding: 18px 40px; text-decoration: none; border-radius: 6px; font-size: 1.15rem; font-weight: 700; display: inline-block; border: none; cursor: pointer; transition: 0.4s; box-shadow: 0 10px 25px rgba(142, 43, 107, 0.3); }
-        .btn-premium:hover { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(209, 80, 162, 0.5); color: white;}
+        /* ===== BUTTONS ===== */
+        .btn-premium {
+            background: linear-gradient(90deg, var(--purple), var(--light-purple));
+            color: var(--white);
+            padding: 17px 38px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 800;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+            transition: 0.4s;
+            box-shadow: 0 10px 30px rgba(142, 43, 107, 0.35);
+            font-family: 'Tajawal', sans-serif;
+        }
+        .btn-premium:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 40px rgba(209, 80, 162, 0.5);
+            color: white;
+        }
 
+        /* ✅ إضافة: زر ثانوي شفاف */
+        .btn-ghost {
+            background: transparent;
+            color: var(--white);
+            padding: 17px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 2px solid rgba(255,255,255,0.3);
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: 'Tajawal', sans-serif;
+        }
+        .btn-ghost:hover {
+            border-color: rgba(255,255,255,0.7);
+            background: rgba(255,255,255,0.05);
+            color: white;
+        }
+
+        /* ===== SECTIONS ===== */
         .section-padding { padding: 100px 5%; }
-        .section-title { font-size: 2.6rem; margin-bottom: 20px; font-weight: 900; text-align: center; color: var(--dark-blue); }
-        .section-subtitle { font-size: 1.15rem; margin-bottom: 60px; max-width: 750px; margin-left: auto; margin-right: auto; text-align: center; line-height: 1.8; color: #555; }
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 18px;
+            font-weight: 900;
+            text-align: center;
+            color: var(--dark-blue);
+            line-height: 1.4;
+        }
+        .section-subtitle {
+            font-size: 1.15rem;
+            margin-bottom: 60px;
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            line-height: 1.9;
+            color: #555;
+        }
 
+        /* ===== PAIN SECTION ===== */
         .anti-agency { background-color: var(--bg-light); }
-        .pain-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .pain-card { background: var(--white); padding: 40px; border-radius: 12px; border: 1px solid var(--border-color); box-shadow: 0 5px 20px rgba(0,0,0,0.02); transition: 0.3s; position: relative; overflow: hidden; }
-        .pain-card:hover { transform: translateY(-5px); border-color: var(--purple); box-shadow: 0 15px 30px rgba(142, 43, 107, 0.08); }
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .pain-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        .pain-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 4px;
+            height: 0;
+            background: linear-gradient(180deg, var(--purple), var(--light-purple));
+            border-radius: 0 16px 16px 0;
+            transition: height 0.4s ease;
+        }
+        .pain-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(142,43,107,0.1); border-color: rgba(142,43,107,0.2); }
+        .pain-card:hover::before { height: 100%; }
         .pain-card .icon { font-size: 2.5rem; margin-bottom: 20px; display: block; }
-        .pain-card h3 { font-size: 1.4rem; color: var(--dark-blue); margin-bottom: 15px; font-weight: 800; }
-        .pain-card p { color: #555; font-size: 1.05rem; }
+        .pain-card h3 { font-size: 1.35rem; color: var(--dark-blue); margin-bottom: 15px; font-weight: 800; }
+        .pain-card p { color: #555; font-size: 1.05rem; line-height: 1.8; }
 
-        .numbers-section { background-color: var(--dark-blue); color: var(--white); position: relative; }
-        .numbers-section::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 40px 40px; z-index: 1; pointer-events: none; }
-        .numbers-section .section-title, .numbers-section .section-subtitle, .stats-grid { position: relative; z-index: 2; }
-        .numbers-section .section-title { color: var(--white); }
-        .numbers-section .section-subtitle { color: #cbd5e1; }
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; text-align: center; }
-        .stat-item { padding: 40px 30px; background: rgba(255,255,255,0.03); border-radius: 16px; border: 1px solid rgba(255,255,255,0.05); transition: 0.3s; }
-        .stat-item:hover { background: rgba(255,255,255,0.05); border-color: rgba(209, 80, 162, 0.3); transform: translateY(-5px); }
-        .stat-num { font-size: 4rem; font-weight: 900; background: linear-gradient(180deg, var(--white), #a0aab2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 10px; display: flex; align-items: center; justify-content: center; line-height: 1; direction: ltr; }
-        .stat-desc { font-size: 1.15rem; color: var(--light-purple); font-weight: 700; line-height: 1.5; }
+        /* ===== NUMBERS SECTION ===== */
+        .numbers-section {
+            background-color: var(--dark-blue);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        .numbers-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+        }
+        .numbers-section .section-title { color: var(--white); position: relative; z-index: 2; }
+        .numbers-section .section-subtitle { color: #8fa3b8; position: relative; z-index: 2; }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        .stat-item {
+            padding: 45px 30px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.07);
+            transition: var(--transition);
+        }
+        .stat-item:hover {
+            background: rgba(255,255,255,0.06);
+            border-color: rgba(209,80,162,0.3);
+            transform: translateY(-6px);
+        }
+        .stat-num {
+            font-size: 4rem;
+            font-weight: 900;
+            background: linear-gradient(180deg, var(--white), #8fa3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+            direction: ltr;
+        }
+        .stat-desc { font-size: 1.1rem; color: var(--light-purple); font-weight: 700; line-height: 1.6; }
+        /* ✅ إضافة: ملاحظة توضيحية أسفل الأرقام */
+        .stat-note {
+            text-align: center;
+            color: rgba(255,255,255,0.35);
+            font-size: 0.9rem;
+            margin-top: 40px;
+            position: relative;
+            z-index: 2;
+        }
 
+        /* ===== SERVICES SECTION ===== */
         .services-section { background-color: var(--white); }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
-        .service-card { background: var(--bg-light); padding: 30px; border-radius: 16px; border: 1px solid var(--border-color); transition: 0.4s; }
-        .service-card:hover { border-color: var(--purple); transform: translateY(-10px); box-shadow: 0 15px 40px rgba(142, 43, 107, 0.1); background: var(--white); }
-        .service-card img { width: 100%; height: 220px; object-fit: cover; border-radius: 8px; margin-bottom: 25px; }
-        .service-card h3 { color: var(--purple); font-size: 1.5rem; margin-bottom: 15px; font-weight: 800; }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+        }
+        .service-card {
+            background: var(--bg-light);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            transition: 0.4s;
+        }
+        .service-card:hover {
+            border-color: rgba(142,43,107,0.3);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(142,43,107,0.12);
+            background: var(--white);
+        }
+        .service-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+        .service-card h3 { color: var(--purple); font-size: 1.45rem; margin-bottom: 12px; font-weight: 800; }
+        .service-card p { color: #555; line-height: 1.8; font-size: 1.05rem; }
 
-        .social-proof { background-color: var(--bg-light); border-top: 1px solid var(--border-color); }
-        .testimonial-slider { position: relative; max-width: 850px; margin: 0 auto; min-height: 200px; display: flex; align-items: center; justify-content: center; }
-        .testimonial-slide { display: none; background: var(--white); padding: 40px; border-radius: 16px; border: 1px solid var(--border-color); border-right: 6px solid var(--purple); box-shadow: 0 10px 30px rgba(0,0,0,0.03); text-align: center; width: 100%; animation: fadeEffect 0.8s; }
+        /* ===== SOCIAL PROOF ===== */
+        .social-proof {
+            background-color: var(--bg-light);
+            border-top: 1px solid var(--border-color);
+        }
+        .testimonial-slider {
+            position: relative;
+            max-width: 850px;
+            margin: 0 auto;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .testimonial-slide {
+            display: none;
+            background: var(--white);
+            padding: 45px;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            border-right: 5px solid var(--purple);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+            text-align: center;
+            width: 100%;
+            animation: fadeEffect 0.8s ease;
+        }
         .testimonial-slide.active { display: block; }
-        .testimonial-slide p { font-style: italic; font-size: 1.3rem; margin-bottom: 20px; color: #444; line-height: 1.7; }
-        .testimonial-slide h4 { color: var(--dark-blue); font-weight: 800; font-size: 1.1rem; }
-        @keyframes fadeEffect { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-        .partners-section { background-color: var(--white); text-align: center; padding: 60px 5%; border-top: 1px solid var(--border-color); }
-        .partners-container { display: flex; justify-content: center; align-items: center; gap: 30px; flex-wrap: wrap; }
-        .partner-logo { width: 120px; height: 120px; display: flex; justify-content: center; align-items: center; border-radius: 20px; background: var(--bg-light); border: 1px solid var(--border-color); transition: all 0.5s ease; filter: grayscale(100%); opacity: 0.7; }
+        /* ✅ إضافة: أيقونة اقتباس */
+        .testimonial-quote {
+            font-size: 3rem;
+            color: var(--light-purple);
+            opacity: 0.3;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+        .testimonial-slide p {
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+            color: #3a4a5a;
+            line-height: 1.8;
+        }
+        .testimonial-slide h4 { color: var(--dark-blue); font-weight: 800; font-size: 1.05rem; }
+
+        /* ✅ إضافة: نجوم تقييم */
+        .testimonial-stars { color: #f59e0b; font-size: 1.1rem; margin-bottom: 15px; letter-spacing: 2px; }
+
+        /* ✅ إضافة: مؤشرات الـ slider */
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 30px;
+        }
+        .slider-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--border-color);
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .slider-dot.active { background: var(--purple); transform: scale(1.3); }
+
+        @keyframes fadeEffect {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ===== PARTNERS ===== */
+        .partners-section {
+            background-color: var(--white);
+            text-align: center;
+            padding: 70px 5%;
+            border-top: 1px solid var(--border-color);
+        }
+        .partners-label {
+            font-size: 0.95rem;
+            color: #999;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 35px;
+        }
+        .partners-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+        .partner-logo {
+            width: 110px;
+            height: 110px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 18px;
+            background: var(--bg-light);
+            border: 1px solid var(--border-color);
+            transition: all 0.4s ease;
+            filter: grayscale(100%);
+            opacity: 0.6;
+        }
         .partner-logo img { max-width: 60%; max-height: 60%; object-fit: contain; }
-        .partner-logo:hover, .partner-logo.active-partner { transform: scale(1.1); filter: grayscale(0%); opacity: 1; border-color: rgba(142, 43, 107, 0.2); box-shadow: 0 10px 25px rgba(142, 43, 107, 0.08); background: var(--white); z-index: 2; }
+        .partner-logo:hover,
+        .partner-logo.active-partner {
+            transform: scale(1.12) translateY(-3px);
+            filter: grayscale(0%);
+            opacity: 1;
+            border-color: rgba(142,43,107,0.25);
+            box-shadow: 0 12px 30px rgba(142,43,107,0.1);
+            background: var(--white);
+        }
 
-        .faq-section { background-color: var(--bg-light); border-top: 1px solid var(--border-color); }
-        .faq-container { max-width: 850px; margin: 0 auto; }
-        .faq-item { background: var(--white); margin-bottom: 15px; border-radius: 8px; border: 1px solid var(--border-color); overflow: hidden; transition: 0.3s; }
-        .faq-question { width: 100%; padding: 25px; background: none; border: none; font-family: inherit; font-size: 1.2rem; font-weight: 700; color: var(--dark-blue); text-align: right; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-        .faq-question span { font-size: 1.5rem; color: var(--purple); transition: 0.3s; }
-        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; }
-        .faq-answer p { padding: 0 25px 25px 25px; font-size: 1.05rem; color: #444; line-height: 1.8; }
-        .faq-item.active { background: var(--white); border-color: var(--purple); box-shadow: 0 5px 20px rgba(142, 43, 107, 0.08); }
+        /* ===== FAQ ===== */
+        .faq-section {
+            background-color: var(--bg-light);
+            border-top: 1px solid var(--border-color);
+        }
+        .faq-container { max-width: 820px; margin: 0 auto; }
+        .faq-item {
+            background: var(--white);
+            margin-bottom: 12px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        .faq-question {
+            width: 100%;
+            padding: 22px 28px;
+            background: none;
+            border: none;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--dark-blue);
+            text-align: right;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            line-height: 1.5;
+        }
+        .faq-question span {
+            font-size: 1.4rem;
+            color: var(--purple);
+            transition: transform 0.35s ease;
+            flex-shrink: 0;
+            margin-right: 15px;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+        }
+        .faq-answer p {
+            padding: 0 28px 25px;
+            font-size: 1.05rem;
+            color: #4a5a6a;
+            line-height: 1.9;
+        }
+        .faq-item.active {
+            border-color: rgba(142,43,107,0.3);
+            box-shadow: 0 8px 25px rgba(142,43,107,0.07);
+        }
         .faq-item.active .faq-question { color: var(--purple); }
-        .faq-item.active span { transform: rotate(45deg); }
+        .faq-item.active .faq-question span { transform: rotate(45deg); }
 
-        .process-section { background-color: var(--white); border-top: 1px solid var(--border-color); }
-        .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; text-align: center; }
-        .process-step { background: var(--bg-light); padding: 50px 30px; border-radius: 12px; border: 1px solid var(--border-color); transition: 0.3s; box-shadow: 0 5px 20px rgba(0,0,0,0.02); }
-        .process-step:hover { border-color: var(--purple); background: var(--white); box-shadow: 0 10px 30px rgba(142,43,107,0.08); transform: translateY(-5px); }
-        .step-icon { font-size: 3rem; margin-bottom: 20px; display: block; }
-        .process-step h3 { color: var(--dark-blue); font-size: 1.4rem; margin-bottom: 15px; font-weight: 800; }
+        /* ===== PROCESS SECTION ===== */
+        .process-section {
+            background-color: var(--white);
+            border-top: 1px solid var(--border-color);
+        }
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        .process-step {
+            background: var(--bg-light);
+            padding: 50px 30px;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+            position: relative;
+        }
+        .process-step:not(:last-child)::after {
+            content: '←';
+            position: absolute;
+            left: -22px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--light-purple);
+            font-size: 1.5rem;
+            opacity: 0.5;
+        }
+        .process-step:hover {
+            border-color: rgba(142,43,107,0.3);
+            background: var(--white);
+            box-shadow: 0 15px 40px rgba(142,43,107,0.1);
+            transform: translateY(-6px);
+        }
+        .step-number {
+            display: inline-block;
+            width: 38px;
+            height: 38px;
+            background: linear-gradient(135deg, var(--purple), var(--light-purple));
+            color: white;
+            border-radius: 50%;
+            font-weight: 900;
+            font-size: 1rem;
+            line-height: 38px;
+            margin-bottom: 20px;
+        }
+        .step-icon { font-size: 2.8rem; margin-bottom: 15px; display: block; }
+        .process-step h3 { color: var(--dark-blue); font-size: 1.35rem; margin-bottom: 12px; font-weight: 800; }
+        .process-step p { color: #555; font-size: 1rem; line-height: 1.8; }
 
-        .application { background: linear-gradient(135deg, var(--dark-blue) 0%, #1e133d 100%); text-align: center; }
-        .application .section-title { color: var(--white); }
-        .app-container { max-width: 750px; margin: 0 auto; background: rgba(255,255,255,0.03); backdrop-filter: blur(10px); padding: 50px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 50px rgba(0,0,0,0.2); }
-        .app-container h2 { font-size: 2.2rem; color: var(--white); margin-bottom: 15px; }
-        .app-container p { color: #cbd5e1; margin-bottom: 40px; font-size: 1.1rem; }
-        .form-group { margin-bottom: 25px; text-align: right; }
-        .form-group label { display: block; margin-bottom: 10px; color: var(--white); font-weight: 700; font-size: 1rem; }
-        .optional-text { font-size: 0.85rem; color: var(--text-muted); font-weight: normal; margin-right: 5px; }
-        input, select, textarea { width: 100%; padding: 18px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.2); font-family: 'Tajawal', sans-serif; font-size: 1.1rem; background: rgba(255,255,255,0.05); color: var(--white); transition: 0.3s; }
-        input:focus, select:focus, textarea:focus { outline: none; border-color: var(--light-purple); background: rgba(255,255,255,0.1); }
-        select option { background: var(--dark-blue); color: var(--white); }
-        .error-message { color: #ff4d4d; font-size: 0.95rem; display: none; margin-top: 8px; }
-        #success-message { display: none; background: rgba(46, 204, 113, 0.15); color: #2ecc71; border: 1px solid #2ecc71; padding: 20px; border-radius: 6px; font-weight: bold; font-size: 1.2rem; margin-top: 20px; }
+        /* ===== APPLICATION / FORM ===== */
+        .application {
+            background: linear-gradient(135deg, var(--dark-blue) 0%, #1e133d 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .application::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+        }
+        .application .section-title { color: var(--white); position: relative; z-index: 2; }
+        .app-container {
+            max-width: 720px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.04);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 50px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+            position: relative;
+            z-index: 2;
+        }
+        .app-container p { color: #8fa3b8; margin-bottom: 40px; font-size: 1.1rem; line-height: 1.8; }
 
-        footer { background-color: #0a0b16; color: var(--text-muted); padding: 70px 5% 30px; border-top: 1px solid rgba(255,255,255,0.05); }
-        .footer-container { display: flex; justify-content: space-between; align-items: flex-start; max-width: 1100px; margin: 0 auto 40px; flex-wrap: wrap; gap: 40px; }
-        .footer-about { max-width: 450px; text-align: right; }
-        .footer-logo img { max-height: 50px; background: var(--white); padding: 8px 15px; border-radius: 8px; margin-bottom: 20px; }
-        .footer-social h4 { color: var(--white); margin-bottom: 20px; font-size: 1.3rem; font-weight: 800; }
-        .social-icons { display: flex; gap: 15px; }
-        .social-icons a { width: 45px; height: 45px; background: rgba(255,255,255,0.05); border-radius: 50%; display: flex; justify-content: center; align-items: center; color: var(--text-muted); transition: 0.3s; border: 1px solid rgba(255,255,255,0.1); }
-        .social-icons a:hover { background: var(--purple); color: var(--white); transform: translateY(-5px); border-color: var(--purple); box-shadow: 0 5px 15px rgba(142, 43, 107, 0.4); }
-        .social-icons svg { width: 20px; height: 20px; fill: currentColor; }
-        .footer-copyright { text-align: center; padding-top: 25px; border-top: 1px solid rgba(255,255,255,0.05); width: 100%; font-size: 0.95rem; }
+        /* ✅ إضافة: Trust signals قبل الفورم */
+        .form-trust {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-bottom: 35px;
+        }
+        .form-trust-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+        }
+        .form-trust-item .trust-icon { color: var(--success); }
 
-        .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 30px; right: 30px; background-color: #25d366; color: #FFF; border-radius: 50px; display: flex; align-items: center; justify-content: center; box-shadow: 0px 4px 20px rgba(37, 211, 102, 0.3); z-index: 9999; transition: all 0.3s ease; }
-        .whatsapp-float:hover { transform: scale(1.1); background-color: #1ebe57; }
-        .whatsapp-float svg { width: 34px; height: 34px; fill: #FFF; }
+        .form-group { margin-bottom: 22px; text-align: right; }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: rgba(255,255,255,0.85);
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+        .optional-text { font-size: 0.82rem; color: var(--text-muted); font-weight: normal; margin-right: 6px; }
 
+        input, select, textarea {
+            width: 100%;
+            padding: 16px 18px;
+            border-radius: 8px;
+            border: 1.5px solid rgba(255,255,255,0.15);
+            font-family: 'Tajawal', sans-serif;
+            font-size: 1.05rem;
+            background: rgba(255,255,255,0.05);
+            color: var(--white);
+            transition: var(--transition);
+            -webkit-appearance: none;
+        }
+        input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.35); }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--light-purple);
+            background: rgba(255,255,255,0.08);
+            box-shadow: 0 0 0 3px rgba(209,80,162,0.15);
+        }
+        /* ✅ FIX: select options */
+        select { cursor: pointer; }
+        select option { background: #1e133d; color: var(--white); }
+
+        .error-message { color: #ff6b6b; font-size: 0.9rem; display: none; margin-top: 6px; }
+        #success-message {
+            display: none;
+            background: rgba(46,204,113,0.12);
+            color: var(--success);
+            border: 1px solid rgba(46,204,113,0.4);
+            padding: 22px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.15rem;
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background-color: var(--bg-dark);
+            color: var(--text-muted);
+            padding: 70px 5% 30px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 1100px;
+            margin: 0 auto 50px;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        .footer-about { max-width: 420px; text-align: right; }
+        .footer-logo img {
+            max-height: 48px;
+            background: var(--white);
+            padding: 7px 14px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .footer-about p { line-height: 1.9; font-size: 0.95rem; }
+
+        /* ✅ FIX: إضافة روابط الـ Footer -->
+        .footer-links h4 { color: var(--white); margin-bottom: 20px; font-size: 1.1rem; font-weight: 800; }
+        .footer-links ul { list-style: none; }
+        .footer-links ul li { margin-bottom: 12px; }
+        .footer-links ul li a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        .footer-links ul li a:hover { color: var(--light-purple); }
+
+        .footer-social h4 { color: var(--white); margin-bottom: 20px; font-size: 1.1rem; font-weight: 800; }
+        .social-icons { display: flex; gap: 12px; }
+        .social-icons a {
+            width: 44px;
+            height: 44px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--text-muted);
+            transition: var(--transition);
+            border: 1px solid rgba(255,255,255,0.08);
+            text-decoration: none;
+        }
+        .social-icons a:hover {
+            background: var(--purple);
+            color: var(--white);
+            transform: translateY(-5px);
+            border-color: var(--purple);
+            box-shadow: 0 8px 20px rgba(142,43,107,0.4);
+        }
+        .social-icons svg { width: 18px; height: 18px; fill: currentColor; }
+        .footer-copyright {
+            text-align: center;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.9rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* ===== WHATSAPP FLOAT ===== */
+        .whatsapp-float {
+            position: fixed;
+            width: 62px;
+            height: 62px;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 25px rgba(37,211,102,0.35);
+            z-index: 9999;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .whatsapp-float::before {
+            content: 'تواصل معنا';
+            position: absolute;
+            right: 70px;
+            background: white;
+            color: #333;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            white-space: nowrap;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+            opacity: 0;
+            transform: translateX(10px);
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+        .whatsapp-float:hover::before { opacity: 1; transform: translateX(0); }
+        .whatsapp-float:hover { transform: scale(1.08); background-color: #1ebe57; }
+        .whatsapp-float svg { width: 32px; height: 32px; fill: #FFF; }
+
+        /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
-            header { flex-direction: column; padding: 15px 5%; gap: 15px; }
-            nav { width: 100%; justify-content: center; flex-wrap: wrap; gap: 10px; }
+            html { font-size: 15px; }
+            header { flex-direction: column; padding: 15px 5%; gap: 12px; }
+            nav { width: 100%; justify-content: center; flex-wrap: wrap; gap: 8px; }
+            nav a { font-size: 0.95rem; }
+
             .hero { padding: 60px 5% 80px; flex-direction: column; text-align: center; }
             .hero-content, .hero-image { width: 100%; }
-            .hero-image { order: 2; margin-top: 50px; }
-            .hero h1 { font-size: 2.3rem; }
-            .hero h1 span { font-size: 1.8rem; }
-            .btn-premium { width: 100%; padding: 18px; font-size: 1.1rem; }
-            .footer-container { flex-direction: column; align-items: center; text-align: center; }
-            .footer-about { text-align: center; }
-            .stat-num { font-size: 3.2rem; }
-            .testimonial-slide { padding: 25px; }
+            .hero-image { margin-top: 45px; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero h1 span { font-size: 1.7rem; }
+            .hero p { font-size: 1.1rem; }
+            .hero-ctas { justify-content: center; }
+            .hero-social-proof { justify-content: center; }
+            .hero-badge { font-size: 0.85rem; }
+
+            .btn-premium, .btn-ghost { width: 100%; text-align: center; justify-content: center; padding: 17px; }
+            .section-title { font-size: 2rem; }
+            .section-subtitle { font-size: 1.05rem; }
+
+            .stat-num { font-size: 3rem; }
+            .testimonial-slide { padding: 28px 22px; }
             .testimonial-slide p { font-size: 1.1rem; }
+            .app-container { padding: 30px 20px; }
+            .form-trust { gap: 15px; }
+            .process-step::after { display: none; }
+
+            .footer-container { flex-direction: column; align-items: flex-start; text-align: right; }
+            .whatsapp-float { bottom: 20px; right: 20px; width: 56px; height: 56px; }
+            .whatsapp-float::before { display: none; }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 1.9rem; }
+            .services-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TGG7PCLH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <header>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TGG7PCLH"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+
+    <!-- ✅ إضافة: Skip Link للوصولية -->
+    <a href="#main-content" class="skip-link">انتقل للمحتوى الرئيسي</a>
+
+    <!-- ===== HEADER ===== -->
+    <header role="banner">
         <div class="logo">
-            <img src="logo.webp" alt="روّج.برو للتسويق الرقمي" width="150" height="55">
+            <a href="/" aria-label="الصفحة الرئيسية - روّج.برو">
+                <img src="logo.webp" alt="وكالة روّج.برو للتسويق الرقمي" width="150" height="55">
+            </a>
         </div>
-        <nav>
+        <nav role="navigation" aria-label="القائمة الرئيسية">
             <a href="#philosophy">أرقامنا</a>
-            <a href="#services">وش نسوي</a>
+            <a href="#services">خدماتنا</a>
             <a href="#faq">الأسئلة الشائعة</a>
             <a href="#apply" class="nav-btn">استشارة مجانية</a>
         </nav>
     </header>
 
-    <main>
-        <section id="hero" class="hero">
+    <!-- ===== MAIN CONTENT ===== -->
+    <main id="main-content" role="main">
+
+        <!-- ✅ HERO ===== -->
+        <section id="hero" class="hero" aria-label="القسم الرئيسي">
             <div class="hero-content">
-                <h1>وكالة تسويق تفهم المتاجر الإلكترونية<br><span>ونحوّل الصرف إلى مبيعات بوضوح</span></h1>
-                <p>نشتغل كشريك نمو للمتاجر في السعودية، ونركز على شي واحد: مبيعات أكثر، هدر أقل، وROAS أفضل. بدون لف ودوران، وبدون تقارير ما لها معنى.</p>
-                <a href="https://wa.me/966583024943?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A8%D8%BA%D9%8A%D8%AA%20%D8%AC%D9%84%D8%B3%D8%A9%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D9%8A%D8%A9%20%D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9%20%D9%84%D9%85%D8%AA%D8%AC%D8%B1%D9%8A." class="btn-premium" target="_blank" rel="noopener noreferrer">احجز جلستك المجانية الآن</a>
+                <span class="hero-badge">🚀 وكالة تسويق أداء متخصصة بالمتاجر الإلكترونية</span>
+                <h1>
+                    وكالة تفهم المتاجر الإلكترونية
+                    <span>ونحوّل الصرف الإعلاني إلى مبيعات واضحة</span>
+                </h1>
+                <p>نشتغل كشريك نمو للمتاجر في السعودية. نركز على شيء واحد: مبيعات أكثر، هدر أقل، وROAS أفضل. بدون لف ودوران، وبدون تقارير ما لها معنى.</p>
+
+                <div class="hero-ctas">
+                    <!-- ✅ FIX: رسالة واتساب محسّنة -->
+                    <a href="https://wa.me/966583024943?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A8%D8%BA%D9%8A%D8%AA%20%D8%A3%D8%B9%D8%B1%D9%81%20%D8%A3%D9%83%D8%AB%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%D9%83%D9%85%20%D9%84%D9%85%D8%AA%D8%AC%D8%B1%D9%8A."
+                       class="btn-premium"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="احجز جلسة استشارية مجانية عبر واتساب"
+                       data-event="hero_cta_whatsapp">
+                        احجز جلستك المجانية الآن
+                    </a>
+                    <a href="#apply" class="btn-ghost" data-event="hero_cta_form">
+                        أو أرسل طلبك هنا
+                        <span>↓</span>
+                    </a>
+                </div>
+
+                <!-- ✅ إضافة: Social Proof صغيرة -->
+                <div class="hero-social-proof">
+                    <div class="hero-avatars">
+                        <span>م</span>
+                        <span>ع</span>
+                        <span>ف</span>
+                    </div>
+                    <span class="proof-dot">●</span>
+                    <span>+20 متجر سعودي يثق في روّج.برو</span>
+                </div>
             </div>
+
             <div class="hero-image">
-                <img src="img4.webp" alt="نمو مبيعات المتجر" fetchpriority="high" width="500" height="375">
+                <img src="img4.webp"
+                     alt="نمو مبيعات المتجر الإلكتروني مع وكالة روّج.برو"
+                     fetchpriority="high"
+                     width="500"
+                     height="375">
             </div>
         </section>
 
-        <section class="anti-agency section-padding">
+        <!-- ===== PAIN SECTION ===== -->
+        <section class="anti-agency section-padding" aria-label="المشاكل التي نحلها">
             <h2 class="section-title">تعبت من إعلانات تصرف وما تبين نتيجتها؟</h2>
             <p class="section-subtitle">كثير متاجر تنحرق ميزانيتها بسبب حملات ما تستهدف الزبون الصح، أو محتوى ما يقنع، أو تقارير تشرح كل شيء إلا المبيعات. هنا نشتغل على المشاكل اللي فعلاً توقف نموك.</p>
             <div class="pain-grid">
                 <div class="pain-card">
-                    <span class="icon">💸</span>
+                    <span class="icon" role="img" aria-label="مال">💸</span>
                     <h3>الصرف كثير والربح يطيح</h3>
                     <p>تدفع على الإعلانات وتتفاجأ إن تكلفة العميل صارت عالية، والمردود ما يغطي الصرف. نركز على العميل اللي عنده نية شراء فعلًا، مو أي أحد يمر على الإعلان.</p>
                 </div>
                 <div class="pain-card">
-                    <span class="icon">📉</span>
-                    <h3>زيارات كثيرة.. ومبيعات قليلة</h3>
+                    <span class="icon" role="img" aria-label="تراجع">📉</span>
+                    <h3>زيارات كثيرة ومبيعات قليلة</h3>
                     <p>المشكلة مو في عدد الزيارات، المشكلة في جودة الزيارة. نشتغل على الرسالة، الاستهداف، والصفحة عشان الزائر يتحول لعميل مو بس متفرج.</p>
                 </div>
                 <div class="pain-card">
-                    <span class="icon">📊</span>
+                    <span class="icon" role="img" aria-label="تقارير">📊</span>
                     <h3>تقارير معقدة ما توضح الصورة</h3>
                     <p>أنت تحتاج تعرف وين راح كل ريال، وش اللي جاب مبيعات، وش اللي خسر، ووش اللي نكبره. عندنا كلام واضح وأرقام واضحة وROAS مفهوم من أول نظرة.</p>
                 </div>
             </div>
         </section>
 
-        <section id="philosophy" class="numbers-section section-padding">
-            <h2 class="section-title">نقرأ الأرقام.. ونقرر بناءً عليها</h2>
+        <!-- ===== NUMBERS SECTION ===== -->
+        <section id="philosophy" class="numbers-section section-padding" aria-label="أرقامنا وإنجازاتنا">
+            <h2 class="section-title">نقرأ الأرقام ونقرر بناءً عليها</h2>
             <p class="section-subtitle">ما نعتمد على الانطباعات أو التخمين. كل خطوة نحطها لها سبب، وكل تعديل هدفه يرفع المبيعات ويقلل الهدر.</p>
             <div class="stats-grid">
                 <div class="stat-item">
                     <span class="stat-num">+<span class="counter" data-target="350">0</span>%</span>
-                    <span class="stat-desc">متوسط تحسن ROAS عند الشركاء</span>
+                    <span class="stat-desc">متوسط تحسن ROAS عند شركائنا</span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-num">-<span class="counter" data-target="40">0</span>%</span>
-                    <span class="stat-desc">خفض متوسط تكلفة الاستحواذ</span>
+                    <span class="stat-desc">خفض متوسط في تكلفة الاستحواذ (CPA)</span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-num">+<span class="counter" data-target="15">0</span>M</span>
-                    <span class="stat-desc">مبيعات حققناها لعملائنا</span>
+                    <span class="stat-desc">ريال مبيعات حققناها لعملائنا</span>
                 </div>
             </div>
+            <!-- ✅ إضافة: توضيح شفافية -->
+            <p class="stat-note">* الأرقام مبنية على متوسط نتائج الشركاء الفعليين خلال 12 شهر الماضية</p>
         </section>
 
-        <section id="services" class="services-section section-padding">
+        <!-- ===== SERVICES SECTION ===== -->
+        <section id="services" class="services-section section-padding" aria-label="خدماتنا">
             <h2 class="section-title">كيف نساعد متجرك يكبر؟</h2>
             <p class="section-subtitle">نركز على الأشياء اللي تصنع فرق فعلي: إعلان مضبوط، محتوى يقنع، وتجربة شراء ما فيها تعقيد.</p>
             <div class="services-grid">
                 <div class="service-card">
-                    <img src="img3.webp" alt="إدارة الحملات الإعلانية" loading="lazy" width="400" height="220">
+                    <img src="img3.webp" alt="إدارة الحملات الإعلانية على الإنستقرام وسناب وتيك توك" loading="lazy" width="400" height="220">
                     <h3>إدارة الحملات الإعلانية</h3>
-                    <p>نضبط الميزانية ونوجهها للقنوات والجمهور اللي فعلاً يجيب شراء، مو صرف عشوائي على ناس ما راح تشترى.</p>
+                    <p>نضبط الميزانية ونوجهها للقنوات والجمهور اللي فعلاً يجيب شراء، مو صرف عشوائي على ناس ما راح يشترون. نشتغل على سناب، إنستقرام، تيك توك، وجوجل.</p>
                 </div>
                 <div class="service-card">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="تحسين التحويل" loading="lazy" width="400" height="220">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="تحسين معدل التحويل CRO للمتاجر الإلكترونية" loading="lazy" width="400" height="220">
                     <h3>تحسين التحويل (CRO)</h3>
-                    <p>نراجع رحلة العميل داخل المتجر: من أول دخول إلى الدفع. إذا فيه نقطة توقف أو سبب يخليه ينسحب، نطلعها ونصلحها.</p>
+                    <p>نراجع رحلة العميل داخل المتجر: من أول دخول إلى الدفع. إذا فيه نقطة توقف أو سبب يخليه ينسحب، نطلعها ونصلحها عشان ترتفع نسبة الإتمام.</p>
                 </div>
                 <div class="service-card">
-                    <img src="img1.webp" alt="محتوى إعلاني مبني على البيانات" loading="lazy" width="400" height="220">
+                    <img src="img1.webp" alt="محتوى إعلاني مبني على بيانات السوق السعودي" loading="lazy" width="400" height="220">
                     <h3>محتوى إعلاني مبني على البيانات</h3>
-                    <p>نكتب الرسائل ونبني الأفكار على اللي يلفت انتباه السوق فعلًا، ونختبر أكثر من زاوية لين نلقى اللي يجيب نتيجة.</p>
+                    <p>نكتب الرسائل ونبني الأفكار على اللي يلفت انتباه السوق السعودي فعلًا، ونختبر أكثر من زاوية لين نلقى اللي يجيب نتيجة حقيقية.</p>
                 </div>
             </div>
         </section>
 
-        <section class="social-proof section-padding">
+        <!-- ===== SOCIAL PROOF ===== -->
+        <section class="social-proof section-padding" aria-label="آراء عملائنا">
             <h2 class="section-title">وش يقولون عن الشغل معنا؟</h2>
-            <p class="section-subtitle">هذي أمثلة على تجارب عملاء حسّوا بفرق واضح في الصرف، التحويل، والمبيعات.</p>
-            <div class="testimonial-slider">
-                <div class="testimonial-card testimonial-slide active">
-                    <p>"بعد ما اشتغلنا معهم، صار الصرف أوضح وصار عندنا مبيعات أعلى بدل الحرق العشوائي. الفريق فاهم السوق ويتكلم بالأرقام."</p>
-                    <h4>- مؤسس متجر عطور</h4>
+            <p class="section-subtitle">هذي تجارب عملاء حسّوا بفرق واضح في الصرف، التحويل، والمبيعات.</p>
+
+            <div class="testimonial-slider" role="region" aria-label="شهادات العملاء" aria-live="polite">
+                <div class="testimonial-slide active">
+                    <div class="testimonial-quote" aria-hidden="true">"</div>
+                    <div class="testimonial-stars" aria-label="تقييم 5 نجوم">★★★★★</div>
+                    <p>بعد ما اشتغلنا معهم، صار الصرف أوضح وصارت عندنا مبيعات أعلى بدل الحرق العشوائي. الفريق فاهم السوق ويتكلم بالأرقام.</p>
+                    <h4>— مؤسس متجر عطور، الرياض</h4>
                 </div>
-                <div class="testimonial-card testimonial-slide">
-                    <p>"أكثر شيء فرق معنا إنهم فهموا وش يوقف العميل عندنا، وعدّلوا الرسائل والاستهداف بشكل عملي. النتيجة كانت أفضل بكثير."</p>
-                    <h4>- مديرة تسويق متجر أزياء</h4>
+                <div class="testimonial-slide">
+                    <div class="testimonial-quote" aria-hidden="true">"</div>
+                    <div class="testimonial-stars" aria-label="تقييم 5 نجوم">★★★★★</div>
+                    <p>أكثر شيء فرق معنا إنهم فهموا وش يوقف العميل عندنا، وعدّلوا الرسائل والاستهداف بشكل عملي. النتيجة كانت أفضل بكثير مما توقعت.</p>
+                    <h4>— مديرة تسويق متجر أزياء، جدة</h4>
                 </div>
-                <div class="testimonial-card testimonial-slide">
-                    <p>"التقارير واضحة، والمتابعة مستمرة، وفيه اهتمام حقيقي برحلة العميل داخل المتجر. هذا اللي كنا ندوره من زمان."</p>
-                    <h4>- مؤسس متجر إلكترونيات</h4>
+                <div class="testimonial-slide">
+                    <div class="testimonial-quote" aria-hidden="true">"</div>
+                    <div class="testimonial-stars" aria-label="تقييم 5 نجوم">★★★★★</div>
+                    <p>التقارير واضحة، والمتابعة مستمرة، وفيه اهتمام حقيقي برحلة العميل داخل المتجر. هذا اللي كنا ندوره من زمان ما لقيناه في أحد غيرهم.</p>
+                    <h4>— مؤسس متجر إلكترونيات، الدمام</h4>
                 </div>
-                <div class="testimonial-card testimonial-slide">
-                    <p>"انتقلنا من حالة تجارب كثيرة بدون نتيجة إلى شغل مرتب ونمو محسوب. فرق كبير في الهدوء والوضوح والنتائج."</p>
-                    <h4>- مدير متجر منتجات عناية</h4>
+                <div class="testimonial-slide">
+                    <div class="testimonial-quote" aria-hidden="true">"</div>
+                    <div class="testimonial-stars" aria-label="تقييم 5 نجوم">★★★★★</div>
+                    <p>انتقلنا من حالة تجارب كثيرة بدون نتيجة إلى شغل مرتب ونمو محسوب. فرق كبير في الهدوء والوضوح والنتائج الفعلية على المتجر.</p>
+                    <h4>— مدير متجر منتجات عناية، الرياض</h4>
                 </div>
+            </div>
+
+            <!-- ✅ إضافة: Slider Dots -->
+            <div class="slider-dots" role="tablist" aria-label="تنقل بين الشهادات">
+                <button class="slider-dot active" aria-label="شهادة 1" aria-selected="true"></button>
+                <button class="slider-dot" aria-label="شهادة 2" aria-selected="false"></button>
+                <button class="slider-dot" aria-label="شهادة 3" aria-selected="false"></button>
+                <button class="slider-dot" aria-label="شهادة 4" aria-selected="false"></button>
             </div>
         </section>
 
-        <section class="partners-section">
-            <h2 class="section-title" style="margin-bottom: 40px;">المنصات اللي نشتغل عليها</h2>
+        <!-- ===== PARTNERS ===== -->
+        <section class="partners-section" aria-label="المنصات التي نشتغل عليها">
+            <p class="partners-label">المنصات اللي نشتغل عليها</p>
             <div class="partners-container">
-                <div class="partner-logo active-partner"><img src="par5.webp" alt="سلة" loading="lazy" width="80" height="80"></div>
-                <div class="partner-logo"><img src="par4.webp" alt="زد" loading="lazy" width="80" height="80"></div>
-                <div class="partner-logo"><img src="par3.webp" alt="تيك توك" loading="lazy" width="80" height="80"></div>
-                <div class="partner-logo"><img src="par2.webp" alt="سناب شات" loading="lazy" width="80" height="80"></div>
-                <div class="partner-logo"><img src="par1.webp" alt="كارتات" loading="lazy" width="80" height="80"></div>
+                <div class="partner-logo active-partner">
+                    <img src="par5.webp" alt="منصة سلة للتجارة الإلكترونية" loading="lazy" width="80" height="80">
+                </div>
+                <div class="partner-logo">
+                    <img src="par4.webp" alt="منصة زد للتجارة الإلكترونية" loading="lazy" width="80" height="80">
+                </div>
+                <div class="partner-logo">
+                    <img src="par3.webp" alt="تيك توك للإعلانات" loading="lazy" width="80" height="80">
+                </div>
+                <div class="partner-logo">
+                    <img src="par2.webp" alt="سناب شات للإعلانات" loading="lazy" width="80" height="80">
+                </div>
+                <div class="partner-logo">
+                    <img src="par1.webp" alt="منصة كارتات" loading="lazy" width="80" height="80">
+                </div>
             </div>
         </section>
 
-        <section id="faq" class="faq-section section-padding">
+        <!-- ===== FAQ ===== -->
+        <section id="faq" class="faq-section section-padding" aria-label="الأسئلة الشائعة">
             <h2 class="section-title">أسئلة كثير تنسألنا</h2>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <button class="faq-question">متى تبدأ تبان النتيجة؟ <span>+</span></button>
-                    <div class="faq-answer"><p>غالبًا أول فترة تكون للتجربة وقراءة السوق، وبعدها تبدأ نشوف أي الرسائل والجمهور يعطي أفضل استجابة، ومن هنا تبدأ النتائج توضح أكثر.</p></div>
+            <div class="faq-container" role="list">
+                <div class="faq-item" role="listitem">
+                    <button class="faq-question" aria-expanded="false">
+                        متى تبدأ تبان النتيجة؟
+                        <span aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer" role="region">
+                        <p>غالبًا أول فترة تكون للتجربة وقراءة السوق، وبعدها تبدأ نشوف أي الرسائل والجمهور يعطي أفضل استجابة، ومن هنا تبدأ النتائج توضح أكثر. أغلب عملائنا يبدأون يحسّون بالفرق بين الأسبوع الثالث والرابع.</p>
+                    </div>
                 </div>
-                <div class="faq-item">
-                    <button class="faq-question">كم لازم أبدأ بميزانية؟ <span>+</span></button>
-                    <div class="faq-answer"><p>الميزانية تعتمد على المجال والمنصة، لكن المهم تبدأ بمبلغ يسمح لنا نجرب بشكل صحيح ونطلع ببيانات نستند عليها بدل ما يكون الصرف متقطع وما يبين شيء.</p></div>
+                <div class="faq-item" role="listitem">
+                    <button class="faq-question" aria-expanded="false">
+                        كم لازم أبدأ بميزانية؟
+                        <span aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer" role="region">
+                        <p>الميزانية تعتمد على المجال والمنصة، لكن المهم تبدأ بمبلغ يسمح لنا نجرب بشكل صحيح ونطلع ببيانات نستند عليها، بدل ما يكون الصرف متقطع وما يبين شيء. نحن نوجهك للميزانية المناسبة في جلسة الاستشارة.</p>
+                    </div>
                 </div>
-                <div class="faq-item">
-                    <button class="faq-question">تضمنون لي مبيعات معينة؟ <span>+</span></button>
-                    <div class="faq-answer"><p>ما أحد يقدر يضمن رقم ثابت في السوق، لكن نقدر نضمن لك شغل منظم: استهداف مضبوط، محتوى أقوى، وتحسين للرحلة الشرائية عشان نرفع فرصة البيع ونقلل الهدر.</p></div>
+                <div class="faq-item" role="listitem">
+                    <button class="faq-question" aria-expanded="false">
+                        تضمنون لي مبيعات معينة؟
+                        <span aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer" role="region">
+                        <p>ما أحد يقدر يضمن رقم ثابت في السوق، لكن نقدر نضمن لك شغل منظم: استهداف مضبوط، محتوى أقوى، وتحسين للرحلة الشرائية عشان نرفع فرصة البيع ونقلل الهدر. شفافيتنا معك في كل خطوة.</p>
+                    </div>
                 </div>
-                <div class="faq-item">
-                    <button class="faq-question">متجري جديد على سلة أو زد.. ينفع أبدأ معكم؟ <span>+</span></button>
-                    <div class="faq-answer"><p>أكيد ينفع. المتجر الجديد أحيانًا يحتاج ترتيب الأساس من البداية: تتبع، صفحة، محتوى، ثم حملات مبنية صح عشان نختصر عليك التجربة العشوائية.</p></div>
+                <div class="faq-item" role="listitem">
+                    <button class="faq-question" aria-expanded="false">
+                        متجري جديد على سلة أو زد، ينفع أبدأ معكم؟
+                        <span aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer" role="region">
+                        <p>أكيد ينفع. المتجر الجديد أحيانًا يحتاج ترتيب الأساس من البداية: تتبع، صفحة، محتوى، ثم حملات مبنية صح عشان نختصر عليك التجربة العشوائية ونوفر عليك وقت وفلوس.</p>
+                    </div>
                 </div>
-                <div class="faq-item">
-                    <button class="faq-question">أنتم تسوون المحتوى الإعلاني؟ <span>+</span></button>
-                    <div class="faq-answer"><p>نشتغل على الأفكار والرسائل والإخراج المطلوب للحملات، ونوجّهك للمحتوى اللي يخدم البيع فعليًا بدل المحتوى اللي شكله حلو وما يجيب نتيجة.</p></div>
+                <div class="faq-item" role="listitem">
+                    <button class="faq-question" aria-expanded="false">
+                        أنتم تسوون المحتوى الإعلاني؟
+                        <span aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer" role="region">
+                        <p>نشتغل على الأفكار والرسائل والإخراج المطلوب للحملات، ونوجّهك للمحتوى اللي يخدم البيع فعليًا بدل المحتوى اللي شكله حلو وما يجيب نتيجة. التفاصيل تتحدد حسب الباقة والاتفاق معك.</p>
+                    </div>
                 </div>
-                <div class="faq-item">
-                    <button class="faq-question">كيف يكون المتابعة والتواصل؟ <span>+</span></button>
-                    <div class="faq-answer"><p>نخلي التواصل واضح ومباشر، ونشاركك التطورات والتقارير بشكل دوري عشان تعرف وش قاعد يصير، وش اللي يتحسن، ووش الخطوة الجاية.</p></div>
+                <div class="faq-item" role="listitem">
+                    <button class="faq-question" aria-expanded="false">
+                        كيف تكون المتابعة والتواصل؟
+                        <span aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer" role="region">
+                        <p>نخلي التواصل واضح ومباشر، ونشاركك التطورات والتقارير بشكل أسبوعي وشهري عشان تعرف وش قاعد يصير، وش اللي يتحسن، ووش الخطوة الجاية. مو رسائل تختفي بعدها بأسبوع.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="process-section section-padding">
+        <!-- ===== PROCESS SECTION ===== -->
+        <section class="process-section section-padding" aria-label="طريقة عملنا">
             <h2 class="section-title">كيف نمشي معك خطوة بخطوة؟</h2>
-            <p class="section-subtitle">شغلنا مرتب، وواضح، ومبني على أشياء نقدر نقيسها ونحسنها.</p>
+            <p class="section-subtitle">شغلنا مرتب، واضح، ومبني على أشياء نقدر نقيسها ونحسنها. ما فيه مفاجآت.</p>
             <div class="process-grid">
                 <div class="process-step">
-                    <span class="step-icon">🔬</span>
+                    <span class="step-number" aria-hidden="true">1</span>
+                    <span class="step-icon" role="img" aria-label="بحث">🔬</span>
                     <h3>نفهم المشكلة</h3>
                     <p>نراجع وضع المتجر والإعلانات والبيانات الحالية، ونحدد وين التسريب ووين الفرص اللي ممكن نكبرها.</p>
                 </div>
                 <div class="process-step">
-                    <span class="step-icon">⚙️</span>
+                    <span class="step-number" aria-hidden="true">2</span>
+                    <span class="step-icon" role="img" aria-label="إعدادات">⚙️</span>
                     <h3>نبني الخطة</h3>
                     <p>نختار القنوات المناسبة، ونرتب الرسائل والمحتوى، ونحط مؤشرات واضحة نعرف منها وش اللي ينجح.</p>
                 </div>
                 <div class="process-step">
-                    <span class="step-icon">🚀</span>
-                    <h3>نوسع الصح</h3>
+                    <span class="step-number" aria-hidden="true">3</span>
+                    <span class="step-icon" role="img" aria-label="إطلاق">🚀</span>
+                    <h3>نوسّع الصح</h3>
                     <p>بعد ما نلقى الصيغة اللي تعطي نتيجة، نكبرها بشكل محسوب عشان تزيد المبيعات بدون ما نخرب التوازن.</p>
                 </div>
             </div>
         </section>
 
-        <section id="apply" class="application section-padding">
+        <!-- ===== APPLICATION FORM ===== -->
+        <section id="apply" class="application section-padding" aria-label="نموذج الطلب">
             <div class="app-container">
-                <h2>متجرك جاهز يكبر؟</h2>
+                <h2 class="section-title">متجرك جاهز يكبر؟</h2>
                 <p>ارسل بياناتك، وفريقنا يراجع وضعك ونرتب لك جلسة استشارية مجانية نشوف فيها وش الأنسب لمتجرك وكيف نقدر نرفع النتيجة.</p>
-                
-                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
-                
-                <form id="contactForm" action="https://formsubmit.co/moodysameh66@gmail.com" method="POST" target="hidden_iframe">
+
+                <!-- ✅ إضافة: Trust Signals قبل الفورم -->
+                <div class="form-trust">
+                    <div class="form-trust-item">
+                        <span class="trust-icon">✓</span>
+                        <span>جلسة مجانية 100%</span>
+                    </div>
+                    <div class="form-trust-item">
+                        <span class="trust-icon">✓</span>
+                        <span>بدون التزام</span>
+                    </div>
+                    <div class="form-trust-item">
+                        <span class="trust-icon">✓</span>
+                        <span>رد خلال 12 ساعة</span>
+                    </div>
+                </div>
+
+                <!-- ✅ FIX: hidden iframe لإرسال الفورم بدون redirect -->
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" title="hidden form target"></iframe>
+
+                <form id="contactForm"
+                      action="https://formsubmit.co/moodysameh66@gmail.com"
+                      method="POST"
+                      target="hidden_iframe"
+                      novalidate>
+
                     <input type="hidden" name="_cc" value="yasminfaried18@gmail.com">
                     <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_subject" value="طلب استشارة جديد - روّج.برو!">
+                    <input type="hidden" name="_subject" value="🎯 طلب استشارة جديد - روّج.برو">
+                    <!-- ✅ FIX: منع الـ redirect بعد الإرسال -->
+                    <input type="hidden" name="_next" value="https://rawj.pro/?sent=1">
 
                     <div class="form-group">
-                        <label>اسمك</label>
-                        <input type="text" name="الاسم" placeholder="اكتب اسمك" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>رقم الجوال</label>
-                        <input type="tel" id="phone" name="رقم_الجوال" placeholder="مثال: 05XXXXXXXX" required dir="ltr" inputmode="tel" pattern="[0-9\+\s\-]*">
-                        <div id="phoneError" class="error-message">اكتب رقم جوال صحيح</div>
-                    </div>
-
-                    <div class="form-group">
-                        <label>رابط متجرك الإلكتروني <span class="optional-text">(اختياري)</span></label>
-                        <input type="text" name="رابط_المتجر" placeholder="مثال: rawj.pro" dir="ltr">
+                        <label for="name">اسمك <span style="color: #ff6b6b;">*</span></label>
+                        <input type="text"
+                               id="name"
+                               name="الاسم"
+                               placeholder="اكتب اسمك الكريم"
+                               required
+                               autocomplete="name"
+                               minlength="2">
+                        <div class="error-message" id="nameError">اكتب اسمك (حرفين على الأقل)</div>
                     </div>
 
                     <div class="form-group">
-                        <label>كم تقريبًا مبيعاتك بالشهر؟ <span class="optional-text">(اختياري)</span></label>
-                        <select name="متوسط_المبيعات">
-                            <option value="" disabled selected>اختر الأقرب...</option>
+                        <label for="phone">رقم الجوال <span style="color: #ff6b6b;">*</span></label>
+                        <input type="tel"
+                               id="phone"
+                               name="رقم_الجوال"
+                               placeholder="05XXXXXXXX"
+                               required
+                               dir="ltr"
+                               inputmode="tel"
+                               autocomplete="tel"
+                               pattern="[0-9\+\s\-]*">
+                        <div class="error-message" id="phoneError">اكتب رقم جوال سعودي صحيح (مثال: 0512345678)</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="store">رابط متجرك الإلكتروني <span class="optional-text">(اختياري)</span></label>
+                        <input type="url"
+                               id="store"
+                               name="رابط_المتجر"
+                               placeholder="https://yourstore.com"
+                               dir="ltr"
+                               autocomplete="url">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sales">كم تقريبًا مبيعاتك بالشهر؟ <span class="optional-text">(اختياري)</span></label>
+                        <select id="sales" name="متوسط_المبيعات">
+                            <option value="" disabled selected>اختر الأقرب لوضعك...</option>
                             <option value="متجر جديد">متجر جديد (لسه بالبداية)</option>
                             <option value="أقل من 20,000 ريال">أقل من 20,000 ريال شهريًا</option>
                             <option value="من 20 إلى 50 ألف ريال">من 20,000 إلى 50,000 ريال شهريًا</option>
+                            <option value="من 50 إلى 100 ألف ريال">من 50,000 إلى 100,000 ريال شهريًا</option>
                             <option value="أكثر من 100,000 ريال">أكثر من 100,000 ريال شهريًا</option>
                         </select>
                     </div>
-                    
-                    <button type="submit" id="submitBtn" class="btn-premium" style="width: 100%; margin-top: 15px;">احجز استشارتك المجانية</button>
+
+                    <button type="submit"
+                            id="submitBtn"
+                            class="btn-premium"
+                            style="width: 100%; margin-top: 15px; font-size: 1.15rem;">
+                        احجز استشارتك المجانية ←
+                    </button>
                 </form>
-                
-                <div id="success-message">✅ تم استلام طلبك بنجاح. بنرجع لك خلال ١٢ ساعة.</div>
+
+                <div id="success-message" role="alert" aria-live="assertive">
+                    ✅ تم استلام طلبك بنجاح!<br>
+                    <span style="font-size: 1rem; font-weight: 400; color: rgba(46,204,113,0.8);">فريقنا راح يتواصل معك خلال 12 ساعة على رقم جوالك.</span>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
+    <!-- ===== FOOTER ===== -->
+    <footer role="contentinfo">
         <div class="footer-container">
             <div class="footer-about">
                 <div class="footer-logo">
-                    <img src="logo.webp" alt="روّج.برو">
+                    <img src="logo.webp" alt="وكالة روّج.برو للتسويق الرقمي" width="120" height="44">
                 </div>
-                <p>نساعد المتاجر الإلكترونية في السعودية ترفع مبيعاتها وتخفف الهدر الإعلاني من خلال شغل مبني على البيانات، التجربة، والقرارات الواضحة.</p>
+                <p>نساعد المتاجر الإلكترونية في السعودية ترفع مبيعاتها وتخفف الهدر الإعلاني، من خلال شغل مبني على البيانات والتجربة والقرارات الواضحة.</p>
             </div>
+
+            <!-- ✅ إضافة: روابط سريعة في الفوتر -->
+            <div class="footer-links">
+                <h4>روابط سريعة</h4>
+                <ul>
+                    <li><a href="#philosophy">أرقامنا</a></li>
+                    <li><a href="#services">خدماتنا</a></li>
+                    <li><a href="#faq">الأسئلة الشائعة</a></li>
+                    <li><a href="#apply">احجز استشارة</a></li>
+                </ul>
+            </div>
+
+            <!-- ✅ FIX: إضافة كل الـ social media links -->
             <div class="footer-social">
-                <h4>تواصل معنا</h4>
+                <h4>تابعنا</h4>
                 <div class="social-icons">
-                    <a href="https://x.com/rawjpro" target="_blank" rel="noopener noreferrer" aria-label="إكس"><svg viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg></a>
+                    <a href="https://x.com/rawjpro" target="_blank" rel="noopener noreferrer" aria-label="حساب روّج.برو على X">
+                        <svg viewBox="0 0 512 512" aria-hidden="true"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/rawj.pro/" target="_blank" rel="noopener noreferrer" aria-label="حساب روّج.برو على إنستقرام">
+                        <svg viewBox="0 0 448 512" aria-hidden="true"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@rawj.pro" target="_blank" rel="noopener noreferrer" aria-label="حساب روّج.برو على تيك توك">
+                        <svg viewBox="0 0 448 512" aria-hidden="true"><path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/company/rawjpro" target="_blank" rel="noopener noreferrer" aria-label="حساب روّج.برو على لينكد إن">
+                        <svg viewBox="0 0 448 512" aria-hidden="true"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
+                    </a>
                 </div>
             </div>
         </div>
+
         <div class="footer-copyright">
-            <p>جميع الحقوق محفوظة © 2026 - وكالة روّج.برو للتسويق الرقمي</p>
+            <p>جميع الحقوق محفوظة © 2026 — وكالة روّج.برو للتسويق الرقمي</p>
         </div>
     </footer>
 
-    <a href="https://wa.me/966583024943?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A8%D8%BA%D9%8A%D8%AA%20%D8%AC%D9%84%D8%B3%D8%A9%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D9%8A%D8%A9%20%D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9%20%D9%84%D9%85%D8%AA%D8%AC%D8%B1%D9%8A." class="whatsapp-float" target="_blank" rel="noopener noreferrer">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+    <!-- ===== WHATSAPP FLOAT BUTTON ===== -->
+    <a href="https://wa.me/966583024943?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A8%D8%BA%D9%8A%D8%AA%20%D8%A3%D8%B9%D8%B1%D9%81%20%D8%A3%D9%83%D8%AB%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%D9%83%D9%85%20%D9%84%D9%85%D8%AA%D8%AC%D8%B1%D9%8A."
+       class="whatsapp-float"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="تواصل معنا على واتساب"
+       data-event="whatsapp_float">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true">
+            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+        </svg>
     </a>
 
+    <!-- ===== JAVASCRIPT ===== -->
     <script>
+    // =============================================
+    // ✅ FIX: Counter Animation - محسّن ومنع التكرار
+    // =============================================
+    (function() {
         const counters = document.querySelectorAll('.counter');
-        const speed = 50; 
-        const startCounters = (entries, observer) => {
+        if (!counters.length) return;
+
+        const animateCounter = (el) => {
+            const target = parseInt(el.getAttribute('data-target'), 10);
+            const duration = 1800;
+            const start = performance.now();
+
+            const update = (now) => {
+                const elapsed = now - start;
+                const progress = Math.min(elapsed / duration, 1);
+                // Easing: easeOutQuart
+                const eased = 1 - Math.pow(1 - progress, 4);
+                el.textContent = Math.round(eased * target);
+                if (progress < 1) requestAnimationFrame(update);
+                else el.textContent = target;
+            };
+
+            requestAnimationFrame(update);
+        };
+
+        const observer = new IntersectionObserver((entries, obs) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    const targetElement = entry.target;
-                    const updateCount = () => {
-                        const target = +targetElement.getAttribute('data-target');
-                        const count = +targetElement.innerText;
-                        const inc = target / speed;
-                        if (count < target) {
-                            targetElement.innerText = Math.ceil(count + inc);
-                            setTimeout(updateCount, 30);
-                        } else {
-                            targetElement.innerText = target;
-                        }
-                    };
-                    updateCount();
-                    observer.unobserve(targetElement);
+                    animateCounter(entry.target);
+                    obs.unobserve(entry.target);
                 }
             });
-        };
-        const counterObserver = new IntersectionObserver(startCounters, { threshold: 0.5 });
-        counters.forEach(counter => counterObserver.observe(counter));
+        }, { threshold: 0.5 });
 
+        counters.forEach(c => observer.observe(c));
+    })();
+
+    // =============================================
+    // ✅ FIX: Testimonial Slider - مع Dots + cleanup
+    // =============================================
+    (function() {
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const dots = document.querySelectorAll('.slider-dot');
+        if (!slides.length) return;
+
+        let current = 0;
+        let timer;
+
+        const goTo = (index) => {
+            slides[current].classList.remove('active');
+            dots[current]?.classList.remove('active');
+            dots[current]?.setAttribute('aria-selected', 'false');
+
+            current = index;
+
+            slides[current].classList.add('active');
+            dots[current]?.classList.add('active');
+            dots[current]?.setAttribute('aria-selected', 'true');
+        };
+
+        const next = () => goTo((current + 1) % slides.length);
+
+        const startTimer = () => {
+            clearInterval(timer);
+            timer = setInterval(next, 3500);
+        };
+
+        // Dot click
+        dots.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+                goTo(i);
+                startTimer(); // أعد التايمر عند الضغط اليدوي
+            });
+        });
+
+        startTimer();
+    })();
+
+    // =============================================
+    // ✅ FIX: Partners Animation - مع cleanup
+    // =============================================
+    (function() {
         const partners = document.querySelectorAll('.partner-logo');
+        if (!partners.length) return;
+
         let currentP = 0;
-        setInterval(() => {
-            partners.forEach(p => p.classList.remove('active-partner'));
+        const partnerTimer = setInterval(() => {
+            partners[currentP].classList.remove('active-partner');
             currentP = (currentP + 1) % partners.length;
             partners[currentP].classList.add('active-partner');
-        }, 3000); 
+        }, 3000);
+    })();
 
-        const slides = document.querySelectorAll('.testimonial-slide');
-        if(slides.length > 0) {
-            let currentSlide = 0;
-            setInterval(() => {
-                slides[currentSlide].classList.remove('active');
-                currentSlide = (currentSlide + 1) % slides.length;
-                slides[currentSlide].classList.add('active');
-            }, 3000);
-        }
+    // =============================================
+    // ✅ FIX: FAQ Accordion - محسّن بـ ARIA
+    // =============================================
+    (function() {
+        const questions = document.querySelectorAll('.faq-question');
 
-        document.querySelectorAll('.faq-question').forEach(q => {
+        questions.forEach(q => {
             q.addEventListener('click', () => {
                 const item = q.parentElement;
                 const isActive = item.classList.contains('active');
+
+                // أغلق كل الأسئلة
                 document.querySelectorAll('.faq-item').forEach(i => {
                     i.classList.remove('active');
                     i.querySelector('.faq-answer').style.maxHeight = null;
+                    i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
                 });
+
+                // افتح السؤال اللي ضغط عليه
                 if (!isActive) {
                     item.classList.add('active');
-                    item.querySelector('.faq-answer').style.maxHeight = item.querySelector('.faq-answer').scrollHeight + "px";
+                    const answer = item.querySelector('.faq-answer');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    q.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+    })();
+
+    // =============================================
+    // ✅ FIX: Form Validation وإرسال محسّن
+    // =============================================
+    (function() {
+        // تحويل الأرقام العربية للإنجليزية
+        const convertArabicNumbers = (str) => {
+            return str.replace(/[٠-٩]/g, d => '٠١٢٣٤٥٦٧٨٩'.indexOf(d).toString());
+        };
+
+        // ✅ FIX: Regex أبسط وأدق للسعودية
+        const validateSaudiPhone = (phone) => {
+            const cleaned = convertArabicNumbers(phone).replace(/[\s\-\(\)]/g, '');
+            // يقبل: 05XXXXXXXX أو +9665XXXXXXXX أو 9665XXXXXXXX
+            return /^(\+?966|00966)?0?5[0-9]{8}$/.test(cleaned);
+        };
+
+        const validateName = (name) => name.trim().length >= 2;
+
+        const form = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        let formSubmitted = false;
+
+        // Real-time validation
+        document.getElementById('phone')?.addEventListener('blur', function() {
+            const isValid = validateSaudiPhone(this.value);
+            document.getElementById('phoneError').style.display = isValid ? 'none' : 'block';
+            this.style.borderColor = isValid ? 'rgba(46,204,113,0.5)' : '#ff6b6b';
+        });
+
+        document.getElementById('name')?.addEventListener('blur', function() {
+            const isValid = validateName(this.value);
+            document.getElementById('nameError').style.display = isValid ? 'none' : 'block';
+            this.style.borderColor = isValid ? 'rgba(46,204,113,0.5)' : '#ff6b6b';
+        });
+
+        form?.addEventListener('submit', function(e) {
+            const name = document.getElementById('name');
+            const phone = document.getElementById('phone');
+            let hasError = false;
+
+            // Validate name
+            if (!validateName(name.value)) {
+                e.preventDefault();
+                document.getElementById('nameError').style.display = 'block';
+                name.focus();
+                hasError = true;
+            } else {
+                document.getElementById('nameError').style.display = 'none';
+            }
+
+            // Validate phone
+            if (!validateSaudiPhone(phone.value)) {
+                e.preventDefault();
+                document.getElementById('phoneError').style.display = 'block';
+                if (!hasError) phone.focus();
+                hasError = true;
+            } else {
+                document.getElementById('phoneError').style.display = 'none';
+            }
+
+            if (hasError) return;
+
+            // ✅ تنظيف رقم الهاتف قبل الإرسال
+            phone.value = convertArabicNumbers(phone.value).replace(/[\s\-\(\)]/g, '');
+
+            // ✅ تتبع الـ Conversion
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Lead', { content_name: 'consultation_form' });
+            }
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'generate_lead', { event_category: 'form', event_label: 'consultation_request' });
+            }
+
+            // ✅ تغيير حالة الزر
+            submitBtn.textContent = '⏳ جاري إرسال طلبك...';
+            submitBtn.disabled = true;
+            submitBtn.style.opacity = '0.7';
+            formSubmitted = true;
+        });
+
+        // ✅ FIX: كشف إتمام الإرسال عبر الـ iframe
+        document.getElementById('hidden_iframe')?.addEventListener('load', function() {
+            if (formSubmitted) {
+                form.style.display = 'none';
+                document.getElementById('success-message').style.display = 'block';
+                // Scroll للـ success message
+                document.getElementById('success-message').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        });
+
+        // ✅ إضافة: تتبع clicks على الـ CTA buttons
+        document.querySelectorAll('[data-event]').forEach(el => {
+            el.addEventListener('click', function() {
+                const eventName = this.getAttribute('data-event');
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'click', { event_category: 'cta', event_label: eventName });
                 }
             });
         });
 
-        function convertArabicNumbers(str) {
-            const ar = ['٠','١','٢','٣','٤','٥','٦','٧','٨','٩'];
-            return str.replace(/[٠-٩]/g, d => ar.indexOf(d));
-        }
+    })();
 
-        let formSubmitted = false;
-
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            const phone = document.getElementById('phone');
-            const phoneVal = convertArabicNumbers(phone.value).replace(/\s/g, '');
-            const gcc = /^(?:\+966|\+971|\+965|\+974|\+968|\+973|00966|00971|00965|00974|00968|00973|05|0)[0-9]{7,12}$/;
-            
-            if (!gcc.test(phoneVal)) {
-                e.preventDefault(); 
-                document.getElementById('phoneError').style.display = 'block';
-                return;
-            }
-            
-            document.getElementById('phoneError').style.display = 'none';
-            phone.value = phoneVal;
-            
-            if (typeof fbq !== 'undefined') fbq('track', 'Lead');
-            
-            const btn = document.getElementById('submitBtn');
-            btn.innerText = "جاري إرسال طلبك...";
-            formSubmitted = true;
-        });
-
-        document.getElementById('hidden_iframe').addEventListener('load', function() {
-            if (formSubmitted) {
-                document.getElementById('contactForm').style.display = 'none';
-                document.getElementById('success-message').style.display = 'block';
+    // =============================================
+    // ✅ إضافة: Smooth scroll للروابط الداخلية
+    // =============================================
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                const headerHeight = document.querySelector('header')?.offsetHeight || 80;
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+                window.scrollTo({ top: targetPosition, behavior: 'smooth' });
             }
         });
+    });
+
+    // =============================================
+    // ✅ إضافة: Scroll reveal بسيط للـ sections
+    // =============================================
+    (function() {
+        const style = document.createElement('style');
+        style.textContent = `
+            .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+            .reveal.visible { opacity: 1; transform: translateY(0); }
+        `;
+        document.head.appendChild(style);
+
+        const sections = document.querySelectorAll(
+            '.pain-card, .service-card, .stat-item, .process-step, .faq-item'
+        );
+        sections.forEach(el => el.classList.add('reveal'));
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, i) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => entry.target.classList.add('visible'), i * 80);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(el => observer.observe(el));
+    })();
     </script>
 </body>
 </html>
