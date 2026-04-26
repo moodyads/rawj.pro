@@ -40,7 +40,6 @@
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TGG7PCLH');</script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0LG3HLGERN"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-0LG3HLGERN');</script>
-    <!-- TODO: استبدل YOUR_PIXEL_ID_HERE برقم الـ Pixel من Meta Business Manager -->
     <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView');</script>
 
 <style>
@@ -103,7 +102,6 @@ header {
 }
 .logo img { max-height: 50px; width: auto; }
 
-/* desktop nav */
 nav { display: flex; gap: 22px; align-items: center; }
 nav a { color: var(--dark); font-weight: 700; font-size: 1rem; transition: var(--r); }
 nav a:hover { color: var(--purple); }
@@ -114,7 +112,6 @@ nav a:hover { color: var(--purple); }
 }
 .nav-btn:hover { background: var(--purple); color: #fff; }
 
-/* mobile header CTA */
 .hdr-wa {
     display: none;
     align-items: center; gap: 7px;
@@ -308,33 +305,111 @@ nav a:hover { color: var(--purple); }
 .srv-card p  { color: #555; font-size: 0.94rem; line-height: 1.8; }
 
 /* ===================================================
-   TESTIMONIALS
+   TESTIMONIALS — NEW CARD GRID
 =================================================== */
 .reviews-bg { background: var(--bg); border-top: 1px solid var(--border); }
-.t-slider {
-    max-width: 760px; margin: 0 auto;
-    display: flex; align-items: center; justify-content: center;
+
+.t-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-.t-slide {
-    display: none; background: #fff; padding: 44px;
-    border-radius: 18px; border: 1px solid var(--border);
-    border-right: 5px solid var(--purple);
-    box-shadow: 0 8px 36px rgba(0,0,0,0.04);
-    text-align: center; width: 100%;
-    animation: fu 0.7s ease;
+
+.t-card {
+    background: #fff;
+    border-radius: 18px;
+    border: 1px solid var(--border);
+    padding: 28px 26px 22px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    transition: var(--r);
+    position: relative;
+    overflow: hidden;
 }
-.t-slide.on { display: block; }
-.t-q  { font-size: 2.6rem; color: var(--pink); opacity: 0.25; line-height: 1; margin-bottom: 4px; }
-.t-st { color: var(--amber); font-size: 1rem; letter-spacing: 2px; margin-bottom: 16px; }
-.t-slide p  { font-size: 1.12rem; color: #3a4a5a; line-height: 1.8; margin-bottom: 16px; }
-.t-slide h4 { font-size: 0.92rem; font-weight: 800; color: var(--dark); }
-.dots { display: flex; justify-content: center; gap: 8px; margin-top: 26px; }
-.dot  {
-    width: 8px; height: 8px; border-radius: 50%;
-    background: var(--border); border: none; cursor: pointer; transition: var(--r);
+.t-card::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 3px; height: 0;
+    background: linear-gradient(180deg, var(--purple), var(--pink));
+    border-radius: 0 18px 18px 0;
+    transition: height 0.4s ease;
 }
-.dot.on { background: var(--purple); transform: scale(1.4); }
-@keyframes fu { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
+.t-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 40px rgba(142,43,107,0.1);
+    border-color: rgba(142,43,107,0.2);
+}
+.t-card:hover::after { height: 100%; }
+
+.t-card-date {
+    font-size: 0.78rem;
+    color: #bbb;
+    margin-bottom: 14px;
+    direction: ltr;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+.t-card-stars {
+    color: var(--amber);
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    margin-bottom: 14px;
+}
+.t-card-text {
+    font-size: 0.97rem;
+    color: #3a4a5a;
+    line-height: 1.9;
+    flex: 1;
+    margin-bottom: 20px;
+    position: relative;
+    padding-right: 0;
+}
+.t-card-text::before {
+    content: '"';
+    font-size: 3.5rem;
+    color: var(--pink);
+    opacity: 0.15;
+    line-height: 1;
+    display: block;
+    margin-bottom: -10px;
+    font-family: Georgia, serif;
+}
+
+.t-card-footer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+}
+.t-avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 2px solid rgba(142,43,107,0.15);
+}
+.t-card-info { flex: 1; }
+.t-card-info h4 {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: var(--dark);
+    margin-bottom: 2px;
+    line-height: 1.3;
+}
+.t-card-info span {
+    font-size: 0.79rem;
+    color: #888;
+    display: block;
+    line-height: 1.4;
+}
 
 /* ===================================================
    PARTNERS
@@ -460,7 +535,7 @@ select option { background: #1e133d; color: #fff; }
 }
 
 /* ===================================================
-   FOOTER
+   FOOTER — UPDATED
 =================================================== */
 footer {
     background: var(--darker); color: var(--muted);
@@ -470,9 +545,83 @@ footer {
     display: flex; justify-content: space-between; align-items: flex-start;
     max-width: 1100px; margin: 0 auto 44px; flex-wrap: wrap; gap: 36px;
 }
-.ft-about { max-width: 400px; }
-.ft-logo img { max-height: 44px; background: #fff; padding: 6px 12px; border-radius: 8px; margin-bottom: 18px; }
+.ft-about { max-width: 380px; }
+
+/* ── LOGO FIX: لا تمدد، لا خلفية مشدودة ── */
+.ft-logo { margin-bottom: 18px; }
+.ft-logo img {
+    height: 46px;
+    width: auto;
+    max-width: 160px;
+    object-fit: contain;
+    background: #fff;
+    padding: 8px 14px;
+    border-radius: 10px;
+    display: block;
+}
+
 .ft-about p { font-size: 0.9rem; line-height: 1.9; }
+
+/* ── PAYMENT METHODS ── */
+.ft-payment { margin-top: 22px; }
+.ft-payment-lbl {
+    font-size: 0.75rem; color: rgba(255,255,255,0.3);
+    font-weight: 700; letter-spacing: 0.5px;
+    margin-bottom: 10px; text-transform: uppercase;
+}
+.ft-pay-icons { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+
+/* Mada */
+.pay-mada {
+    height: 28px; padding: 0 10px;
+    border-radius: 6px; display: flex; align-items: center; justify-content: center;
+    background: #4a2387; border: 1px solid rgba(255,255,255,0.1);
+    font-family: 'Tajawal', sans-serif; font-size: 0.8rem;
+    font-weight: 900; color: #fff; letter-spacing: 0.5px;
+    direction: ltr;
+}
+/* Visa */
+.pay-visa {
+    height: 28px; padding: 0 10px;
+    border-radius: 6px; display: flex; align-items: center; justify-content: center;
+    background: #1a1f71; border: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.78rem; font-weight: 900; color: #fff;
+    font-style: italic; letter-spacing: 1px; direction: ltr;
+    font-family: Arial, sans-serif;
+}
+/* Mastercard */
+.pay-mc {
+    height: 28px; padding: 0 8px;
+    border-radius: 6px; display: flex; align-items: center; justify-content: center;
+    background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1);
+}
+/* Bank Transfer */
+.pay-bank {
+    height: 28px; padding: 0 10px;
+    border-radius: 6px; display: flex; align-items: center; justify-content: center; gap: 5px;
+    background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
+    font-family: 'Tajawal', sans-serif; font-size: 0.76rem;
+    font-weight: 700; color: rgba(255,255,255,0.55);
+}
+
+/* ── TRUST BADGES (وزارة التجارة / منصة الأعمال) ── */
+.ft-trust { margin-top: 18px; display: flex; gap: 8px; flex-wrap: wrap; }
+.ft-trust-badge {
+    display: flex; align-items: center; gap: 7px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 7px 12px; border-radius: 9px;
+    font-size: 0.77rem; color: rgba(255,255,255,0.45);
+    font-weight: 700; white-space: nowrap;
+    transition: var(--r);
+}
+.ft-trust-badge:hover {
+    background: rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.65);
+    border-color: rgba(255,255,255,0.2);
+}
+.ft-trust-badge svg { width: 14px; height: 14px; fill: rgba(255,255,255,0.4); flex-shrink: 0; }
+
 .ft-links h4, .ft-social h4 { color: #fff; margin-bottom: 18px; font-size: 1rem; font-weight: 800; }
 .ft-links ul { list-style: none; }
 .ft-links ul li { margin-bottom: 10px; }
@@ -487,7 +636,21 @@ footer {
 }
 .soc-icons a:hover { background: var(--purple); color: #fff; transform: translateY(-4px); border-color: var(--purple); }
 .soc-icons svg { width: 16px; height: 16px; fill: currentColor; }
-.ft-copy { text-align: center; padding-top: 22px; border-top: 1px solid rgba(255,255,255,0.05); font-size: 0.87rem; max-width: 1100px; margin: 0 auto; }
+
+/* ── FOOTER BOTTOM ── */
+.ft-bottom {
+    max-width: 1100px; margin: 0 auto;
+    padding-top: 22px; border-top: 1px solid rgba(255,255,255,0.05);
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 12px;
+}
+.ft-copy { font-size: 0.87rem; }
+.ft-copy-trust { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+.ft-copy-trust span {
+    font-size: 0.78rem; color: rgba(255,255,255,0.25);
+    display: flex; align-items: center; gap: 5px;
+}
+.ft-copy-trust span::before { content: '🔒'; font-size: 0.7rem; }
 
 /* ===================================================
    WA FLOAT — DESKTOP ONLY
@@ -549,23 +712,13 @@ footer {
 =================================================== */
 @media (max-width: 768px) {
 
-    /* space for sticky bar */
     body { padding-bottom: 72px; }
 
-    /* ────────────────────────────────
-       HEADER: logo only — NO buttons
-    ──────────────────────────────── */
     header { padding: 10px 4%; justify-content: center; }
     nav        { display: none; }
-    .hdr-wa    { display: none !important; } /* never show on mobile */
+    .hdr-wa    { display: none !important; }
     .logo img  { max-height: 44px; }
 
-    /* ────────────────────────────────
-       HERO: photo strip + dark content
-       — NO full-bleed (avoids crop)
-       — ONE button only
-       — ONE dominant text
-    ──────────────────────────────── */
     .hero {
         flex-direction: column;
         padding: 0; gap: 0;
@@ -574,7 +727,6 @@ footer {
     }
     .hero::before { display: none; }
 
-    /* Photo strip at the top — contained, proper crop */
     .hero-img-wrap {
         position: relative;
         width: 100%;
@@ -586,13 +738,12 @@ footer {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: center 25%; /* show upper portion of landscape image */
+        object-position: center 25%;
         border-radius: 0;
         border: none;
         box-shadow: none;
         aspect-ratio: unset;
     }
-    /* fade bottom of image into dark bg seamlessly */
     .hero-img-wrap::after {
         content: '';
         position: absolute;
@@ -601,7 +752,6 @@ footer {
         background: linear-gradient(to bottom, transparent, var(--dark));
     }
 
-    /* Content sits below the image strip */
     .hero-content {
         position: relative;
         z-index: 2;
@@ -615,10 +765,8 @@ footer {
         justify-content: flex-start;
     }
 
-    /* ── BADGE: hidden on mobile (remove visual competition) */
     .badge { display: none; }
 
-    /* ── H1: single white text, ONE size, NO pink span */
     .hero h1 {
         font-size: 1.65rem;
         line-height: 1.5;
@@ -626,7 +774,6 @@ footer {
         color: #fff;
         font-weight: 900;
     }
-    /* Remove gradient on the span — same white as parent */
     .hero h1 span {
         display: inline;
         font-size: inherit;
@@ -635,12 +782,10 @@ footer {
         -webkit-text-fill-color: #fff;
         background-clip: unset;
         color: #fff;
-        /* Accent only: underline color hint */
         border-bottom: 2px solid rgba(209,80,162,0.6);
         padding-bottom: 2px;
     }
 
-    /* ── DESC: short, muted */
     .hero-desc {
         font-size: 0.93rem;
         color: rgba(255,255,255,0.65);
@@ -648,7 +793,6 @@ footer {
         line-height: 1.7;
     }
 
-    /* ── MINI-STATS */
     .mini-stats {
         display: flex; gap: 0;
         background: rgba(255,255,255,0.07);
@@ -666,26 +810,18 @@ footer {
     }
     .mini-stat em { font-style: normal; font-size: 0.68rem; color: rgba(255,255,255,0.5); display: block; margin-top: 2px; }
 
-    /* ── CTA: ONE button only, full width */
     .hero-ctas { flex-direction: column; gap: 0; width: 100%; }
     .hero-ctas .btn-p {
         width: 100%; padding: 17px 20px; font-size: 1.03rem;
     }
-    /* Hide the second button — sticky bar handles it */
     .btn-o-desktop-only { display: none !important; }
-
-    /* ── SOCIAL PROOF: hidden on mobile (reduces clutter) */
     .hero-proof { display: none; }
 
-    /* ────────────────────────────────
-       REST OF SECTIONS
-    ──────────────────────────────── */
     .sec    { padding: 44px 18px; }
     .sec-sm { padding: 32px 18px; }
     .ttl    { font-size: 1.6rem; }
     .sub    { font-size: 0.95rem; margin-bottom: 26px; }
 
-    /* PAIN: vertical stack */
     .pain-grid { grid-template-columns: 1fr; gap: 12px; }
     .pain-card { padding: 20px 18px; border-radius: 14px; }
     .pain-card-inner { display: flex; gap: 14px; align-items: flex-start; }
@@ -693,31 +829,31 @@ footer {
     .pain-card h3 { font-size: 1rem; margin-bottom: 4px; }
     .pain-card p  { font-size: 0.87rem; line-height: 1.7; }
 
-    /* NUMBERS: 3-col compact */
     .stats-grid { grid-template-columns: repeat(3,1fr); gap: 8px; }
     .stat-card  { padding: 14px 8px; border-radius: 12px; }
     .stat-num   { font-size: 1.75rem; margin-bottom: 5px; }
     .stat-lbl   { font-size: 0.68rem; line-height: 1.4; }
     .stat-note  { font-size: 0.75rem; margin-top: 16px; }
 
-    /* SERVICES: vertical stack */
     .srv-grid { grid-template-columns: 1fr; gap: 14px; }
     .srv-card { padding: 0 0 18px; border-radius: 16px; overflow: hidden; }
     .srv-card img { height: 165px; border-radius: 0; margin-bottom: 14px; }
     .srv-card h3 { font-size: 1.05rem; padding: 0 16px; }
     .srv-card p  { font-size: 0.87rem; line-height: 1.7; padding: 0 16px; margin-top: 5px; }
 
-    /* TESTIMONIALS */
-    .t-slide { padding: 24px 18px; }
-    .t-slide p { font-size: 0.96rem; }
-    .t-q { font-size: 1.8rem; }
+    /* TESTIMONIALS MOBILE: vertical stack */
+    .t-grid { grid-template-columns: 1fr; gap: 14px; }
+    .t-card { padding: 22px 18px 18px; }
+    .t-card-text { font-size: 0.93rem; }
+    .t-card-text::before { font-size: 2.5rem; margin-bottom: -6px; }
+    .t-avatar { width: 40px; height: 40px; }
+    .t-card-info h4 { font-size: 0.88rem; }
+    .t-card-info span { font-size: 0.75rem; }
 
-    /* PARTNERS: wrap, centered */
     .par-sec { padding: 26px 18px; }
     .par-wrap { gap: 10px; justify-content: center; flex-wrap: wrap; }
     .par-item { width: 74px; height: 74px; border-radius: 12px; }
 
-    /* PROCESS: vertical timeline */
     .proc-grid { grid-template-columns: 1fr; gap: 0; }
     .proc-step {
         padding: 0; border-radius: 0; display: flex;
@@ -734,32 +870,32 @@ footer {
     .proc-step h3 { font-size: 0.98rem; margin-bottom: 4px; color: var(--dark); }
     .proc-step p  { font-size: 0.86rem; color: #555; line-height: 1.7; }
 
-    /* FORM */
     .form-box { padding: 22px 16px; border-radius: 14px; }
     .trust-row { gap: 10px; }
     .trust-item { font-size: 0.8rem; }
     input, select { font-size: 0.97rem; padding: 13px 14px; }
     .fg label { font-size: 0.87rem; }
 
-    /* FOOTER */
+    /* FOOTER MOBILE */
     footer { padding: 34px 18px 18px; }
     .ft-wrap { flex-direction: column; gap: 24px; }
     .ft-about { max-width: 100%; }
+    .ft-logo img { height: 40px; }
+    .ft-pay-icons { gap: 6px; }
+    .ft-trust { gap: 6px; }
+    .ft-trust-badge { font-size: 0.72rem; padding: 6px 10px; }
+    .ft-bottom { flex-direction: column; text-align: center; gap: 8px; }
+    .ft-copy-trust { justify-content: center; }
 
-    /* desktop WA float: hide */
     .wa-btn { display: none; }
-
-    /* sticky bar: show */
     .sticky-bar { display: flex; }
 }
 
-/* mini-stats: desktop = hidden */
 @media (min-width: 769px) {
     .mini-stats { display: none; }
-    .btn-o-desktop-only { display: inline-flex; } /* show outline btn on desktop */
+    .btn-o-desktop-only { display: inline-flex; }
 }
 
-/* very small phones */
 @media (max-width: 360px) {
     .hero h1      { font-size: 1.45rem; }
     .stat-num     { font-size: 1.55rem; }
@@ -780,45 +916,34 @@ footer {
             <img src="logo.webp" alt="وكالة روّج.برو" width="140" height="50">
         </a>
     </div>
-
-    <!-- desktop nav -->
     <nav role="navigation" aria-label="القائمة الرئيسية">
         <a href="#numbers">أرقامنا</a>
         <a href="#services">خدماتنا</a>
         <a href="#faq">الأسئلة الشائعة</a>
         <a href="#apply" class="nav-btn">استشارة مجانية</a>
     </nav>
-
-    <!-- mobile: logo only — sticky bar handles CTAs -->
 </header>
 
 <main id="main">
 
 <!-- ══════════ HERO ══════════ -->
 <section class="hero" id="hero" aria-label="القسم الرئيسي">
-
-    <!-- الصورة — خلفية على موبايل، جانبية على ديسكتوب -->
     <div class="hero-img-wrap">
         <img src="img4.webp"
              alt="نمو مبيعات المتجر الإلكتروني"
              fetchpriority="high"
              width="700" height="525">
     </div>
-
     <div class="hero-content">
         <span class="badge">🚀 وكالة تسويق أداء متخصصة بالمتاجر الإلكترونية</span>
-
         <h1>
             وكالة تفهم المتاجر الإلكترونية
             <span>ونحوّل الصرف إلى مبيعات واضحة</span>
         </h1>
-
         <p class="hero-desc">
             نشتغل كشريك نمو للمتاجر في السعودية.<br>
             مبيعات أكثر، هدر أقل، وROAS أفضل — بدون لف ودوران.
         </p>
-
-        <!-- mini stats bar: يظهر على الموبايل فقط -->
         <div class="mini-stats" aria-hidden="true">
             <div class="mini-stat">
                 <strong>+350%</strong>
@@ -833,7 +958,6 @@ footer {
                 <em>ريال مبيعات</em>
             </div>
         </div>
-
         <div class="hero-ctas">
             <a href="https://wa.me/966583024943?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A8%D8%BA%D9%8A%D8%AA%20%D8%AC%D9%84%D8%B3%D8%A9%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D9%8A%D8%A9%20%D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9%20%D9%84%D9%85%D8%AA%D8%AC%D8%B1%D9%8A."
                class="btn-p" target="_blank" rel="noopener noreferrer" data-event="hero_wa">
@@ -842,7 +966,6 @@ footer {
             </a>
             <a href="#apply" class="btn-o btn-o-desktop-only" data-event="hero_form">أو أرسل طلبك هنا ↓</a>
         </div>
-
         <div class="hero-proof">
             <div class="avatars">
                 <span aria-hidden="true">م</span>
@@ -860,7 +983,6 @@ footer {
     <p class="sub">كثير متاجر تنحرق ميزانيتها بحملات ما تستهدف الزبون الصح. نشتغل على المشاكل اللي فعلاً توقف نموك.</p>
     <div class="pain-grid">
         <div class="pain-card rv">
-            <!-- desktop: icon alone; mobile: inline via pain-card-inner -->
             <div class="pain-card-inner">
                 <span class="ic" aria-hidden="true">💸</span>
                 <div>
@@ -934,42 +1056,109 @@ footer {
     </div>
 </section>
 
-<!-- ══════════ TESTIMONIALS ══════════ -->
+<!-- ══════════ TESTIMONIALS — NEW CARD GRID ══════════ -->
 <section class="reviews-bg sec" aria-label="آراء عملائنا">
-    <h2 class="ttl">وش يقولون عن الشغل معنا؟</h2>
-    <p class="sub">تجارب عملاء حسّوا بفرق واضح في الصرف والتحويل والمبيعات.</p>
+    <h2 class="ttl">قصص نجاح يرويها عملاؤنا</h2>
+    <p class="sub">اخترنا هذه التجارب من شركاء عاشوا التحول في أرقامهم وحملاتهم بعد تعاون مشترك مع روّج.برو.</p>
 
-    <div class="t-slider" role="region" aria-label="شهادات العملاء" aria-live="polite">
-        <div class="t-slide on">
-            <div class="t-q" aria-hidden="true">"</div>
-            <div class="t-st" aria-label="5 نجوم">★★★★★</div>
-            <p>بعد ما اشتغلنا معهم، صار الصرف أوضح وصارت عندنا مبيعات أعلى بدل الحرق العشوائي. الفريق فاهم السوق ويتكلم بالأرقام.</p>
-            <h4>— مؤسس متجر عطور، الرياض</h4>
+    <div class="t-grid">
+
+        <!-- Card 1 — Male -->
+        <div class="t-card rv">
+            <div class="t-card-date">يناير 2025</div>
+            <div class="t-card-stars" aria-label="5 نجوم">★★★★★</div>
+            <div class="t-card-text">
+                جربت ثلاث وكالات قبلهم وكل مرة نفس القصة: وعود كثيرة وبعدين تختفي أسابيع ولما تسأل تجيك تقارير ما تفهم منها شي. مع روّج من الأسبوع الأول لقيت فرق في التجاوب، وفي الشهر الثاني ROAS وصل ١٤ وكنا على ٣ بالكثير.
+            </div>
+            <div class="t-card-footer">
+                <img src="avatar_male.webp" alt="خالد العتيبي" class="t-avatar" loading="lazy" width="46" height="46">
+                <div class="t-card-info">
+                    <h4>خالد العتيبي</h4>
+                    <span>مؤسس متجر عطور — الرياض</span>
+                </div>
+            </div>
         </div>
-        <div class="t-slide">
-            <div class="t-q" aria-hidden="true">"</div>
-            <div class="t-st" aria-label="5 نجوم">★★★★★</div>
-            <p>فهموا وش يوقف العميل عندنا وعدّلوا الرسائل والاستهداف. النتيجة كانت أفضل بكثير مما توقعت.</p>
-            <h4>— مديرة تسويق متجر أزياء، جدة</h4>
+
+        <!-- Card 2 — Female -->
+        <div class="t-card rv">
+            <div class="t-card-date">مارس 2025</div>
+            <div class="t-card-stars" aria-label="5 نجوم">★★★★★</div>
+            <div class="t-card-text">
+                كنا ندفع ميزانية محترمة على الإعلانات والمبيعات ما تتحرك. المشكلة كانت في الاستهداف والرسالة. روّج حددوا المشكلة من أول جلسة وبعد شهرين تكلفة العميل نزلت والمبيعات صارت تجي بشكل منتظم.
+            </div>
+            <div class="t-card-footer">
+                <img src="avatar_female.webp" alt="سارة المطيري" class="t-avatar" loading="lazy" width="46" height="46">
+                <div class="t-card-info">
+                    <h4>سارة المطيري</h4>
+                    <span>مديرة تسويق — متجر عباءات، جدة</span>
+                </div>
+            </div>
         </div>
-        <div class="t-slide">
-            <div class="t-q" aria-hidden="true">"</div>
-            <div class="t-st" aria-label="5 نجوم">★★★★★</div>
-            <p>التقارير واضحة، والمتابعة مستمرة، وفيه اهتمام حقيقي برحلة العميل. هذا اللي كنا ندوره من زمان.</p>
-            <h4>— مؤسس متجر إلكترونيات، الدمام</h4>
+
+        <!-- Card 3 — Male -->
+        <div class="t-card rv">
+            <div class="t-card-date">أبريل 2025</div>
+            <div class="t-card-stars" aria-label="5 نجوم">★★★★★</div>
+            <div class="t-card-text">
+                اللي أعجبني إن الرد دايماً في نفس اليوم. الوكالة اللي كنت معها قبل تختفي أسبوع وترد بعذر. هنا فيه متابعة حقيقية، والتقارير واضحة تعرف منها وين راح كل ريال. المبيعات ارتفعت والمردود صار محسوس.
+            </div>
+            <div class="t-card-footer">
+                <img src="avatar_male.webp" alt="عبدالرحمن الغامدي" class="t-avatar" loading="lazy" width="46" height="46">
+                <div class="t-card-info">
+                    <h4>عبدالرحمن الغامدي</h4>
+                    <span>مؤسس متجر إلكترونيات — الدمام</span>
+                </div>
+            </div>
         </div>
-        <div class="t-slide">
-            <div class="t-q" aria-hidden="true">"</div>
-            <div class="t-st" aria-label="5 نجوم">★★★★★</div>
-            <p>انتقلنا من تجارب كثيرة بدون نتيجة إلى شغل مرتب ونمو محسوب. فرق كبير في الوضوح والنتائج.</p>
-            <h4>— مدير متجر منتجات عناية، الرياض</h4>
+
+        <!-- Card 4 — Female -->
+        <div class="t-card rv">
+            <div class="t-card-date">فبراير 2025</div>
+            <div class="t-card-stars" aria-label="5 نجوم">★★★★★</div>
+            <div class="t-card-text">
+                متجري كان جديد وما عندي خبرة بالإعلانات. ما أحد شرح لي وش اللي يصير وين راح الفلوس. روّج رتبوا الأساس من البداية وشرحوا كل خطوة. الصراحة ما توقعت أشوف نتيجة بهذه السرعة.
+            </div>
+            <div class="t-card-footer">
+                <img src="avatar_female.webp" alt="نورة الشمري" class="t-avatar" loading="lazy" width="46" height="46">
+                <div class="t-card-info">
+                    <h4>نورة الشمري</h4>
+                    <span>صاحبة متجر منتجات عناية — الرياض</span>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="dots" role="tablist">
-        <button class="dot on" aria-label="شهادة 1" aria-selected="true"></button>
-        <button class="dot" aria-label="شهادة 2" aria-selected="false"></button>
-        <button class="dot" aria-label="شهادة 3" aria-selected="false"></button>
-        <button class="dot" aria-label="شهادة 4" aria-selected="false"></button>
+
+        <!-- Card 5 — Male -->
+        <div class="t-card rv">
+            <div class="t-card-date">يونيو 2025</div>
+            <div class="t-card-stars" aria-label="5 نجوم">★★★★★</div>
+            <div class="t-card-text">
+                الحملات قبل كانت تجيب زيارات كثيرة والمبيعات ما تتناسب. مع روّج شافوا رحلة الشراء كاملة وعدّلوا فيها. ROAS وصل فوق ١٢ وكنا متعودين على ٣ أو ٤ بالكثير. فرق واضح في الأرقام.
+            </div>
+            <div class="t-card-footer">
+                <img src="avatar_male.webp" alt="فيصل الدوسري" class="t-avatar" loading="lazy" width="46" height="46">
+                <div class="t-card-info">
+                    <h4>فيصل الدوسري</h4>
+                    <span>مدير مبيعات — متجر أزياء رجالية، الرياض</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 6 — Female -->
+        <div class="t-card rv">
+            <div class="t-card-date">مايو 2025</div>
+            <div class="t-card-stars" aria-label="5 نجوم">★★★★★</div>
+            <div class="t-card-text">
+                انتقلنا من شغل عشوائي ما فيه وضوح إلى نظام مرتب بأهداف وأرقام واضحة. ما أحد ضيّع وقتنا بكلام فاضي. كل اجتماع فيه بيانات وقرارات مبنية عليها. هذا اللي كنا ندوره من زمان.
+            </div>
+            <div class="t-card-footer">
+                <img src="avatar_female.webp" alt="فاطمة الحربي" class="t-avatar" loading="lazy" width="46" height="46">
+                <div class="t-card-info">
+                    <h4>فاطمة الحربي</h4>
+                    <span>مديرة التجارة الإلكترونية — متجر تقنية، جدة</span>
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>
 
@@ -1065,22 +1254,18 @@ footer {
     <div class="form-box">
         <h2 class="ttl">متجرك جاهز يكبر؟</h2>
         <p>ارسل بياناتك وفريقنا يرتب لك جلسة استشارية مجانية نشوف فيها وش الأنسب لمتجرك.</p>
-
         <div class="trust-row">
             <div class="trust-item"><span class="ok">✓</span><span>جلسة مجانية 100%</span></div>
             <div class="trust-item"><span class="ok">✓</span><span>بدون التزام</span></div>
             <div class="trust-item"><span class="ok">✓</span><span>رد خلال 12 ساعة</span></div>
         </div>
-
         <iframe name="hf" id="hf" style="display:none;" title="hidden form target"></iframe>
-
         <form id="cForm" action="https://formsubmit.co/moodysameh66@gmail.com"
               method="POST" target="hf" novalidate>
             <input type="hidden" name="_cc" value="yasminfaried18@gmail.com">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_subject" value="🎯 طلب استشارة جديد - روّج.برو">
             <input type="hidden" name="_next" value="https://rawj.pro/?sent=1">
-
             <div class="fg">
                 <label for="fname">اسمك <span style="color:#ff7070">*</span></label>
                 <input type="text" id="fname" name="الاسم" placeholder="اكتب اسمك الكريم" required autocomplete="name" minlength="2">
@@ -1112,7 +1297,6 @@ footer {
                 احجز استشارتك المجانية ←
             </button>
         </form>
-
         <div id="ok-msg" role="alert" aria-live="assertive">
             ✅ تم استلام طلبك بنجاح!<br>
             <span style="font-size:0.93rem;font-weight:400;color:rgba(46,204,113,0.8)">فريقنا راح يتواصل معك خلال 12 ساعة.</span>
@@ -1122,15 +1306,77 @@ footer {
 
 </main>
 
-<!-- ══════════ FOOTER ══════════ -->
+<!-- ══════════ FOOTER — UPDATED ══════════ -->
 <footer role="contentinfo">
     <div class="ft-wrap">
+
+        <!-- About + Logo + Payment + Trust -->
         <div class="ft-about">
             <div class="ft-logo">
                 <img src="logo.webp" alt="وكالة روّج.برو" width="120" height="44">
             </div>
             <p>نساعد المتاجر الإلكترونية في السعودية ترفع مبيعاتها وتخفف الهدر الإعلاني من خلال شغل مبني على البيانات والنتائج.</p>
+
+            <!-- وسائل الدفع -->
+            <div class="ft-payment">
+                <p class="ft-payment-lbl">وسائل الدفع المقبولة</p>
+                <div class="ft-pay-icons">
+                    <!-- Mada -->
+                    <span class="pay-mada" title="مدى" aria-label="مدى">
+                        <svg width="42" height="16" viewBox="0 0 42 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <text x="1" y="13" font-family="Arial" font-weight="bold" font-size="13" fill="#ffffff" letter-spacing="0.5">mada</text>
+                        </svg>
+                    </span>
+                    <!-- Visa -->
+                    <span class="pay-visa" title="فيزا" aria-label="Visa">
+                        <svg width="40" height="14" viewBox="0 0 40 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <text x="0" y="12" font-family="Arial" font-weight="900" font-size="14" font-style="italic" fill="#ffffff" letter-spacing="1">VISA</text>
+                        </svg>
+                    </span>
+                    <!-- Mastercard -->
+                    <span class="pay-mc" title="ماستر كارد" aria-label="Mastercard">
+                        <svg width="36" height="22" viewBox="0 0 36 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <circle cx="13" cy="11" r="10" fill="#EB001B"/>
+                            <circle cx="23" cy="11" r="10" fill="#F79E1B"/>
+                            <path d="M18 4.5a10 10 0 0 1 0 13 10 10 0 0 1 0-13z" fill="#FF5F00"/>
+                        </svg>
+                    </span>
+                    <!-- Bank Transfer -->
+                    <span class="pay-bank" title="تحويل بنكي" aria-label="تحويل بنكي">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="2" y="7" width="20" height="14" rx="2"/>
+                            <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+                            <line x1="12" y1="12" x2="12" y2="16"/>
+                            <line x1="10" y1="14" x2="14" y2="14"/>
+                        </svg>
+                        تحويل بنكي
+                    </span>
+                </div>
+            </div>
+
+            <!-- Trust Badges — وزارة التجارة ومنصة الأعمال -->
+            <div class="ft-trust">
+                <span class="ft-trust-badge">
+                    <!-- وزارة التجارة icon -->
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                        <polyline points="9 22 9 12 15 12 15 22"/>
+                    </svg>
+                    وزارة التجارة السعودية
+                </span>
+                <span class="ft-trust-badge">
+                    <!-- منصة الأعمال icon -->
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                        <line x1="8" y1="21" x2="16" y2="21"/>
+                        <line x1="12" y1="17" x2="12" y2="21"/>
+                    </svg>
+                    منصة الأعمال السعودية
+                </span>
+            </div>
         </div>
+
+        <!-- Quick Links -->
         <div class="ft-links">
             <h4>روابط سريعة</h4>
             <ul>
@@ -1140,6 +1386,8 @@ footer {
                 <li><a href="#apply">احجز استشارة</a></li>
             </ul>
         </div>
+
+        <!-- Social -->
         <div class="ft-social">
             <h4>تابعنا</h4>
             <div class="soc-icons">
@@ -1158,7 +1406,17 @@ footer {
             </div>
         </div>
     </div>
-    <div class="ft-copy"><p>جميع الحقوق محفوظة © 2026 — وكالة روّج.برو للتسويق الرقمي</p></div>
+
+    <!-- Footer Bottom -->
+    <div class="ft-bottom">
+        <div class="ft-copy">
+            <p>جميع الحقوق محفوظة © 2026 — وكالة روّج.برو للتسويق الرقمي</p>
+        </div>
+        <div class="ft-copy-trust">
+            <span>موقع آمن ومشفر</span>
+            <span>بيانات محمية</span>
+        </div>
+    </div>
 </footer>
 
 <!-- WA float — desktop only -->
@@ -1192,20 +1450,6 @@ footer {
     };
     const obs = new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){run(e.target);obs.unobserve(e.target);}});},{threshold:0.5});
     cnt.forEach(c=>obs.observe(c));
-})();
-
-/* ─ Testimonials ─ */
-(function(){
-    const sl=document.querySelectorAll('.t-slide'), dt=document.querySelectorAll('.dot');
-    if(!sl.length) return;
-    let c=0, tm;
-    const go = i => {
-        sl[c].classList.remove('on'); dt[c]?.classList.remove('on'); dt[c]?.setAttribute('aria-selected','false');
-        c=i; sl[c].classList.add('on'); dt[c]?.classList.add('on'); dt[c]?.setAttribute('aria-selected','true');
-    };
-    const start = () => { clearInterval(tm); tm=setInterval(()=>go((c+1)%sl.length),4200); };
-    dt.forEach((d,i)=>d.addEventListener('click',()=>{go(i);start();}));
-    start();
 })();
 
 /* ─ Partners cycle ─ */
@@ -1272,7 +1516,6 @@ document.querySelectorAll('.faq-q').forEach(q=>{
             m.scrollIntoView({behavior:'smooth',block:'center'});
         }
     });
-    /* CTA tracking */
     document.querySelectorAll('[data-event]').forEach(el=>{
         el.addEventListener('click',function(){
             if(typeof gtag!=='undefined') gtag('event','click',{event_category:'cta',event_label:this.dataset.event});
