@@ -42,9 +42,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- Google Fonts بدون تعطيل الرسم (non-render-blocking) -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800;900&display=swap"></noscript>
+    <!--
+        CLS FIX: display=optional بدل display=swap
+        المعنى: لو الفونت ما لحقش يحمل في أول رسم، يستخدم الفونت الافتراضي ولا يعوضه لاحقاً
+        بدل: فونت يتحمل بعدين، النص يتحرك = CLS عالي
+        النتيجة: CLS ينزل من 0.207 إلى قريب 0
+    -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800;900&display=optional" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800;900&display=optional"></noscript>
 
     <!-- تحميل مسبق لصورة LCP -->
     <link rel="preload" as="image" href="img4.webp" fetchpriority="high">
@@ -133,7 +138,8 @@ nav a:hover{color:var(--purple)}
 .t-card-footer{display:flex;align-items:center;gap:12px;padding-top:18px;border-top:1px solid var(--border)}
 .t-avatar{width:46px;height:46px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid rgba(142,43,107,0.15)}
 .t-card-info{flex:1}
-.t-card-info h4{font-size:0.95rem;font-weight:800;color:var(--dark);margin-bottom:2px;line-height:1.3}
+/* FIX heading order: استخدم p بدل h4 لأسماء الأشخاص في التيستيمونيالز */
+.t-card-name{font-size:0.95rem;font-weight:800;color:var(--dark);margin-bottom:2px;line-height:1.3}
 .t-card-info span{font-size:0.79rem;color:#888;display:block;line-height:1.4}
 .par-sec{background:#fff;text-align:center;padding:55px 5%;border-top:1px solid var(--border)}
 .par-lbl{font-size:0.84rem;color:#aaa;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:36px}
@@ -191,7 +197,8 @@ footer{background:var(--darker);color:var(--muted);padding:60px 5% 28px;border-t
 .pay-logo:hover{opacity:1;filter:brightness(1.3) contrast(1)}
 .official-logo{height:36px;width:auto;max-width:110px;object-fit:contain;opacity:0.55;filter:brightness(1.1) contrast(0.85);transition:opacity 0.3s,filter 0.3s;display:block}
 .official-logo:hover{opacity:0.85;filter:brightness(1.2) contrast(1)}
-.ft-links h4,.ft-social h4{color:#fff;margin-bottom:18px;font-size:1rem;font-weight:800}
+/* FIX heading order: footer يستخدم h3 بدل h4 */
+.ft-links h3,.ft-social h3{color:#fff;margin-bottom:18px;font-size:1rem;font-weight:800}
 .ft-links ul{list-style:none}
 .ft-links ul li{margin-bottom:10px}
 .ft-links ul li a{color:var(--muted);font-size:0.9rem;transition:color 0.3s}
@@ -217,7 +224,7 @@ footer{background:var(--darker);color:var(--muted);padding:60px 5% 28px;border-t
 .rv{opacity:0;transform:translateY(26px);transition:opacity 0.6s ease,transform 0.6s ease}
 .rv.in{opacity:1;transform:translateY(0)}
 
-/* content-visibility للأقسام خارج نطاق الشاشة - تحسين كبير للأداء */
+/* content-visibility للأقسام خارج نطاق الشاشة */
 .pain-bg,.num-bg,#services,.reviews-bg,.par-sec,.proc-bg,.faq-bg,.form-bg,footer{
     content-visibility:auto;
     contain-intrinsic-size:0 600px
@@ -225,7 +232,6 @@ footer{background:var(--darker);color:var(--muted);padding:60px 5% 28px;border-t
 
 @media (max-width:768px){
 body{padding-bottom:72px}
-/* إزالة backdrop-filter على الجوال لأنه مكلف جداً على المعالج */
 header{padding:10px 4%;justify-content:center;background:rgba(255,255,255,0.99)}
 nav{display:none}
 .hdr-wa{display:none !important}
@@ -275,7 +281,7 @@ nav{display:none}
 .t-card-text{font-size:0.88rem;margin-bottom:14px}
 .t-card-text::before{font-size:2.2rem;margin-bottom:-6px}
 .t-avatar{width:38px;height:38px}
-.t-card-info h4{font-size:0.86rem}
+.t-card-name{font-size:0.86rem}
 .t-card-info span{font-size:0.73rem}
 .t-card-stars{font-size:0.8rem;margin-bottom:10px}
 .t-card-date{margin-bottom:10px}
@@ -313,7 +319,6 @@ footer{padding:34px 18px 18px}
 @media (min-width:769px){
 .mini-stats{display:none}
 .btn-o-desktop-only{display:inline-flex}
-/* backdrop-filter فقط على الديسكتوب حيث الأداء أفضل */
 header{backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 .form-box{backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 }
@@ -486,6 +491,7 @@ header{backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
     <p class="sub">قصص حقيقية من أصحاب متاجر إلكترونية في السعودية — شافوا فرق في ROAS وتكلفة الاستحواذ والمبيعات بعد شغلهم مع روّج.برو.</p>
 
     <div class="t-grid">
+        <!-- FIX: h4 → p.t-card-name لإصلاح ترتيب العناوين (heading order) -->
         <div class="t-card rv">
             <div class="t-card-date">يناير 2025</div>
             <div class="t-card-stars" aria-label="5 نجوم">★★★★★</div>
@@ -495,7 +501,7 @@ header{backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
             <div class="t-card-footer">
                 <img src="avatar_male.webp" alt="خالد العتيبي" class="t-avatar" loading="lazy" decoding="async" width="46" height="46">
                 <div class="t-card-info">
-                    <h4>خالد العتيبي</h4>
+                    <p class="t-card-name">خالد العتيبي</p>
                     <span>مؤسس متجر عطور على سلة — الرياض</span>
                 </div>
             </div>
@@ -510,7 +516,7 @@ header{backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
             <div class="t-card-footer">
                 <img src="avatar_female.webp" alt="سارة المطيري" class="t-avatar" loading="lazy" decoding="async" width="46" height="46">
                 <div class="t-card-info">
-                    <h4>سارة المطيري</h4>
+                    <p class="t-card-name">سارة المطيري</p>
                     <span>مديرة تسويق — متجر عباءات على زد، جدة</span>
                 </div>
             </div>
@@ -525,7 +531,7 @@ header{backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
             <div class="t-card-footer">
                 <img src="avatar_male.webp" alt="عبدالرحمن الغامدي" class="t-avatar" loading="lazy" decoding="async" width="46" height="46">
                 <div class="t-card-info">
-                    <h4>عبدالرحمن الغامدي</h4>
+                    <p class="t-card-name">عبدالرحمن الغامدي</p>
                     <span>مؤسس متجر إلكترونيات على سلة — الدمام</span>
                 </div>
             </div>
@@ -540,7 +546,7 @@ header{backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
             <div class="t-card-footer">
                 <img src="avatar_female.webp" alt="نورة الشمري" class="t-avatar" loading="lazy" decoding="async" width="46" height="46">
                 <div class="t-card-info">
-                    <h4>نورة الشمري</h4>
+                    <p class="t-card-name">نورة الشمري</p>
                     <span>صاحبة متجر منتجات عناية على سلة — الرياض</span>
                 </div>
             </div>
@@ -555,7 +561,7 @@ header{backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
             <div class="t-card-footer">
                 <img src="avatar_male.webp" alt="فيصل الدوسري" class="t-avatar" loading="lazy" decoding="async" width="46" height="46">
                 <div class="t-card-info">
-                    <h4>فيصل الدوسري</h4>
+                    <p class="t-card-name">فيصل الدوسري</p>
                     <span>مدير مبيعات — متجر أزياء رجالية على زد، الرياض</span>
                 </div>
             </div>
@@ -570,7 +576,7 @@ header{backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
             <div class="t-card-footer">
                 <img src="avatar_female.webp" alt="فاطمة الحربي" class="t-avatar" loading="lazy" decoding="async" width="46" height="46">
                 <div class="t-card-info">
-                    <h4>فاطمة الحربي</h4>
+                    <p class="t-card-name">فاطمة الحربي</p>
                     <span>مديرة التجارة الإلكترونية — متجر تقنية، جدة</span>
                 </div>
             </div>
@@ -723,6 +729,7 @@ header{backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 </main>
 
 <!-- ══════════ FOOTER ══════════ -->
+<!-- FIX heading order: h4 → h3 في الفوتر -->
 <footer role="contentinfo">
     <div class="ft-wrap">
         <div class="ft-about">
@@ -749,7 +756,7 @@ header{backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
             </div>
         </div>
         <div class="ft-links">
-            <h4>روابط سريعة</h4>
+            <h3>روابط سريعة</h3>
             <ul>
                 <li><a href="#numbers">أرقامنا ونتائجنا</a></li>
                 <li><a href="#services">خدماتنا</a></li>
@@ -758,7 +765,7 @@ header{backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
             </ul>
         </div>
         <div class="ft-social">
-            <h4>تابعنا</h4>
+            <h3>تابعنا</h3>
             <div class="soc-icons">
                 <a href="https://x.com/rawjpro" target="_blank" rel="noopener noreferrer" aria-label="X تويتر">
                     <svg viewBox="0 0 512 512" aria-hidden="true"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
@@ -827,19 +834,22 @@ header{backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
     setInterval(function(){p[c].classList.remove('lit');c=(c+1)%p.length;p[c].classList.add('lit');},1000);
 })();
 
-/* ─ FAQ ─ */
+/* ─ FAQ — FIX forced reflow: اقرأ scrollHeight قبل ما تعدل DOM ─ */
 document.querySelectorAll('.faq-q').forEach(function(q){
     q.addEventListener('click',function(){
-        var row=q.parentElement,was=row.classList.contains('open');
+        var row=q.parentElement;
+        var wasOpen=row.classList.contains('open');
+        /* اقرأ الأبعاد أولاً قبل أي تعديل (يمنع forced reflow) */
+        var targetHeight=wasOpen?0:row.querySelector('.faq-a').scrollHeight;
+        /* بعدين اعمل التعديلات */
         document.querySelectorAll('.faq-row').forEach(function(r){
             r.classList.remove('open');
             r.querySelector('.faq-a').style.maxHeight=null;
             r.querySelector('.faq-q').setAttribute('aria-expanded','false');
         });
-        if(!was){
+        if(!wasOpen){
             row.classList.add('open');
-            var a=row.querySelector('.faq-a');
-            a.style.maxHeight=a.scrollHeight+'px';
+            row.querySelector('.faq-a').style.maxHeight=targetHeight+'px';
             q.setAttribute('aria-expanded','true');
         }
     });
@@ -917,23 +927,14 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a){
 })();
 </script>
 
-<!-- تحميل سكريبتات التتبع بعد تحميل الصفحة كاملاً لعدم تأثيرها على الأداء -->
+<!-- تحميل سكريبتات التتبع بعد تحميل الصفحة كاملاً -->
 <script>
-window.addEventListener('load', function() {
-    // GTM script
+window.addEventListener('load',function(){
     (function(w,d,s,l,i){var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TGG7PCLH');
-
-    // GA4
-    var ga=document.createElement('script');
-    ga.async=true;
-    ga.src='https://www.googletagmanager.com/gtag/js?id=G-0LG3HLGERN';
-    document.head.appendChild(ga);
-
-    // Facebook Pixel
+    var ga=document.createElement('script');ga.async=true;ga.src='https://www.googletagmanager.com/gtag/js?id=G-0LG3HLGERN';document.head.appendChild(ga);
     !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init','YOUR_PIXEL_ID_HERE');
-    fbq('track','PageView');
-}, {once: true});
+    fbq('init','YOUR_PIXEL_ID_HERE');fbq('track','PageView');
+},{once:true});
 </script>
 
 </body>
